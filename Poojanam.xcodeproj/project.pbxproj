@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31009CBF1D80064C00CC9F7E /* TabBarController.swift */; };
+		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
+		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
+		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
+		3184CE2A1D85268B00812B60 /* SongDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE291D85268B00812B60 /* SongDetailsViewController.swift */; };
+		3184CE2D1D852ED600812B60 /* AboutPoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE2C1D852ED600812B60 /* AboutPoojaViewController.swift */; };
+		3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE2E1D852EE800812B60 /* PoojaDetailsViewController.swift */; };
+		3184CE311D85346D00812B60 /* AarathiDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE301D85346D00812B60 /* AarathiDetailsViewController.swift */; };
+		3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE331D853AB500812B60 /* LanguagesViewController.swift */; };
+		3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE351D853AC800812B60 /* FeedbackViewController.swift */; };
+		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
+		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
+		31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */; };
+		31FDC59B1D7D3CC8008CAC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */; };
+		31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */; };
+		31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */; };
+		31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */; };
+		31FDC5B21D7D3CC9008CAC1C /* PoojanamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */; };
+		57B0310A654249779E434443 /* Pods_PoojanamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */; };
+		DDD165BECAC6245F2B77578A /* Pods_Poojanam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31FDC5AE1D7D3CC9008CAC1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31FDC58F1D7D3CC8008CAC1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31FDC5961D7D3CC8008CAC1C;
+			remoteInfo = Poojanam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoojanamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poojanam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31009CBF1D80064C00CC9F7E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
+		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		3184CE291D85268B00812B60 /* SongDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsViewController.swift; sourceTree = "<group>"; };
+		3184CE2C1D852ED600812B60 /* AboutPoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPoojaViewController.swift; sourceTree = "<group>"; };
+		3184CE2E1D852EE800812B60 /* PoojaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaDetailsViewController.swift; sourceTree = "<group>"; };
+		3184CE301D85346D00812B60 /* AarathiDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiDetailsViewController.swift; sourceTree = "<group>"; };
+		3184CE331D853AB500812B60 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		3184CE351D853AC800812B60 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
+		31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiViewController.swift; sourceTree = "<group>"; };
+		31FDC5971D7D3CC8008CAC1C /* Poojanam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poojanam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31FDC5A11D7D3CC9008CAC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31FDC5A61D7D3CC9008CAC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31FDC5A81D7D3CC9008CAC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31FDC5AD1D7D3CC9008CAC1C /* PoojanamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoojanamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojanamTests.swift; sourceTree = "<group>"; };
+		31FDC5B31D7D3CC9008CAC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoojanamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests.release.xcconfig"; sourceTree = "<group>"; };
+		5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.release.xcconfig"; sourceTree = "<group>"; };
+		73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.debug.xcconfig"; sourceTree = "<group>"; };
+		E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoojanamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31FDC5941D7D3CC8008CAC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDD165BECAC6245F2B77578A /* Pods_Poojanam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FDC5AA1D7D3CC9008CAC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B0310A654249779E434443 /* Pods_PoojanamTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F6DBC274DF4AA265CBE73A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */,
+				5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */,
+				E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */,
+				374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2553BAD7DC53D0A6CA46D1AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */,
+				0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3184CE281D8524AA00812B60 /* DetailPages */ = {
+			isa = PBXGroup;
+			children = (
+				3184CE321D8537E000812B60 /* MoreViews */,
+				3184CE2B1D852EBD00812B60 /* PoojaViews */,
+				3184CE291D85268B00812B60 /* SongDetailsViewController.swift */,
+				3184CE301D85346D00812B60 /* AarathiDetailsViewController.swift */,
+			);
+			name = DetailPages;
+			sourceTree = "<group>";
+		};
+		3184CE2B1D852EBD00812B60 /* PoojaViews */ = {
+			isa = PBXGroup;
+			children = (
+				3184CE2C1D852ED600812B60 /* AboutPoojaViewController.swift */,
+				3184CE2E1D852EE800812B60 /* PoojaDetailsViewController.swift */,
+			);
+			name = PoojaViews;
+			sourceTree = "<group>";
+		};
+		3184CE321D8537E000812B60 /* MoreViews */ = {
+			isa = PBXGroup;
+			children = (
+				3184CE331D853AB500812B60 /* LanguagesViewController.swift */,
+				3184CE351D853AC800812B60 /* FeedbackViewController.swift */,
+				3184CE371D853AE100812B60 /* AboutViewController.swift */,
+			);
+			name = MoreViews;
+			sourceTree = "<group>";
+		};
+		31D0868A1D807EE400D59FB7 /* TabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31D0868B1D80836100D59FB7 /* PoojaViewController.swift */,
+				31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */,
+				3184CE221D8480F100812B60 /* SongsViewController.swift */,
+				3184CE241D84979600812B60 /* StotramViewController.swift */,
+				3184CE261D8497A600812B60 /* MoreViewController.swift */,
+			);
+			name = TabBarViewControllers;
+			sourceTree = "<group>";
+		};
+		31FDC58E1D7D3CC8008CAC1C = {
+			isa = PBXGroup;
+			children = (
+				31FDC5991D7D3CC8008CAC1C /* Poojanam */,
+				31FDC5B01D7D3CC9008CAC1C /* PoojanamTests */,
+				31FDC5981D7D3CC8008CAC1C /* Products */,
+				1F6DBC274DF4AA265CBE73A8 /* Pods */,
+				2553BAD7DC53D0A6CA46D1AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		31FDC5981D7D3CC8008CAC1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FDC5971D7D3CC8008CAC1C /* Poojanam.app */,
+				31FDC5AD1D7D3CC9008CAC1C /* PoojanamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31FDC5991D7D3CC8008CAC1C /* Poojanam */ = {
+			isa = PBXGroup;
+			children = (
+				3184CE281D8524AA00812B60 /* DetailPages */,
+				31D0868A1D807EE400D59FB7 /* TabBarViewControllers */,
+				31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */,
+				31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */,
+				31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */,
+				31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */,
+				31FDC5A81D7D3CC9008CAC1C /* Info.plist */,
+				31009CBF1D80064C00CC9F7E /* TabBarController.swift */,
+			);
+			path = Poojanam;
+			sourceTree = "<group>";
+		};
+		31FDC5B01D7D3CC9008CAC1C /* PoojanamTests */ = {
+			isa = PBXGroup;
+			children = (
+				31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */,
+				31FDC5B31D7D3CC9008CAC1C /* Info.plist */,
+			);
+			path = PoojanamTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31FDC5961D7D3CC8008CAC1C /* Poojanam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FDC5B61D7D3CC9008CAC1C /* Build configuration list for PBXNativeTarget "Poojanam" */;
+			buildPhases = (
+				4D57780F33F91FDDD15AF989 /* [CP] Check Pods Manifest.lock */,
+				31FDC5931D7D3CC8008CAC1C /* Sources */,
+				31FDC5941D7D3CC8008CAC1C /* Frameworks */,
+				31FDC5951D7D3CC8008CAC1C /* Resources */,
+				6B3BEF95A803EABDF53D0AD4 /* [CP] Embed Pods Frameworks */,
+				A37FAD7B9DA36110DBA33EB5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Poojanam;
+			productName = Poojanam;
+			productReference = 31FDC5971D7D3CC8008CAC1C /* Poojanam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31FDC5AC1D7D3CC9008CAC1C /* PoojanamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FDC5B91D7D3CC9008CAC1C /* Build configuration list for PBXNativeTarget "PoojanamTests" */;
+			buildPhases = (
+				D25401EC9A26B7259AFFA35D /* [CP] Check Pods Manifest.lock */,
+				31FDC5A91D7D3CC9008CAC1C /* Sources */,
+				31FDC5AA1D7D3CC9008CAC1C /* Frameworks */,
+				31FDC5AB1D7D3CC9008CAC1C /* Resources */,
+				C68277EC26940B26C3BFD8A7 /* [CP] Embed Pods Frameworks */,
+				414F2C0C2A956AD21237672F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31FDC5AF1D7D3CC9008CAC1C /* PBXTargetDependency */,
+			);
+			name = PoojanamTests;
+			productName = PoojanamTests;
+			productReference = 31FDC5AD1D7D3CC9008CAC1C /* PoojanamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31FDC58F1D7D3CC8008CAC1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Gupta;
+				TargetAttributes = {
+					31FDC5961D7D3CC8008CAC1C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+					31FDC5AC1D7D3CC9008CAC1C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 31FDC5961D7D3CC8008CAC1C;
+					};
+				};
+			};
+			buildConfigurationList = 31FDC5921D7D3CC8008CAC1C /* Build configuration list for PBXProject "Poojanam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31FDC58E1D7D3CC8008CAC1C;
+			productRefGroup = 31FDC5981D7D3CC8008CAC1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31FDC5961D7D3CC8008CAC1C /* Poojanam */,
+				31FDC5AC1D7D3CC9008CAC1C /* PoojanamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31FDC5951D7D3CC8008CAC1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */,
+				31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */,
+				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FDC5AB1D7D3CC9008CAC1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		414F2C0C2A956AD21237672F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D57780F33F91FDDD15AF989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3BEF95A803EABDF53D0AD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A37FAD7B9DA36110DBA33EB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68277EC26940B26C3BFD8A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25401EC9A26B7259AFFA35D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31FDC5931D7D3CC8008CAC1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3184CE311D85346D00812B60 /* AarathiDetailsViewController.swift in Sources */,
+				3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */,
+				3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */,
+				31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */,
+				3184CE251D84979600812B60 /* StotramViewController.swift in Sources */,
+				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
+				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
+				3184CE2D1D852ED600812B60 /* AboutPoojaViewController.swift in Sources */,
+				3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */,
+				31FDC59B1D7D3CC8008CAC1C /* AppDelegate.swift in Sources */,
+				3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */,
+				3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */,
+				3184CE2A1D85268B00812B60 /* SongDetailsViewController.swift in Sources */,
+				31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FDC5A91D7D3CC9008CAC1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FDC5B21D7D3CC9008CAC1C /* PoojanamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31FDC5AF1D7D3CC9008CAC1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31FDC5961D7D3CC8008CAC1C /* Poojanam */;
+			targetProxy = 31FDC5AE1D7D3CC9008CAC1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FDC5A11D7D3CC9008CAC1C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FDC5A61D7D3CC9008CAC1C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31FDC5B41D7D3CC9008CAC1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		31FDC5B51D7D3CC9008CAC1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31FDC5B71D7D3CC9008CAC1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Poojanam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gupta.Poojanam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		31FDC5B81D7D3CC9008CAC1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Poojanam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gupta.Poojanam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		31FDC5BA1D7D3CC9008CAC1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PoojanamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gupta.PoojanamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poojanam.app/Poojanam";
+			};
+			name = Debug;
+		};
+		31FDC5BB1D7D3CC9008CAC1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PoojanamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gupta.PoojanamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poojanam.app/Poojanam";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31FDC5921D7D3CC8008CAC1C /* Build configuration list for PBXProject "Poojanam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FDC5B41D7D3CC9008CAC1C /* Debug */,
+				31FDC5B51D7D3CC9008CAC1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FDC5B61D7D3CC9008CAC1C /* Build configuration list for PBXNativeTarget "Poojanam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FDC5B71D7D3CC9008CAC1C /* Debug */,
+				31FDC5B81D7D3CC9008CAC1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FDC5B91D7D3CC9008CAC1C /* Build configuration list for PBXNativeTarget "PoojanamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FDC5BA1D7D3CC9008CAC1C /* Debug */,
+				31FDC5BB1D7D3CC9008CAC1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31FDC58F1D7D3CC8008CAC1C /* Project object */;
+}
