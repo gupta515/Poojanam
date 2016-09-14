@@ -18,6 +18,7 @@
 		3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE331D853AB500812B60 /* LanguagesViewController.swift */; };
 		3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE351D853AC800812B60 /* FeedbackViewController.swift */; };
 		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
+		3194C2081D89A6D0003766B8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3194C2071D89A6D0003766B8 /* .gitignore */; };
 		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
 		31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */; };
 		31FDC59B1D7D3CC8008CAC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */; };
@@ -25,7 +26,6 @@
 		31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */; };
 		31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */; };
 		31FDC5B21D7D3CC9008CAC1C /* PoojanamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */; };
-		57B0310A654249779E434443 /* Pods_PoojanamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */; };
 		DDD165BECAC6245F2B77578A /* Pods_Poojanam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +53,7 @@
 		3184CE331D853AB500812B60 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		3184CE351D853AC800812B60 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3194C2071D89A6D0003766B8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
 		31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiViewController.swift; sourceTree = "<group>"; };
 		31FDC5971D7D3CC8008CAC1C /* Poojanam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poojanam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,10 +65,8 @@
 		31FDC5AD1D7D3CC9008CAC1C /* PoojanamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoojanamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojanamTests.swift; sourceTree = "<group>"; };
 		31FDC5B31D7D3CC9008CAC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoojanamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests.release.xcconfig"; sourceTree = "<group>"; };
 		5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.release.xcconfig"; sourceTree = "<group>"; };
 		73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.debug.xcconfig"; sourceTree = "<group>"; };
-		E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoojanamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B0310A654249779E434443 /* Pods_PoojanamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +93,6 @@
 			children = (
 				73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */,
 				5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */,
-				E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */,
-				374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,6 +179,7 @@
 				31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */,
 				31FDC5A81D7D3CC9008CAC1C /* Info.plist */,
 				31009CBF1D80064C00CC9F7E /* TabBarController.swift */,
+				3194C2071D89A6D0003766B8 /* .gitignore */,
 			);
 			path = Poojanam;
 			sourceTree = "<group>";
@@ -285,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3194C2081D89A6D0003766B8 /* .gitignore in Resources */,
 				31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */,
 				31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */,
 				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
@@ -580,7 +578,6 @@
 		};
 		31FDC5BA1D7D3CC9008CAC1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4545D764863F07934816CEC /* Pods-PoojanamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,7 +592,6 @@
 		};
 		31FDC5BB1D7D3CC9008CAC1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 374831D22447A4903D93AE7A /* Pods-PoojanamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
