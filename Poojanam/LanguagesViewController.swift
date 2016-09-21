@@ -17,16 +17,12 @@ class LanguagesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage") {
-            print(selectedLang)
             self.title = "Change Language"
             selectedLanguage = selectedLang
-            
         } else {
             self.title = "Choose Language"
-            print(languagesAvailable)
         }
         self.languagesTableView?.tableFooterView = UIView()
     }
@@ -48,9 +44,16 @@ class LanguagesViewController: UIViewController, UITableViewDelegate, UITableVie
         let languageCell = tableView.dequeueReusableCell(withIdentifier: "LanguageCellID") as! LanguageViewCell
         let arryLang = languagesAvailable[indexPath.row]
         languageCell.languageLable.text = arryLang
-        if arryLang == selectedLanguage {
-            languageCell.languageHighLight.isHidden = false
-        }
+        languageCell.languageHighLight.isHidden = (arryLang != selectedLanguage)
         return languageCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userChoosenLanguage = languagesAvailable[indexPath.row]
+        if userChoosenLanguage != selectedLanguage {
+            UserDefaults.standard.set(userChoosenLanguage, forKey: "selectedLanguage")
+            selectedLanguage = userChoosenLanguage
+            languagesTableView?.reloadData()
+        }
     }
 }
