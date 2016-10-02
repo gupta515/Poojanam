@@ -9,11 +9,14 @@
 import UIKit
 
 class AboutPoojaViewController: UIViewController {
+    
+    var poojaName : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("in view did load \(poojaName)")
         // Do any additional setup after loading the view.
+        self.title = poojaName
     }
 
     override func didReceiveMemoryWarning() {

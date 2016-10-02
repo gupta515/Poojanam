@@ -17,29 +17,127 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Pooja's View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD" userLabel="PoojaView">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-7U-kTc">
+                                <frame key="frameInset" width="100.00%" height="19.49%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming Pooja" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-cY-hiW">
+                                        <frame key="frameInset" minX="16" minY="5" width="350" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Nz-Mvq">
+                                        <frame key="frameInset" minY="40" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-yY-h4r">
+                                                <frame key="frameInset" minX="20" minY="4" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDV-rN-HEa">
+                                                <frame key="frameInset" minX="68" width="200" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Ganesh Chaturthi">
+                                                    <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="upcomingPoojaDetailBtn:" destination="9pv-A4-QxB" eventType="touchDown" id="lD5-dm-tdv"/>
+                                                    <segue destination="HaA-NF-goE" kind="push" id="3Un-dO-xEU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-fO-zle">
+                                                <frame key="frameInset" minY="13" width="22" height="22" maxX="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="about"/>
+                                                <connections>
+                                                    <action selector="upcomingPoojaInfoBtn:" destination="9pv-A4-QxB" eventType="touchDown" id="xlA-m7-XHj"/>
+                                                    <segue destination="Fb8-M2-WI4" kind="push" id="1Nr-aK-bjJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-z5-YSg">
+                                        <frame key="frameInset" minY="89" width="100.00%" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Poojas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWE-BV-3JF">
+                                        <frame key="frameInset" minX="16" minY="91" width="340" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-Eo-Wvf">
+                                <frame key="frameInset" minY="130" maxY="39"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoojaCellID" rowHeight="50" id="rHv-JU-7CX" customClass="PoojaTableViewCell" customModule="Poojanam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rHv-JU-7CX" id="jde-Xb-Jvr">
+                                            <frame key="frameInset" minX="0.0%" minY="0.0%" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-1X-rZd">
+                                                    <frame key="frameInset" minX="20" minY="4" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-hn-r4k">
+                                                    <frame key="frameInset" minX="68" width="200" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="Ganesh Chaturthi">
+                                                        <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yl-chq">
+                                                    <frame key="frameInset" minY="13" width="22" height="22" maxX="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="about"/>
+                                                </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-0p-nlc">
+                                                    <frame key="frameInset" minX="70" minY="49" width="100.00%" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="poojaDietyImage" destination="dz1-1X-rZd" id="0QZ-RA-ssp"/>
+                                            <outlet property="poojaInfoBtn" destination="TeG-Yl-chq" id="o2d-e2-2Ag"/>
+                                            <outlet property="poojaNameBtn" destination="UB5-hn-r4k" id="1q1-zY-z7H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="koJ-nU-5pm"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="nqd-EJ-VK6"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Pooja" image="pooja_inactive" selectedImage="pooja_active" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="poojaTableView" destination="rvJ-Eo-Wvf" id="Q5m-IT-hE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1232" y="-1939"/>
+            <point key="canvasLocation" x="-1233" y="-1941"/>
         </scene>
         <!--Pooja Details View Controller-->
         <scene sceneID="N6s-dr-Uyd">
             <objects>
-                <viewController id="HaA-NF-goE" customClass="PoojaDetailsViewController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PoojaDetailViewID" id="HaA-NF-goE" customClass="PoojaDetailsViewController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1LP-0n-OQs"/>
                         <viewControllerLayoutGuide type="bottom" id="Bid-44-gnb"/>
@@ -47,8 +145,80 @@
                     <view key="view" contentMode="scaleToFill" id="Y3A-up-Vhh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwY-4Q-yc7">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqb-EY-SZ1">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="de6-pa-vK7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSR-fi-yhM">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK1-kb-cZZ">
+                                                <frame key="frameInset" height="100.00%" maxX="121"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Samagri">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="poojaSamagriClicked:" destination="HaA-NF-goE" eventType="touchUpInside" id="Xyg-Di-950"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPR-Ab-qnx">
+                                                <frame key="frameInset" minX="50.00%" minY="0.0%" width="1" height="100.00%"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-Bt-rwl">
+                                                <frame key="frameInset" minX="121" width="120" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Pooja Vidhi">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="poojaVidhiClicked:" destination="HaA-NF-goE" eventType="touchUpInside" id="6No-8B-ZJc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Me8-of-BQy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="10" id="4is-9x-1kN"/>
+                                    <constraint firstAttribute="trailing" secondItem="kqb-EY-SZ1" secondAttribute="trailing" id="5YE-s5-yje"/>
+                                    <constraint firstItem="kqb-EY-SZ1" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="59" id="QSQ-HS-Oe6"/>
+                                    <constraint firstAttribute="trailing" secondItem="rSR-fi-yhM" secondAttribute="trailing" constant="67" id="SSf-wa-Kw4"/>
+                                    <constraint firstItem="kqb-EY-SZ1" firstAttribute="leading" secondItem="rwY-4Q-yc7" secondAttribute="leading" id="XnN-Op-0D9"/>
+                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="leading" secondItem="rwY-4Q-yc7" secondAttribute="leading" constant="67" id="azY-zm-T52"/>
+                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="centerX" secondItem="rwY-4Q-yc7" secondAttribute="centerX" id="c6z-xw-LMt"/>
+                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="10" id="sX2-2C-ayV"/>
+                                    <constraint firstAttribute="height" constant="60" id="xt1-7s-O9W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rwY-4Q-yc7" secondAttribute="trailing" id="NI8-ew-bYW"/>
+                            <constraint firstItem="rwY-4Q-yc7" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="ZxV-DW-SLG"/>
+                            <constraint firstItem="rwY-4Q-yc7" firstAttribute="top" secondItem="Y3A-up-Vhh" secondAttribute="top" id="yAC-Dy-bO3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GhK-Vn-xWH"/>
+                    <connections>
+                        <outlet property="poojaSamagriBtn" destination="VK1-kb-cZZ" id="QyO-Eb-MUP"/>
+                        <outlet property="poojaVidhiBtn" destination="zLb-Bt-rwl" id="KGI-a0-nC4"/>
+                        <outlet property="swapButtonOptionsView" destination="rSR-fi-yhM" id="GKL-4o-YEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ict-gD-6sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +227,7 @@
         <!--About Pooja View Controller-->
         <scene sceneID="qO7-kF-LaK">
             <objects>
-                <viewController id="Fb8-M2-WI4" customClass="AboutPoojaViewController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutPoojaViewID" id="Fb8-M2-WI4" customClass="AboutPoojaViewController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0bN-b3-Djt"/>
                         <viewControllerLayoutGuide type="bottom" id="QGQ-3H-IGB"/>
@@ -67,6 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tfp-FV-QGN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQc-PX-FBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,9 +485,7 @@
                                                     <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="ago-E1-hP3">
-                                                    <frame key="frameInset" minX="18" minY="22" width="14" height="11"/>
-                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="ago-E1-hP3"/>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ago-E1-hP3" firstAttribute="top" secondItem="MVX-dp-YAt" secondAttribute="top" constant="22" id="0or-e2-hSc"/>
@@ -396,6 +565,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pya-GF-1Nx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="H4b-3Q-I0U"/>
@@ -415,8 +585,13 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.98399999999999999" green="0.54900000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -433,8 +608,10 @@
     </scenes>
     <resources>
         <image name="Check" width="13" height="10"/>
+        <image name="Ganesh" width="48" height="48"/>
         <image name="aarathi_active" width="13" height="22"/>
         <image name="aarathi_inactive" width="13" height="22"/>
+        <image name="about" width="22" height="22"/>
         <image name="more_active" width="22" height="5"/>
         <image name="more_inactive" width="22" height="5"/>
         <image name="pooja_active" width="21" height="21"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31009CBF1D80064C00CC9F7E /* TabBarController.swift */; };
+		3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311054291DA116E400EAEE25 /* Extensions.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
 		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
@@ -18,6 +19,7 @@
 		3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE331D853AB500812B60 /* LanguagesViewController.swift */; };
 		3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE351D853AC800812B60 /* FeedbackViewController.swift */; };
 		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
+		319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319005481D9990830066EB49 /* PoojaTableViewCell.swift */; };
 		3194C2081D89A6D0003766B8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3194C2071D89A6D0003766B8 /* .gitignore */; };
 		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
 		31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */; };
@@ -46,6 +48,7 @@
 		0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoojanamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poojanam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31009CBF1D80064C00CC9F7E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		311054291DA116E400EAEE25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
 		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		3184CE331D853AB500812B60 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		3184CE351D853AC800812B60 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		319005481D9990830066EB49 /* PoojaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaTableViewCell.swift; sourceTree = "<group>"; };
 		3194C2071D89A6D0003766B8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
 		31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 			name = MoreViews;
 			sourceTree = "<group>";
 		};
+		319005191D97B6730066EB49 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */,
+				311054291DA116E400EAEE25 /* Extensions.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		31D0868A1D807EE400D59FB7 /* TabBarViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */,
+				319005481D9990830066EB49 /* PoojaTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -195,13 +209,13 @@
 		31FDC5991D7D3CC8008CAC1C /* Poojanam */ = {
 			isa = PBXGroup;
 			children = (
+				319005191D97B6730066EB49 /* Utility */,
 				31E4B6B51D903FE8007C16CB /* TableViewCells */,
 				31E4B6B01D8F06D0007C16CB /* AppControlFiles */,
 				3184CE281D8524AA00812B60 /* DetailPages */,
 				31D0868A1D807EE400D59FB7 /* TabBarViewControllers */,
 				31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */,
 				31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */,
-				31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */,
 				31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */,
 				31FDC5A81D7D3CC9008CAC1C /* Info.plist */,
 				3194C2071D89A6D0003766B8 /* .gitignore */,
@@ -422,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31E4B6AF1D8F06C2007C16CB /* MainNavigationController.swift in Sources */,
+				3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */,
 				3184CE311D85346D00812B60 /* AarathiDetailsViewController.swift in Sources */,
 				3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */,
 				3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */,
@@ -438,6 +453,7 @@
 				3184CE2A1D85268B00812B60 /* SongDetailsViewController.swift in Sources */,
 				31E4B6B21D9030C8007C16CB /* PoojanamInfo.swift in Sources */,
 				31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */,
+				319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

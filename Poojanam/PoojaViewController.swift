@@ -8,34 +8,76 @@
 
 import UIKit
 
-class PoojaViewController: UIViewController {
-
+class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var poojaTableView : UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        print("Pooja did load")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Pooja view will appear")
         self.tabBarController?.navigationItem.title = "Pooja"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func upcomingPoojaDetailBtn(_ sender: AnyObject) {
+        moveToPoojaDetailView(poojaName: "Ganesh Upcoming")
     }
-    */
-
+    
+    @IBAction func upcomingPoojaInfoBtn(_ sender: AnyObject) {
+        print("Upcoming pooja button is clicked")
+        moveToAboutPoojaView(poojaName: "Ganesh Chaturthi")
+    }
+    
+    //Pooja TableView Delegates
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let poojaCell = tableView.dequeueReusableCell(withIdentifier: "PoojaCellID") as! PoojaTableViewCell
+        //Pooja Info setup
+        poojaCell.poojaInfoBtn.tag = indexPath.row
+        poojaCell.poojaInfoBtn.addTarget(self, action: #selector(poojaInfoBtn), for: UIControlEvents.touchUpInside)
+        
+        //Pooja Detail setup
+        poojaCell.poojaNameBtn.tag = indexPath.row
+        poojaCell.poojaNameBtn.addTarget(self, action: #selector(aboutPooja), for: UIControlEvents.touchUpInside)
+        return poojaCell
+    }
+    
+    //Functions to move to Deatil and About views
+    func aboutPooja(sender:UIButton)  {
+        moveToAboutPoojaView(poojaName: sender.currentTitle!)
+    }
+    
+    func moveToAboutPoojaView(poojaName : String){
+        if let aboutPoojaView = storyboard?.instantiateViewController(withIdentifier: "AboutPoojaViewID")  as? AboutPoojaViewController {
+            aboutPoojaView.poojaName = poojaName
+            self.navigationController?.pushViewController(aboutPoojaView, animated: true)
+        }
+    }
+    
+    func poojaInfoBtn(sender:UIButton){
+        moveToPoojaDetailView(poojaName: sender.currentTitle!)
+        
+    }
+    
+    func moveToPoojaDetailView(poojaName : String){
+        if let poojaDetailsView = storyboard?.instantiateViewController(withIdentifier: "PoojaDetailViewID")  as? PoojaDetailsViewController {
+            poojaDetailsView.poojaName = poojaName
+            self.navigationController?.pushViewController(poojaDetailsView, animated: true)
+        }
+    }
 }
