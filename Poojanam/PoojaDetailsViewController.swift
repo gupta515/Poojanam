@@ -14,6 +14,10 @@ class PoojaDetailsViewController: UIViewController {
     @IBOutlet weak var poojaSamagriBtn: UIButton!
     @IBOutlet weak var poojaVidhiBtn: UIButton!
     
+    
+    @IBOutlet weak var poojaSamagriView: UIView!
+    @IBOutlet weak var poojaVidhiView: UIView!
+    
     var poojaName : String = ""
     var isPoojaSamagriActivated : Bool = true
     
@@ -68,5 +72,10 @@ class PoojaDetailsViewController: UIViewController {
         isPoojaSamagriActivated = active
         poojaSamagriBtn.swapButtonState(active: isPoojaSamagriActivated)
         poojaVidhiBtn.swapButtonState(active: !isPoojaSamagriActivated)
+        
+        //Set Corresponding view
+        poojaVidhiView.isHidden = true
+        poojaSamagriView.isHidden = true
+        isPoojaSamagriActivated ? (poojaSamagriView.isHidden = false) : (poojaVidhiView.isHidden = false)
     }
 }
