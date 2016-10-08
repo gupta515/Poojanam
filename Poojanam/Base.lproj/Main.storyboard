@@ -210,9 +210,6 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="558" id="tC7-N7-BjQ"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLH-Ot-KSI">
                                 <subviews>
@@ -220,15 +217,21 @@
                                         <frame key="frameInset" width="100.00%" height="72"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-0x-He6">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-M3-BfR">
                                                 <frame key="frameInset" minX="16" minY="16" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89a-mw-SB6">
-                                                <frame key="frameInset" minX="0.0%" minY="100.00%" width="100.00%" height="1"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="play"/>
+                                                <connections>
+                                                    <action selector="poojaTopPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="mMv-tP-ZHL"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Listen to audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-aG-LSj" userLabel="Listen to audio">
+                                                <frame key="frameInset" minX="70" minY="16" width="59.02%" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n19-dn-rX2">
                                                 <frame key="frameInset" minY="26" width="11.44%" height="21" maxX="8"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
@@ -236,48 +239,87 @@
                                                 <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Listen to audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-aG-LSj">
-                                                <frame key="frameInset" minX="84" minY="16" width="61.86%" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89a-mw-SB6">
+                                                <frame key="frameInset" minX="0.0%" minY="100.00%" width="100.00%" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vidhi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-Ne-xzM">
-                                        <frame key="frameInset" minX="141" minY="248" width="93" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQB-63-xXQ">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-Kz-7Ik">
+                                                <frame key="frameInset" minX="8" minY="12.25%" width="40" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="IVI-J1-wBx">
+                                                <frame key="frameInset" minX="60" minY="15" width="63.49%" height="2"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="progressTintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYj-MP-70C">
+                                                <frame key="frameInset" minY="50.00%" width="40" height="40" maxX="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="play"/>
+                                                <connections>
+                                                    <action selector="poojaBottomPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="22i-LW-t0W"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ganesh Pooja Audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-CW-XIz">
+                                                <frame key="frameInset" minX="8" minY="41" width="68.12%" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3iO-pB-f5y"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="558" id="VOG-4Z-1JY"/>
-                                    <constraint firstAttribute="width" constant="375" id="yiX-J4-JVN"/>
+                                    <constraint firstItem="KQB-63-xXQ" firstAttribute="leading" secondItem="gLH-Ot-KSI" secondAttribute="leading" id="dbG-pc-3R6"/>
+                                    <constraint firstAttribute="bottom" secondItem="KQB-63-xXQ" secondAttribute="bottom" id="eHO-UY-di9"/>
+                                    <constraint firstItem="KQB-63-xXQ" firstAttribute="centerX" secondItem="gLH-Ot-KSI" secondAttribute="centerX" id="vqc-M9-9JW"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="1zm-OD-f63"/>
-                            <constraint firstItem="Qnt-7S-gut" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="bottom" id="2Nq-V3-WhN"/>
-                            <constraint firstItem="Qnt-7S-gut" firstAttribute="centerX" secondItem="Y3A-up-Vhh" secondAttribute="centerX" id="Ftt-Z8-YrC"/>
+                            <constraint firstItem="Bid-44-gnb" firstAttribute="top" secondItem="Qnt-7S-gut" secondAttribute="bottom" id="BhE-2D-DJg"/>
+                            <constraint firstItem="Qnt-7S-gut" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="bottom" id="Ffk-12-GvT"/>
+                            <constraint firstItem="Bid-44-gnb" firstAttribute="top" secondItem="gLH-Ot-KSI" secondAttribute="bottom" id="LPG-Kp-zL4"/>
                             <constraint firstAttribute="trailing" secondItem="rwY-4Q-yc7" secondAttribute="trailing" id="NI8-ew-bYW"/>
-                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="centerX" secondItem="Y3A-up-Vhh" secondAttribute="centerX" id="S7C-a7-QU0"/>
-                            <constraint firstAttribute="trailing" secondItem="Qnt-7S-gut" secondAttribute="trailing" id="Wzk-UG-uDE"/>
+                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="Ngf-hX-IXL"/>
                             <constraint firstItem="rwY-4Q-yc7" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="ZxV-DW-SLG"/>
-                            <constraint firstAttribute="trailing" secondItem="gLH-Ot-KSI" secondAttribute="trailing" id="d1K-za-ATM"/>
-                            <constraint firstItem="Qnt-7S-gut" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="qck-Dq-k9n"/>
+                            <constraint firstItem="Qnt-7S-gut" firstAttribute="centerX" secondItem="Y3A-up-Vhh" secondAttribute="centerX" id="hU5-gf-VM1"/>
+                            <constraint firstItem="Qnt-7S-gut" firstAttribute="leading" secondItem="Y3A-up-Vhh" secondAttribute="leading" id="ied-W3-Vgk"/>
+                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="centerX" secondItem="Y3A-up-Vhh" secondAttribute="centerX" id="rHM-nt-Tch"/>
+                            <constraint firstAttribute="trailing" secondItem="Qnt-7S-gut" secondAttribute="trailing" id="sJE-uU-fbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gLH-Ot-KSI" secondAttribute="trailing" id="vei-8C-2aq"/>
+                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="bottom" id="w9z-6W-QtX"/>
                             <constraint firstItem="rwY-4Q-yc7" firstAttribute="top" secondItem="Y3A-up-Vhh" secondAttribute="top" id="yAC-Dy-bO3"/>
-                            <constraint firstItem="gLH-Ot-KSI" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="bottom" id="yIm-r7-sKY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GhK-Vn-xWH"/>
                     <connections>
+                        <outlet property="poojaAudioBottomCtlrBtn" destination="qYj-MP-70C" id="I6K-8v-ty1"/>
+                        <outlet property="poojaAudioBottomProgressBar" destination="IVI-J1-wBx" id="N0I-WJ-OPQ"/>
+                        <outlet property="poojaAudioBottomProgressLabel" destination="gbE-Kz-7Ik" id="FUN-lc-wF2"/>
+                        <outlet property="poojaAudioCtlrBottomView" destination="KQB-63-xXQ" id="woR-Rx-wWG"/>
+                        <outlet property="poojaAudioCtlrTopView" destination="WrT-Rg-1yX" id="VEY-ZF-kII"/>
+                        <outlet property="poojaAudioLabel" destination="Tyx-CW-XIz" id="3nG-1K-miF"/>
+                        <outlet property="poojaAudioProgressLabel" destination="n19-dn-rX2" id="kOf-DE-NOW"/>
+                        <outlet property="poojaAudioTopCtlrBtn" destination="dLe-M3-BfR" id="1cq-GD-xSJ"/>
                         <outlet property="poojaSamagriBtn" destination="VK1-kb-cZZ" id="QyO-Eb-MUP"/>
                         <outlet property="poojaSamagriView" destination="Qnt-7S-gut" id="oHv-sa-cQU"/>
                         <outlet property="poojaVidhiBtn" destination="zLb-Bt-rwl" id="KGI-a0-nC4"/>
@@ -447,7 +489,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bVU-PX-AyP" id="x2f-tt-WVM">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Change Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNz-4M-0gE">
@@ -467,7 +509,7 @@
                                         <rect key="frame" x="0.0" y="124" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6V4-Wl-ghk" id="QDE-nO-xr5">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-8u-543">
@@ -487,7 +529,7 @@
                                         <rect key="frame" x="0.0" y="184" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ZM-aQ-aQ9" id="AXR-4W-0vX">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  About Poojanam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-qa-WRF">
@@ -538,7 +580,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Wt-U5-UVa" id="MVX-dp-YAt">
-                                            <frame key="frameInset" width="375" height="59.5"/>
+                                            <frame key="frameInset" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-6o-cx1">

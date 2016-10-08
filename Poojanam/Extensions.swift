@@ -8,6 +8,13 @@
 
 import UIKit
 
+extension UINavigationController{
+    public func removeNavigationBarBorder(){
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
+    }
+}
+
 extension UIColor {
     public func appBaseColorSaffaron() -> UIColor {
         return UIColor.init(colorLiteralRed: 0.984, green: 0.549, blue: 0.000, alpha: 1)
