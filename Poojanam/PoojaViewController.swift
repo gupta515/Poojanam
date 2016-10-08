@@ -32,7 +32,6 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func upcomingPoojaInfoBtn(_ sender: AnyObject) {
-        print("Upcoming pooja button is clicked")
         moveToAboutPoojaView(poojaName: "Ganesh Chaturthi")
     }
     
@@ -71,7 +70,6 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func poojaInfoBtn(sender:UIButton){
         moveToPoojaDetailView(poojaName: sender.currentTitle!)
-        
     }
     
     func moveToPoojaDetailView(poojaName : String){

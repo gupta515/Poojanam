@@ -20,7 +20,7 @@ extension UIColor {
         return UIColor.init(colorLiteralRed: 0.984, green: 0.549, blue: 0.000, alpha: 1)
     }
     
-    public func btnInactiveColorGray() -> UIColor {
+    public func colorGray() -> UIColor {
         return UIColor.init(colorLiteralRed: 0.961, green: 0.961, blue: 0.961, alpha: 1)
     }
 }
@@ -31,8 +31,30 @@ extension UIButton {
             self.backgroundColor = UIColor().appBaseColorSaffaron()
             self.setTitleColor(UIColor.white, for: UIControlState.normal)
         } else {
-            self.backgroundColor = UIColor().btnInactiveColorGray()
+            self.backgroundColor = UIColor().colorGray()
             self.setTitleColor(UIColor().appBaseColorSaffaron(), for: UIControlState.normal)
         }
+    }
+}
+
+extension UIView{
+    public func setViewRoundCorner(borderWidth : CGFloat = 0, cornerRadius : CGFloat = 0){
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
+        self.clipsToBounds = true
+    }
+    
+    public func setViewRoundCornerWithBorder(borderWidth : CGFloat = 0, cornerRadius : CGFloat = 0, borderColor : UIColor = UIColor.white){
+        self.setViewRoundCorner(borderWidth: borderWidth, cornerRadius: cornerRadius)
+        self.layer.borderColor = borderColor.cgColor
+    }
+}
+
+extension UITextView{
+    public func setTextViewHeightAsPerContent(){
+        let contentSize = self.sizeThatFits(self.bounds.size)
+        var frame = self.frame
+        frame.size.height = contentSize.height
+        self.frame = frame
     }
 }

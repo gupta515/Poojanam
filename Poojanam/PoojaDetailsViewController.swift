@@ -37,7 +37,7 @@ class PoojaDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = poojaName
         self.navigationController?.removeNavigationBarBorder()
-        setSwapButtonView()
+        swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
         swapActiveBtn(active: true)
         swapAudioCtlrView(play: isAudioPlaying)
     }
@@ -71,13 +71,6 @@ class PoojaDetailsViewController: UIViewController {
     
     
     //Set View functions
-    func setSwapButtonView() {
-        swapButtonOptionsView.layer.borderWidth = 1
-        swapButtonOptionsView.layer.cornerRadius = 5
-        swapButtonOptionsView.clipsToBounds = true
-        swapButtonOptionsView.layer.borderColor = UIColor().appBaseColorSaffaron().cgColor
-    }
-    
     func swapActiveBtn(active : Bool) {
         isPoojaSamagriActivated = active
         poojaSamagriBtn.swapButtonState(active: isPoojaSamagriActivated)
