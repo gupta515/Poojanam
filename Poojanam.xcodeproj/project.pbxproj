@@ -23,6 +23,7 @@
 		3194C2081D89A6D0003766B8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3194C2071D89A6D0003766B8 /* .gitignore */; };
 		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
 		31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */; };
+		31E138951DAAC029003E1283 /* AarathiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */; };
 		31E4B6AF1D8F06C2007C16CB /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6AE1D8F06C2007C16CB /* MainNavigationController.swift */; };
 		31E4B6B21D9030C8007C16CB /* PoojanamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */; };
 		31E4B6B41D903FB9007C16CB /* LanguageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */; };
@@ -63,6 +64,7 @@
 		3194C2071D89A6D0003766B8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
 		31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiViewController.swift; sourceTree = "<group>"; };
+		31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiTableViewCell.swift; sourceTree = "<group>"; };
 		31E4B6AE1D8F06C2007C16CB /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojanamInfo.swift; sourceTree = "<group>"; };
 		31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */,
 				319005481D9990830066EB49 /* PoojaTableViewCell.swift */,
+				31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */,
 				3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */,
 				31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */,
+				31E138951DAAC029003E1283 /* AarathiTableViewCell.swift in Sources */,
 				3184CE251D84979600812B60 /* StotramViewController.swift in Sources */,
 				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
 				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
