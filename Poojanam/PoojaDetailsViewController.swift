@@ -19,6 +19,7 @@ class PoojaDetailsViewController: UIViewController {
     @IBOutlet weak var poojaVidhiView: UIView!
     
     @IBOutlet weak var poojaAudioCtlrTopView: UIView!
+    @IBOutlet weak var poojaAudioTopProgressBar: UIProgressView!
     @IBOutlet weak var poojaAudioProgressLabel: UILabel!
     @IBOutlet weak var poojaAudioTopCtlrBtn: UIButton!
     

@@ -9,27 +9,49 @@
 import UIKit
 
 class AarathiDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var aarathiAudioCltrTopView: UIView!
+    
+    
+    @IBOutlet weak var aarathiAudioTopPlayBtn: UIButton!
+    @IBOutlet weak var aarathiAudioTopProgressLabel: UILabel!
+    @IBOutlet weak var aarathiAudioTopProgressBar: UIProgressView!
+    @IBOutlet weak var aarathiAudioCtlrBottomView: UIView!
+    @IBOutlet weak var aarathiAudioBottomProgressLabel: UILabel!
+    @IBOutlet weak var aarathiAudioProgressBar: UIProgressView!
+    @IBOutlet weak var aarathiAudioBottomPlayBtn: UIButton!
+    @IBOutlet weak var aarathiNameLabel: UILabel!
+    
+    var aarathiName : String = ""
+    var isAudioPlaying = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.title = aarathiName
+        swapAudioCtlrView(play: isAudioPlaying)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func aarathiAudioCtlrTopBtn(_ sender: AnyObject) {
+        swapAudioCtlrView(play: !isAudioPlaying)
     }
-    */
-
+    
+    @IBAction func aarathiAudioCtlrBottomBtn(_ sender: AnyObject) {
+        swapAudioCtlrView(play: !isAudioPlaying)
+    }
+    
+    func swapAudioCtlrView(play : Bool) {
+        isAudioPlaying = play
+        let audioCtlrImage = isAudioPlaying ? UIImage(named: "pause") : UIImage(named : "play")
+        aarathiAudioTopPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)
+        aarathiAudioCtlrBottomView.isHidden = !isAudioPlaying
+        aarathiAudioBottomPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)
+    }
+    
 }

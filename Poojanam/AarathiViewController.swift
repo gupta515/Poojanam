@@ -14,13 +14,10 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        print("aarathi view didload")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Aarathi view will appear")
         self.tabBarController?.navigationItem.title = "Aarathi"
     }
 
@@ -49,5 +46,9 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func aarathiPlay(sender:UIButton) {
         print(sender.tag)
+        if let aarathiDetailsView = storyboard?.instantiateViewController(withIdentifier: "AarathiDetailViewID")  as? AarathiDetailsViewController {
+            aarathiDetailsView.aarathiName = sender.currentTitle ?? "Test dummy Aarathi"
+            self.navigationController?.pushViewController(aarathiDetailsView, animated: true)
+        }
     }
 }
