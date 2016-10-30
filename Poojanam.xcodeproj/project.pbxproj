@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31009CBF1D80064C00CC9F7E /* TabBarController.swift */; };
 		3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311054291DA116E400EAEE25 /* Extensions.swift */; };
+		311F26AB1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */; };
+		311F26AD1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt in Resources */ = {isa = PBXBuildFile; fileRef = 311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */; };
+		316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
 		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
@@ -50,6 +53,9 @@
 		1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poojanam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31009CBF1D80064C00CC9F7E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		311054291DA116E400EAEE25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShriSatyanarayanVratKatha.txt; sourceTree = "<group>"; };
+		311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShriSatyanarayanVratSamagri.txt; sourceTree = "<group>"; };
+		316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramTableViewCell.swift; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
 		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,47 @@
 				0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		311F26A31DC26DA800CD0098 /* TextFiles */ = {
+			isa = PBXGroup;
+			children = (
+				311F26A41DC26F6000CD0098 /* Marati */,
+			);
+			name = TextFiles;
+			sourceTree = "<group>";
+		};
+		311F26A41DC26F6000CD0098 /* Marati */ = {
+			isa = PBXGroup;
+			children = (
+				311F26A51DC271B600CD0098 /* Pooja */,
+			);
+			name = Marati;
+			sourceTree = "<group>";
+		};
+		311F26A51DC271B600CD0098 /* Pooja */ = {
+			isa = PBXGroup;
+			children = (
+				311F26A71DC272AF00CD0098 /* Vidhi */,
+				311F26A61DC271C400CD0098 /* Samagri */,
+			);
+			name = Pooja;
+			sourceTree = "<group>";
+		};
+		311F26A61DC271C400CD0098 /* Samagri */ = {
+			isa = PBXGroup;
+			children = (
+				311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */,
+			);
+			name = Samagri;
+			sourceTree = "<group>";
+		};
+		311F26A71DC272AF00CD0098 /* Vidhi */ = {
+			isa = PBXGroup;
+			children = (
+				311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */,
+			);
+			name = Vidhi;
 			sourceTree = "<group>";
 		};
 		3184CE281D8524AA00812B60 /* DetailPages */ = {
@@ -185,6 +232,7 @@
 				31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */,
 				319005481D9990830066EB49 /* PoojaTableViewCell.swift */,
 				31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */,
+				316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -212,6 +260,7 @@
 		31FDC5991D7D3CC8008CAC1C /* Poojanam */ = {
 			isa = PBXGroup;
 			children = (
+				311F26A31DC26DA800CD0098 /* TextFiles */,
 				319005191D97B6730066EB49 /* Utility */,
 				31E4B6B51D903FE8007C16CB /* TableViewCells */,
 				31E4B6B01D8F06D0007C16CB /* AppControlFiles */,
@@ -326,6 +375,8 @@
 			files = (
 				3194C2081D89A6D0003766B8 /* .gitignore in Resources */,
 				31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */,
+				311F26AB1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt in Resources */,
+				311F26AD1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt in Resources */,
 				31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */,
 				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
 			);
@@ -448,6 +499,7 @@
 				3184CE251D84979600812B60 /* StotramViewController.swift in Sources */,
 				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
 				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
+				316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */,
 				3184CE2D1D852ED600812B60 /* AboutPoojaViewController.swift in Sources */,
 				3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */,
 				31E4B6B41D903FB9007C16CB /* LanguageViewCell.swift in Sources */,

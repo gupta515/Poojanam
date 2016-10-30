@@ -16,6 +16,9 @@ class AarathiDetailsViewController: UIViewController {
     @IBOutlet weak var aarathiAudioTopPlayBtn: UIButton!
     @IBOutlet weak var aarathiAudioTopProgressLabel: UILabel!
     @IBOutlet weak var aarathiAudioTopProgressBar: UIProgressView!
+    
+    @IBOutlet weak var aarathiTextView: UITextView!
+    
     @IBOutlet weak var aarathiAudioCtlrBottomView: UIView!
     @IBOutlet weak var aarathiAudioBottomProgressLabel: UILabel!
     @IBOutlet weak var aarathiAudioProgressBar: UIProgressView!
@@ -27,9 +30,9 @@ class AarathiDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view. 
         self.title = aarathiName
-        swapAudioCtlrView(play: isAudioPlaying)
+        swapAudioCtlrView(play: isAudioPlaying, setTextView : false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,16 +42,17 @@ class AarathiDetailsViewController: UIViewController {
     
     
     @IBAction func aarathiAudioCtlrTopBtn(_ sender: AnyObject) {
-        swapAudioCtlrView(play: !isAudioPlaying)
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView : true)
     }
     
     @IBAction func aarathiAudioCtlrBottomBtn(_ sender: AnyObject) {
-        swapAudioCtlrView(play: !isAudioPlaying)
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView : true)
     }
     
-    func swapAudioCtlrView(play : Bool) {
+    func swapAudioCtlrView(play : Bool, setTextView : Bool) {
         isAudioPlaying = play
         let audioCtlrImage = isAudioPlaying ? UIImage(named: "pause") : UIImage(named : "play")
+
         aarathiAudioTopPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)
         aarathiAudioCtlrBottomView.isHidden = !isAudioPlaying
         aarathiAudioBottomPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)

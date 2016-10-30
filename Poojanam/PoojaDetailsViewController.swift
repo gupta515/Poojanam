@@ -16,12 +16,15 @@ class PoojaDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var poojaSamagriView: UIView!
+    @IBOutlet weak var poojaSamagriTextView: UITextView!
     @IBOutlet weak var poojaVidhiView: UIView!
     
     @IBOutlet weak var poojaAudioCtlrTopView: UIView!
     @IBOutlet weak var poojaAudioTopProgressBar: UIProgressView!
     @IBOutlet weak var poojaAudioProgressLabel: UILabel!
     @IBOutlet weak var poojaAudioTopCtlrBtn: UIButton!
+    
+    @IBOutlet weak var poojaVidhiTextView: UITextView!
     
     @IBOutlet weak var poojaAudioCtlrBottomView: UIView!
     @IBOutlet weak var poojaAudioBottomProgressLabel: UILabel!
@@ -40,7 +43,28 @@ class PoojaDetailsViewController: UIViewController {
         self.navigationController?.removeNavigationBarBorder()
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
         swapActiveBtn(active: true)
-        swapAudioCtlrView(play: isAudioPlaying)
+        swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
+        //Set Text info 
+        if let poojaSamagriPath = Bundle.main.path(forResource: "ShriSatyanarayanVratSamagri", ofType: "txt") {
+            let contents: String
+            do {
+                contents = try String(contentsOfFile: poojaSamagriPath, encoding: .utf8)
+            } catch _ {
+                contents = ""
+            }
+            poojaSamagriTextView.text  = contents as String
+        }
+        
+        if let poojaVidhiPath = Bundle.main.path(forResource: "ShriSatyanarayanVratKatha", ofType: "txt") {
+        let contents: String
+        do {
+            contents = try String(contentsOfFile: poojaVidhiPath, encoding: .utf8)
+        } catch _ {
+            contents = ""
+        }
+        poojaVidhiTextView.text  = contents as String
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,11 +87,11 @@ class PoojaDetailsViewController: UIViewController {
     }
     
     @IBAction func poojaTopPlayBtn(_ sender: AnyObject) {
-        swapAudioCtlrView(play: !isAudioPlaying)
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView: true)
     }
     
     @IBAction func poojaBottomPlayBtn(_ sender: AnyObject) {
-        swapAudioCtlrView(play: !isAudioPlaying)
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView: true)
     }
     
     
@@ -83,9 +107,12 @@ class PoojaDetailsViewController: UIViewController {
         isPoojaSamagriActivated ? (poojaSamagriView.isHidden = false) : (poojaVidhiView.isHidden = false)
     }
     
-    func swapAudioCtlrView(play : Bool) {
+    func swapAudioCtlrView(play : Bool, setTextView : Bool) {
         isAudioPlaying = play
         let audioCtlrImage = isAudioPlaying ? UIImage(named: "pause") : UIImage(named : "play")
+        if setTextView{
+            poojaVidhiTextView.frame.size.height = poojaVidhiView.frame.height - (isAudioPlaying ? 142 : 72)
+        }
         poojaAudioTopCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
         poojaAudioCtlrBottomView.isHidden = !isAudioPlaying
         poojaAudioBottomCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
