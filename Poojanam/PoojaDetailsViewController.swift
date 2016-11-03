@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class PoojaDetailsViewController: UIViewController {
     
     @IBOutlet weak var swapButtonOptionsView: UIView!
     @IBOutlet weak var poojaSamagriBtn: UIButton!
     @IBOutlet weak var poojaVidhiBtn: UIButton!
-    
     
     @IBOutlet weak var poojaSamagriView: UIView!
     @IBOutlet weak var poojaSamagriTextView: UITextView!
@@ -36,6 +36,8 @@ class PoojaDetailsViewController: UIViewController {
     var isPoojaSamagriActivated : Bool = true
     var isAudioPlaying = false
     
+    let storage = FIRStorage.storage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -44,27 +46,29 @@ class PoojaDetailsViewController: UIViewController {
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
         swapActiveBtn(active: true)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
-        //Set Text info 
-        if let poojaSamagriPath = Bundle.main.path(forResource: "ShriSatyanarayanVratSamagri", ofType: "txt") {
-            let contents: String
-            do {
-                contents = try String(contentsOfFile: poojaSamagriPath, encoding: .utf8)
-            } catch _ {
-                contents = ""
-            }
-            poojaSamagriTextView.text  = contents as String
-        }
         
-        if let poojaVidhiPath = Bundle.main.path(forResource: "ShriSatyanarayanVratKatha", ofType: "txt") {
-        let contents: String
-        do {
-            contents = try String(contentsOfFile: poojaVidhiPath, encoding: .utf8)
-        } catch _ {
-            contents = ""
-        }
-        poojaVidhiTextView.text  = contents as String
-        }
+        //Set Text info
+        poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: "marathi_satyanarayan_pooja_vidhi", fileExtension: "rtf")
+        poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: "marathi_satyanarayan_pooja_samgri", fileExtension: "rtf")
         
+        
+        let audioM4A = Bundle.main.path(forResource: "satyanarayanpooja", ofType: "m4a")
+        let audioMP3 = Bundle.main.path(forResource: "SatyanarayanPooja", ofType: "mp3")
+        print("\(audioM4A) \n \(audioMP3)")
+        
+        let audioMP3URL = Bundle.main.url(forResource: "satyanarayanpooja", withExtension: "m4a")
+        let audioM4AURL = Bundle.main.url(forResource: "SatyanarayanPooja", withExtension: "mp3")
+        print("\(audioM4AURL) \n \(audioMP3URL)")
+        
+        let testAudioFile = Bundle.main.url(forResource: "Maruti Stotra", withExtension: "m4a")
+        print("\(testAudioFile)")
+        
+        let poojaVidhiFBRef = storage.reference(forURL: satyanarayanapoojavidhi)
+        let localUrl = URL(fileURLWithPath: "audio/marati/poojavidhi/satyanarayanapoojavidhi.m4a")
+        //poojaVidhiFBRef.write(toFile: localUrl)
+        
+        let downloadAudioFile = Bundle.main.url(forResource: "satyanarayanapoojavidhi", withExtension:".m4a")
+        print("download \(downloadAudioFile)")
     }
     
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@ target 'Poojanam' do
 
   # Pods for Poojanam
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
   
 #  target 'PoojanamTests' do
 #    inherit! :search_paths
