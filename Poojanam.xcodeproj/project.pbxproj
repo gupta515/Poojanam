@@ -9,8 +9,19 @@
 /* Begin PBXBuildFile section */
 		31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31009CBF1D80064C00CC9F7E /* TabBarController.swift */; };
 		3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311054291DA116E400EAEE25 /* Extensions.swift */; };
-		311F26AB1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */; };
-		311F26AD1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt in Resources */ = {isa = PBXBuildFile; fileRef = 311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */; };
+		313B25C51DD60E9800A117FE /* marathi_mangalagauri_pooja_about.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25C41DD60E9800A117FE /* marathi_mangalagauri_pooja_about.rtf */; };
+		313B25C71DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25C61DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf */; };
+		313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25C81DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf */; };
+		313B25CB1DD60F7400A117FE /* marathi_mangalagauri_pooja_samgri.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25CA1DD60F7400A117FE /* marathi_mangalagauri_pooja_samgri.rtf */; };
+		313B25CD1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */; };
+		313B25D11DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25CF1DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf */; };
+		313B25D21DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25D01DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf */; };
+		314E7DEE1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */; };
+		31519AF11DCA56EC0090F97C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31519AF01DCA56EC0090F97C /* Helper.swift */; };
+		31519AF31DCA63810090F97C /* marathi_satyanarayan_pooja_samgri.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samgri.rtf */; };
+		31519AF51DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */; };
+		3158E69F1DCA672500A28374 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3158E69E1DCA672500A28374 /* .gitignore */; };
+		315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 315C19C31DC9B601002A7188 /* GoogleService-Info.plist */; };
 		316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
@@ -23,7 +34,8 @@
 		3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE351D853AC800812B60 /* FeedbackViewController.swift */; };
 		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
 		319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319005481D9990830066EB49 /* PoojaTableViewCell.swift */; };
-		3194C2081D89A6D0003766B8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3194C2071D89A6D0003766B8 /* .gitignore */; };
+		319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319B8B2C1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf */; };
+		319B8B2F1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319B8B2E1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf */; };
 		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
 		31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */; };
 		31E138951DAAC029003E1283 /* AarathiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */; };
@@ -35,6 +47,7 @@
 		31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */; };
 		31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */; };
 		31FDC5B21D7D3CC9008CAC1C /* PoojanamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */; };
+		31FF1BAB1DC7CF9C0041312D /* Maruti Stotra.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 31FF1BAA1DC7CF9C0041312D /* Maruti Stotra.m4a */; };
 		DDD165BECAC6245F2B77578A /* Pods_Poojanam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +66,19 @@
 		1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poojanam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31009CBF1D80064C00CC9F7E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		311054291DA116E400EAEE25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShriSatyanarayanVratKatha.txt; sourceTree = "<group>"; };
-		311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShriSatyanarayanVratSamagri.txt; sourceTree = "<group>"; };
+		313B25C41DD60E9800A117FE /* marathi_mangalagauri_pooja_about.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_about.rtf; sourceTree = "<group>"; };
+		313B25C61DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_benefits.rtf; sourceTree = "<group>"; };
+		313B25C81DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_vidhi.rtf; sourceTree = "<group>"; };
+		313B25CA1DD60F7400A117FE /* marathi_mangalagauri_pooja_samgri.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_samgri.rtf; sourceTree = "<group>"; };
+		313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_mangalagauri_pooja.m4a; sourceTree = "<group>"; };
+		313B25CF1DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansDevanagari-Bold.ttf"; sourceTree = "<group>"; };
+		313B25D01DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansDevanagari-Regular.ttf"; sourceTree = "<group>"; };
+		314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_satyanarayan_pooja.m4a; sourceTree = "<group>"; };
+		31519AF01DCA56EC0090F97C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samgri.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_samgri.rtf; sourceTree = "<group>"; };
+		31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_vidhi.rtf; sourceTree = "<group>"; };
+		3158E69E1DCA672500A28374 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		315C19C31DC9B601002A7188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramTableViewCell.swift; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +91,8 @@
 		3184CE351D853AC800812B60 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		319005481D9990830066EB49 /* PoojaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaTableViewCell.swift; sourceTree = "<group>"; };
-		3194C2071D89A6D0003766B8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		319B8B2C1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_benefits.rtf; sourceTree = "<group>"; };
+		319B8B2E1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_about.rtf; sourceTree = "<group>"; };
 		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
 		31D0868D1D8083A800D59FB7 /* AarathiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiViewController.swift; sourceTree = "<group>"; };
 		31E138941DAAC029003E1283 /* AarathiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AarathiTableViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +108,7 @@
 		31FDC5AD1D7D3CC9008CAC1C /* PoojanamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoojanamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FDC5B11D7D3CC9008CAC1C /* PoojanamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojanamTests.swift; sourceTree = "<group>"; };
 		31FDC5B31D7D3CC9008CAC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31FF1BAA1DC7CF9C0041312D /* Maruti Stotra.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maruti Stotra.m4a"; sourceTree = "<group>"; };
 		5DD0501A9AF236AD0F495CD1 /* Pods-Poojanam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.release.xcconfig"; sourceTree = "<group>"; };
 		73EBC0F00D2562400DF51FC3 /* Pods-Poojanam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poojanam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +169,8 @@
 		311F26A51DC271B600CD0098 /* Pooja */ = {
 			isa = PBXGroup;
 			children = (
+				319B8B291DCE3F2400B7314D /* about */,
+				3131A3F41DCC2ED000BEBF1C /* benefits */,
 				311F26A71DC272AF00CD0098 /* Vidhi */,
 				311F26A61DC271C400CD0098 /* Samagri */,
 			);
@@ -152,7 +180,8 @@
 		311F26A61DC271C400CD0098 /* Samagri */ = {
 			isa = PBXGroup;
 			children = (
-				311F26AC1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt */,
+				31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samgri.rtf */,
+				313B25CA1DD60F7400A117FE /* marathi_mangalagauri_pooja_samgri.rtf */,
 			);
 			name = Samagri;
 			sourceTree = "<group>";
@@ -160,9 +189,28 @@
 		311F26A71DC272AF00CD0098 /* Vidhi */ = {
 			isa = PBXGroup;
 			children = (
-				311F26AA1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt */,
+				31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */,
+				313B25C81DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf */,
 			);
 			name = Vidhi;
+			sourceTree = "<group>";
+		};
+		3131A3F41DCC2ED000BEBF1C /* benefits */ = {
+			isa = PBXGroup;
+			children = (
+				319B8B2C1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf */,
+				313B25C61DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf */,
+			);
+			name = benefits;
+			sourceTree = "<group>";
+		};
+		313B25CE1DD63BBF00A117FE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				313B25CF1DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf */,
+				313B25D01DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		3184CE281D8524AA00812B60 /* DetailPages */ = {
@@ -200,8 +248,18 @@
 			children = (
 				31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */,
 				311054291DA116E400EAEE25 /* Extensions.swift */,
+				31519AF01DCA56EC0090F97C /* Helper.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		319B8B291DCE3F2400B7314D /* about */ = {
+			isa = PBXGroup;
+			children = (
+				313B25C41DD60E9800A117FE /* marathi_mangalagauri_pooja_about.rtf */,
+				319B8B2E1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf */,
+			);
+			name = about;
 			sourceTree = "<group>";
 		};
 		31D0868A1D807EE400D59FB7 /* TabBarViewControllers */ = {
@@ -260,6 +318,8 @@
 		31FDC5991D7D3CC8008CAC1C /* Poojanam */ = {
 			isa = PBXGroup;
 			children = (
+				313B25CE1DD63BBF00A117FE /* Fonts */,
+				31FF1BA01DC7C89D0041312D /* AudioFiles */,
 				311F26A31DC26DA800CD0098 /* TextFiles */,
 				319005191D97B6730066EB49 /* Utility */,
 				31E4B6B51D903FE8007C16CB /* TableViewCells */,
@@ -269,8 +329,9 @@
 				31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */,
 				31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */,
 				31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */,
+				315C19C31DC9B601002A7188 /* GoogleService-Info.plist */,
 				31FDC5A81D7D3CC9008CAC1C /* Info.plist */,
-				3194C2071D89A6D0003766B8 /* .gitignore */,
+				3158E69E1DCA672500A28374 /* .gitignore */,
 			);
 			path = Poojanam;
 			sourceTree = "<group>";
@@ -282,6 +343,16 @@
 				31FDC5B31D7D3CC9008CAC1C /* Info.plist */,
 			);
 			path = PoojanamTests;
+			sourceTree = "<group>";
+		};
+		31FF1BA01DC7C89D0041312D /* AudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				31FF1BAA1DC7CF9C0041312D /* Maruti Stotra.m4a */,
+				314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */,
+				313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */,
+			);
+			name = AudioFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,12 +382,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31FDC5B91D7D3CC9008CAC1C /* Build configuration list for PBXNativeTarget "PoojanamTests" */;
 			buildPhases = (
-				D25401EC9A26B7259AFFA35D /* [CP] Check Pods Manifest.lock */,
 				31FDC5A91D7D3CC9008CAC1C /* Sources */,
 				31FDC5AA1D7D3CC9008CAC1C /* Frameworks */,
 				31FDC5AB1D7D3CC9008CAC1C /* Resources */,
-				C68277EC26940B26C3BFD8A7 /* [CP] Embed Pods Frameworks */,
-				414F2C0C2A956AD21237672F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,7 +408,8 @@
 				TargetAttributes = {
 					31FDC5961D7D3CC8008CAC1C = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = B69YG3733Z;
+						ProvisioningStyle = Automatic;
 					};
 					31FDC5AC1D7D3CC9008CAC1C = {
 						CreatedOnToolsVersion = 8.0;
@@ -373,12 +442,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3194C2081D89A6D0003766B8 /* .gitignore in Resources */,
+				319B8B2F1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf in Resources */,
+				31519AF31DCA63810090F97C /* marathi_satyanarayan_pooja_samgri.rtf in Resources */,
+				31519AF51DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf in Resources */,
+				313B25CB1DD60F7400A117FE /* marathi_mangalagauri_pooja_samgri.rtf in Resources */,
+				313B25D21DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf in Resources */,
+				313B25CD1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a in Resources */,
+				319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */,
+				315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */,
+				313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */,
 				31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */,
-				311F26AB1DC27BAB00CD0098 /* ShriSatyanarayanVratKatha.txt in Resources */,
-				311F26AD1DC3059300CD0098 /* ShriSatyanarayanVratSamagri.txt in Resources */,
+				313B25C71DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf in Resources */,
+				313B25C51DD60E9800A117FE /* marathi_mangalagauri_pooja_about.rtf in Resources */,
 				31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */,
 				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
+				3158E69F1DCA672500A28374 /* .gitignore in Resources */,
+				31FF1BAB1DC7CF9C0041312D /* Maruti Stotra.m4a in Resources */,
+				314E7DEE1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a in Resources */,
+				313B25D11DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,21 +473,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		414F2C0C2A956AD21237672F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4D57780F33F91FDDD15AF989 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6B3BEF95A803EABDF53D0AD4 /* [CP] Embed Pods Frameworks */ = {
@@ -452,36 +518,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Poojanam/Pods-Poojanam-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C68277EC26940B26C3BFD8A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoojanamTests/Pods-PoojanamTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D25401EC9A26B7259AFFA35D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -500,6 +536,7 @@
 				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
 				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
 				316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */,
+				31519AF11DCA56EC0090F97C /* Helper.swift in Sources */,
 				3184CE2D1D852ED600812B60 /* AboutPoojaViewController.swift in Sources */,
 				3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */,
 				31E4B6B41D903FB9007C16CB /* LanguageViewCell.swift in Sources */,
@@ -650,12 +687,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Poojanam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gupta.Poojanam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsirius.Poojanam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -666,12 +706,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mayur Pathak (CWCVZL7543)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Poojanam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gupta.Poojanam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsirius.Poojanam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -27,12 +27,18 @@ class AboutPoojaViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = poojaName
-        poojaInfoNameLabel.text = "About \(poojaName)"
-        
-        poojaInfoDateView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
-        poojaInfoBeginView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
-        poojaInfoEndView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
+        if let poojaData = poojaDataDicts[poojaName] {
+            self.title = poojaName
+            poojaInfoNameLabel.text = "About \(poojaName)"
+            
+            poojaInfoDateView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
+            poojaInfoBeginView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
+            poojaInfoEndView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
+            
+            poojaAboutInfoText.attributedText = TextFiles().getTextFromFile(fileName: poojaData["about"]!, fileExtension: "rtf")
+            poojaInfoDescriptionView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["benefits"]!, fileExtension: "rtf")
+            poojaInfoDurationLabel.text = poojaData["duration"]!
+        }
         
         poojaAboutInfoText.setTextViewHeightAsPerContent()
         poojaInfoDescriptionView.setTextViewHeightAsPerContent()
@@ -51,7 +57,7 @@ class AboutPoojaViewController: UITableViewController {
         case 1:
             return poojaAboutInfoText.frame.height
         case 2:
-            return 145
+            return 0
         case 3:
             return 65
         case 4:

@@ -8,8 +8,9 @@
 
 import UIKit
 import FirebaseStorage
+import AVFoundation
 
-class PoojaDetailsViewController: UIViewController {
+class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var swapButtonOptionsView: UIView!
     @IBOutlet weak var poojaSamagriBtn: UIButton!
@@ -34,41 +35,58 @@ class PoojaDetailsViewController: UIViewController {
     
     var poojaName : String = ""
     var isPoojaSamagriActivated : Bool = true
+    var audioPlayer = AVAudioPlayer()
     var isAudioPlaying = false
+    var audioDuration : Float64 = 0.0
+    var updater : CADisplayLink! = nil
     
     let storage = FIRStorage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = poojaName
         self.navigationController?.removeNavigationBarBorder()
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
         swapActiveBtn(active: true)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
         
-        //Set Text info
-        poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: "marathi_satyanarayan_pooja_vidhi", fileExtension: "rtf")
-        poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: "marathi_satyanarayan_pooja_samgri", fileExtension: "rtf")
-        
-        
-        let audioM4A = Bundle.main.path(forResource: "satyanarayanpooja", ofType: "m4a")
-        let audioMP3 = Bundle.main.path(forResource: "SatyanarayanPooja", ofType: "mp3")
-        print("\(audioM4A) \n \(audioMP3)")
-        
-        let audioMP3URL = Bundle.main.url(forResource: "satyanarayanpooja", withExtension: "m4a")
-        let audioM4AURL = Bundle.main.url(forResource: "SatyanarayanPooja", withExtension: "mp3")
-        print("\(audioM4AURL) \n \(audioMP3URL)")
-        
-        let testAudioFile = Bundle.main.url(forResource: "Maruti Stotra", withExtension: "m4a")
-        print("\(testAudioFile)")
-        
-        let poojaVidhiFBRef = storage.reference(forURL: satyanarayanapoojavidhi)
-        let localUrl = URL(fileURLWithPath: "audio/marati/poojavidhi/satyanarayanapoojavidhi.m4a")
-        //poojaVidhiFBRef.write(toFile: localUrl)
-        
-        let downloadAudioFile = Bundle.main.url(forResource: "satyanarayanapoojavidhi", withExtension:".m4a")
-        print("download \(downloadAudioFile)")
+        if let poojaData = poojaDataDicts[poojaName] {
+            self.title = poojaData["name"]
+            poojaAudioLabel.text = "\(poojaData["name"] ?? "") audio"
+            //Set Text info
+            poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["vidhi"]!, fileExtension: "rtf")
+            poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)
+            poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["samagri"]!, fileExtension: "rtf")
+            
+            if let audioPathUrl = Bundle.main.url(forResource: poojaData["audio"], withExtension:".m4a") {
+                print("play audio path \(audioPathUrl)")
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: audioPathUrl)
+                    audioDuration = getTotalAudioDuration(audioPathUrl: audioPathUrl)
+                    
+                    updater = CADisplayLink(target: self, selector: #selector(self.trackAudio))
+                    updater.frameInterval = 1
+                    updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+                    
+                    print("audio duration \(getTotalAudioDuration(audioPathUrl: audioPathUrl))")
+                } catch {
+                    print("Couldn't set audio player")
+                }
+            }
+        }
+    }
+    
+    func trackAudio() {
+        if isAudioPlaying {
+            let currentTime = Int(audioPlayer.currentTime)
+            let currentTimeStr  = String(format: "%02d", currentTime/60) + ":" + String(format: "%02d", currentTime%60)
+            print("current time \(currentTime) & currentTimeStr \(currentTimeStr)")
+            poojaAudioProgressLabel.text = currentTimeStr
+            poojaAudioBottomProgressLabel.text = currentTimeStr
+            
+            poojaAudioTopProgressBar.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
+            poojaAudioBottomProgressBar.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,12 +110,24 @@ class PoojaDetailsViewController: UIViewController {
     
     @IBAction func poojaTopPlayBtn(_ sender: AnyObject) {
         swapAudioCtlrView(play: !isAudioPlaying, setTextView: true)
+        
+        if isAudioPlaying {
+            audioPlayer.play()
+        } else {
+            audioPlayer.pause()
+        }
+        
     }
     
     @IBAction func poojaBottomPlayBtn(_ sender: AnyObject) {
         swapAudioCtlrView(play: !isAudioPlaying, setTextView: true)
+        
+        if isAudioPlaying {
+            audioPlayer.play()
+        } else {
+            audioPlayer.pause()
+        }
     }
-    
     
     //Set View functions
     func swapActiveBtn(active : Bool) {
@@ -120,5 +150,9 @@ class PoojaDetailsViewController: UIViewController {
         poojaAudioTopCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
         poojaAudioCtlrBottomView.isHidden = !isAudioPlaying
         poojaAudioBottomCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
+    }
+    
+    func getTotalAudioDuration(audioPathUrl: URL) -> Float64 {
+        return CMTimeGetSeconds(AVURLAsset(url: audioPathUrl).duration)
     }
 }

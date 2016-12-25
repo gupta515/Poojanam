@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINavigationController{
+extension UINavigationController {
     public func removeNavigationBarBorder(){
         self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationBar.shadowImage = UIImage()
@@ -37,7 +37,7 @@ extension UIButton {
     }
 }
 
-extension UIView{
+extension UIView {
     public func setViewRoundCorner(borderWidth : CGFloat = 0, cornerRadius : CGFloat = 0){
         self.layer.borderWidth = borderWidth
         self.layer.cornerRadius = cornerRadius
@@ -50,11 +50,12 @@ extension UIView{
     }
 }
 
-extension UITextView{
-    public func setTextViewHeightAsPerContent(){
+extension UITextView {
+    public func setTextViewHeightAsPerContent() {
         let contentSize = self.sizeThatFits(self.bounds.size)
         var frame = self.frame
         frame.size.height = contentSize.height
         self.frame = frame
     }
 }
+

@@ -14,12 +14,14 @@ class LanguagesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet var languagesTableView : UITableView?
     
     var selectedLanguage = ""
+    var isChangeLanguage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage") {
             self.title = "Change Language"
+            isChangeLanguage = true
             selectedLanguage = selectedLang
         } else {
             self.title = "Choose Language"
@@ -54,6 +56,10 @@ class LanguagesViewController: UIViewController, UITableViewDelegate, UITableVie
             UserDefaults.standard.set(userChoosenLanguage, forKey: "selectedLanguage")
             selectedLanguage = userChoosenLanguage
             languagesTableView?.reloadData()
+            
+            if !isChangeLanguage, let setTabBarCtlr = storyboard!.instantiateViewController(withIdentifier: "TabBarView") as? TabBarController {
+                self.navigationController?.pushViewController(setTabBarCtlr, animated: false)
+            }
         }
     }
 }
