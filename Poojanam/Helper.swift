@@ -22,3 +22,12 @@ class TextFiles {
         return nil
     }
 }
+
+class Validator {
+    func isEmpty(string: String?) -> Bool {
+        guard let str = string else {
+            return true
+        }
+        return str.trimmingCharacters(in: .whitespacesAndNewlines).characters.count <= 0
+    }
+}

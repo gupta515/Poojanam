@@ -34,6 +34,7 @@
 		3184CE361D853AC800812B60 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE351D853AC800812B60 /* FeedbackViewController.swift */; };
 		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
 		319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319005481D9990830066EB49 /* PoojaTableViewCell.swift */; };
+		319691601E0F986D00AF093C /* ImageViewRoundCornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3196915F1E0F986D00AF093C /* ImageViewRoundCornered.swift */; };
 		319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319B8B2C1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf */; };
 		319B8B2F1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319B8B2E1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf */; };
 		31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0868B1D80836100D59FB7 /* PoojaViewController.swift */; };
@@ -91,6 +92,7 @@
 		3184CE351D853AC800812B60 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		319005481D9990830066EB49 /* PoojaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaTableViewCell.swift; sourceTree = "<group>"; };
+		3196915F1E0F986D00AF093C /* ImageViewRoundCornered.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewRoundCornered.swift; sourceTree = "<group>"; };
 		319B8B2C1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_benefits.rtf; sourceTree = "<group>"; };
 		319B8B2E1DCE40FF00B7314D /* marathi_satyanarayan_pooja_about.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_about.rtf; sourceTree = "<group>"; };
 		31D0868B1D80836100D59FB7 /* PoojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
@@ -246,11 +248,20 @@
 		319005191D97B6730066EB49 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3196915E1E0F985600AF093C /* HelperClasses */,
 				31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */,
 				311054291DA116E400EAEE25 /* Extensions.swift */,
 				31519AF01DCA56EC0090F97C /* Helper.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		3196915E1E0F985600AF093C /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3196915F1E0F986D00AF093C /* ImageViewRoundCornered.swift */,
+			);
+			name = HelperClasses;
 			sourceTree = "<group>";
 		};
 		319B8B291DCE3F2400B7314D /* about */ = {
@@ -533,6 +544,7 @@
 				31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */,
 				31E138951DAAC029003E1283 /* AarathiTableViewCell.swift in Sources */,
 				3184CE251D84979600812B60 /* StotramViewController.swift in Sources */,
+				319691601E0F986D00AF093C /* ImageViewRoundCornered.swift in Sources */,
 				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
 				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
 				316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */,

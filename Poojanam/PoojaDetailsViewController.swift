@@ -59,7 +59,6 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
             poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["samagri"]!, fileExtension: "rtf")
             
             if let audioPathUrl = Bundle.main.url(forResource: poojaData["audio"], withExtension:".m4a") {
-                print("play audio path \(audioPathUrl)")
                 do {
                     audioPlayer = try AVAudioPlayer(contentsOf: audioPathUrl)
                     audioDuration = getTotalAudioDuration(audioPathUrl: audioPathUrl)

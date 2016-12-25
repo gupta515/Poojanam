@@ -10,29 +10,36 @@ import UIKit
 
 class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //Mark:- IBOutlets
     @IBOutlet weak var upcomingPoojaImage: UIImageView!
     @IBOutlet weak var upcomingPoojaBtn: UIButton!
     @IBOutlet var poojaTableView : UITableView?
     
+    //Mark:- Properties
     var langPoojasDict : [String:[String:String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        upcomingPoojaImage.layer.cornerRadius = upcomingPoojaImage.frame.size.width/2
-        upcomingPoojaImage.clipsToBounds = true
-        upcomingPoojaBtn.setTitle("Satyanarayana Vrath", for: UIControlState.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Pooja"
-        print("pooja view will appear")
         if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage") {
             if let reqPoojalist = allPoojas[selectedLang.lowercased()] {
                 langPoojasDict = reqPoojalist
             }
         }
         poojaTableView?.reloadData()
+        
+        let upcomingPoojaKey = getPoojaKey(index: 0)
+        guard !upcomingPoojaKey.isEmpty, let upcomingPoojaInfo = poojaDataDicts[upcomingPoojaKey] else {
+            return
+        }
+        
+        upcomingPoojaBtn.setTitle(upcomingPoojaInfo["name"], for: UIControlState.normal)
+        upcomingPoojaImage.image = UIImage(named: upcomingPoojaInfo["image"]!)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,13 +47,16 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func upcomingPoojaDetailBtn(_ sender: AnyObject) {
-        moveToPoojaDetailView(poojaName: "Satyanarayana Pooja")
+        if let upcomingPoojaName = upcomingPoojaBtn.title(for: UIControlState.normal) {
+            moveToPoojaDetailView(poojaName: upcomingPoojaName)
+        }
     }
     
     @IBAction func upcomingPoojaInfoBtn(_ sender: AnyObject) {
-        moveToPoojaInfoView(poojaName: "Satyanarayana Pooja")
+        if let upcomingPoojaName = upcomingPoojaBtn.title(for: UIControlState.normal) {
+            moveToPoojaInfoView(poojaName: upcomingPoojaName)
+        }
     }
     
     //Pooja TableView Delegates
