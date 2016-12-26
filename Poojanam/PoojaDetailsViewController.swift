@@ -66,8 +66,6 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
                     updater = CADisplayLink(target: self, selector: #selector(self.trackAudio))
                     updater.frameInterval = 1
                     updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
-                    
-                    print("audio duration \(getTotalAudioDuration(audioPathUrl: audioPathUrl))")
                 } catch {
                     print("Couldn't set audio player")
                 }
@@ -75,11 +73,15 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        audioPlayer.stop()
+    }
+    
     func trackAudio() {
         if isAudioPlaying {
             let currentTime = Int(audioPlayer.currentTime)
             let currentTimeStr  = String(format: "%02d", currentTime/60) + ":" + String(format: "%02d", currentTime%60)
-            print("current time \(currentTime) & currentTimeStr \(currentTimeStr)")
             poojaAudioProgressLabel.text = currentTimeStr
             poojaAudioBottomProgressLabel.text = currentTimeStr
             

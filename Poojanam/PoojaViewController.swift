@@ -16,7 +16,7 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var poojaTableView : UITableView?
     
     //Mark:- Properties
-    var langPoojasDict : [String:[String:String]]?
+    var langPoojaSortedKeys : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +25,11 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Pooja"
-        if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage") {
-            if let reqPoojalist = allPoojas[selectedLang.lowercased()] {
-                langPoojasDict = reqPoojalist
-            }
-        }
+
+        langPoojaSortedKeys = getSortedPoojaNames()
         poojaTableView?.reloadData()
         
-        let upcomingPoojaKey = getPoojaKey(index: 0)
+        let upcomingPoojaKey = langPoojaSortedKeys[0]
         guard !upcomingPoojaKey.isEmpty, let upcomingPoojaInfo = poojaDataDicts[upcomingPoojaKey] else {
             return
         }
@@ -61,11 +58,12 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Pooja TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return langPoojasDict?.keys.count ?? 0
+        return langPoojaSortedKeys.count
     }
     
     func getPoojaKey(index: Int) -> String {
-        if let lazyPoojaKeys = langPoojasDict?.keys {
+        if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let reqPoojaDict = allPoojas[selectedLang.lowercased()] {
+            let lazyPoojaKeys = reqPoojaDict.keys
             let poojaKeysList = Array(lazyPoojaKeys)
             let poojaKey = poojaKeysList[index]
             return poojaKey
@@ -73,10 +71,19 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return ""
     }
     
+    func getSortedPoojaNames() -> [String] {
+        if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let reqPoojaDict = allPoojas[selectedLang.lowercased()]{
+            let lazyPoojaKeys = reqPoojaDict.keys
+            let poojaKeysList = Array(lazyPoojaKeys)
+            return poojaKeysList.sorted()
+        }
+        return []
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let poojaCell = tableView.dequeueReusableCell(withIdentifier: "PoojaCellID") as! PoojaTableViewCell
         //Pooja Info setup
-        let cellPoojaKey = getPoojaKey(index: indexPath.row)
+        let cellPoojaKey = langPoojaSortedKeys[indexPath.row]
         if let cellPoojaData = poojaDataDicts[cellPoojaKey] {
             poojaCell.poojaNameBtn.setTitle(cellPoojaData["name"], for: UIControlState.normal)
             //Pooja Detail setup
@@ -100,7 +107,7 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func moveToPoojaDetailView(poojaName : String){
-        if let poojaDetailsView = storyboard?.instantiateViewController(withIdentifier: "PoojaDetailViewID")  as? PoojaDetailsViewController {
+        if let poojaDetailsView = storyboard?.instantiateViewController(withIdentifier: "PoojaDetailViewID") as? PoojaDetailsViewController {
             poojaDetailsView.poojaName = poojaName
             self.navigationController?.pushViewController(poojaDetailsView, animated: true)
         }
@@ -108,7 +115,7 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Functions to move to Info View
     func poojaInfoBtn(sender:UIButton) {
-        moveToPoojaInfoView(poojaName: getPoojaKey(index: sender.tag))
+        moveToPoojaInfoView(poojaName: langPoojaSortedKeys[sender.tag])
     }
     
     func moveToPoojaInfoView(poojaName : String){
