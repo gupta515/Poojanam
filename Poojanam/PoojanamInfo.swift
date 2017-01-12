@@ -34,31 +34,31 @@ let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
 //MARK:- Stotram INFO
 
 //MARK:- Marathi Stotrams8
-let marathi_stotram_ganpati_atharvashisha : [String:String] = ["audio":"marathi_ganpati_athravshisha_stotram", "duration":"07mins"]
+let marathi_stotram_ganpati_atharvashisha : [String:String] = ["audio":"marathi_ganpati_athravshisha_stotram", "duration":"07 mins"]
 
-let marathi_stotram_ganpati_sukta : [String:String] = ["audio":"marathi_ganpati_sukta_stotram", "duration":"03mins"]
+let marathi_stotram_ganpati_sukta : [String:String] = ["audio":"marathi_ganpati_sukta_stotram", "duration":"03 mins"]
 
-let marathi_stotram_mahalakshmi_ashtakam : [String:String] = ["audio":"marathi_mahalakshmi_ashtakam_stotram", "duration":"03mins"]
+let marathi_stotram_mahalakshmi_ashtakam : [String:String] = ["audio":"marathi_mahalakshmi_ashtakam_stotram", "duration":"03 mins"]
 
-let marathi_stotram_maruti : [String:String] = ["audio":"marathi_maruti_stotram", "duration":"03mins"]
+let marathi_stotram_maruti : [String:String] = ["audio":"marathi_maruti_stotram", "duration":"03 mins"]
 
-let marathi_stotram_navgraha : [String:String] = ["audio":"marathi_navgraha_stotram", "duration":"03mins"]
+let marathi_stotram_navgraha : [String:String] = ["audio":"marathi_navgraha_stotram", "duration":"03 mins"]
 
-let marathi_stotram_purusha_sukta : [String:String] = ["audio":"marathi_purusha_sukta_stotram", "duration":"07mins"]
+let marathi_stotram_purusha_sukta : [String:String] = ["audio":"marathi_purusha_sukta_stotram", "duration":"07 mins"]
 
-let marathi_stotram_ramaraksha : [String:String] = ["audio":"marathi_ramaraksha_stotram", "duration":"06mins"]
+let marathi_stotram_ramaraksha : [String:String] = ["audio":"marathi_ramaraksha_stotram", "duration":"06 mins"]
 
-let marathi_stotram_rudra_adhyay : [String:String] = ["audio":"marathi_rudra_adhyay_stotram", "duration":"23mins"]
+let marathi_stotram_rudra_adhyay : [String:String] = ["audio":"marathi_rudra_adhyay_stotram", "duration":"23 mins"]
 
-let marathi_stotram_sankatnashan_ganesh : [String:String] = ["audio":"marathi_sankatnashan_ganesh_stotram", "duration":"02mins"]
+let marathi_stotram_sankatnashan_ganesh : [String:String] = ["audio":"marathi_sankatnashan_ganesh_stotram", "duration":"02 mins"]
 
-let marathi_stotram_shani : [String:String] = ["audio":"marathi_shani_stotram", "duration":"04mins"]
+let marathi_stotram_shani : [String:String] = ["audio":"marathi_shani_stotram", "duration":"04 mins"]
 
-let marathi_stotram_shri_stotram : [String:String] = ["audio":"marathi_shri_stotram", "duration":"08mins"]
+let marathi_stotram_shri_stotram : [String:String] = ["audio":"marathi_shri_stotram", "duration":"08 mins"]
 
-let marathi_stotram_sour : [String:String] = ["audio":"marathi_sour_stotram", "duration":"15mins"]
+let marathi_stotram_sour : [String:String] = ["audio":"marathi_sour_stotram", "duration":"15 mins"]
 
-let marathi_stotram_dattatreya_kashta_nashak : [String:String] = ["audio":"marathi_dattatreya_kashta_nashak_stotram", "duration":"03mins"]
+let marathi_stotram_dattatreya_kashta_nashak : [String:String] = ["audio":"marathi_dattatreya_kashta_nashak_stotram", "duration":"03 mins"]
 
 let marathi_stotrams : [String] = ["Ganpati Atharvashisha", "Ganpati Sukta", "Mahalakshmi Ashtak", "Maruti Stotram", "Navgraha Stotram", "Purusha Sukta", "Ramraksha Stotra", "Rudra Adhyay", "Sankat Nashan GaneshStotra", "Shani Stotra", "Shri Sukta", "Sour Sukta", "Dattatreya Kashta Nashak"]
 

@@ -29,7 +29,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var poojaAudioCtlrBottomView: UIView!
     @IBOutlet weak var poojaAudioBottomProgressLabel: UILabel!
-    @IBOutlet weak var poojaAudioBottomProgressBar: UIProgressView!
+    @IBOutlet weak var audioSlider: UISlider!
     @IBOutlet weak var poojaAudioLabel: UILabel!
     @IBOutlet weak var poojaAudioBottomCtlrBtn: UIButton!
     
@@ -86,7 +86,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
             poojaAudioBottomProgressLabel.text = currentTimeStr
             
             poojaAudioTopProgressBar.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
-            poojaAudioBottomProgressBar.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
+            audioSlider.value = Float(audioPlayer.currentTime/audioPlayer.duration)
         }
     }
     
@@ -153,7 +153,14 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         poojaAudioBottomCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
     }
     
+    @IBAction func valueAction(_ sender: UISlider) {
+        let currentAudioPosition = Float(audioPlayer.duration) * Float(sender.value)
+        audioPlayer.currentTime = TimeInterval(currentAudioPosition)
+    }
+    
     func getTotalAudioDuration(audioPathUrl: URL) -> Float64 {
         return CMTimeGetSeconds(AVURLAsset(url: audioPathUrl).duration)
     }
+    
+    
 }

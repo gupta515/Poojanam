@@ -29,13 +29,15 @@ class PoojaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         langPoojaSortedKeys = getSortedPoojaNames()
         poojaTableView?.reloadData()
         
-        let upcomingPoojaKey = langPoojaSortedKeys[0]
-        guard !upcomingPoojaKey.isEmpty, let upcomingPoojaInfo = poojaDataDicts[upcomingPoojaKey] else {
-            return
+        if langPoojaSortedKeys.count > 0 {
+            let upcomingPoojaKey = langPoojaSortedKeys[0]
+            guard !upcomingPoojaKey.isEmpty, let upcomingPoojaInfo = poojaDataDicts[upcomingPoojaKey] else {
+                return
+            }
+            
+            upcomingPoojaBtn.setTitle(upcomingPoojaInfo["name"], for: UIControlState.normal)
+            upcomingPoojaImage.image = UIImage(named: upcomingPoojaInfo["image"]!)
         }
-        
-        upcomingPoojaBtn.setTitle(upcomingPoojaInfo["name"], for: UIControlState.normal)
-        upcomingPoojaImage.image = UIImage(named: upcomingPoojaInfo["image"]!)
         
     }
     

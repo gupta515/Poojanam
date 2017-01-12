@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -316,6 +315,15 @@
                                                 <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-wK-8j6">
+                                                <rect key="frame" x="58" y="0.0" width="204" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="thumbTintColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="valueAction:" destination="HaA-NF-goE" eventType="valueChanged" id="rbi-vd-Ic7"/>
+                                                </connections>
+                                            </slider>
                                         </subviews>
                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -350,8 +358,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="GhK-Vn-xWH"/>
                     <connections>
+                        <outlet property="audioSlider" destination="UzF-wK-8j6" id="Otc-tY-pBh"/>
                         <outlet property="poojaAudioBottomCtlrBtn" destination="qYj-MP-70C" id="I6K-8v-ty1"/>
-                        <outlet property="poojaAudioBottomProgressBar" destination="IVI-J1-wBx" id="N0I-WJ-OPQ"/>
                         <outlet property="poojaAudioBottomProgressLabel" destination="gbE-Kz-7Ik" id="FUN-lc-wF2"/>
                         <outlet property="poojaAudioCtlrBottomView" destination="KQB-63-xXQ" id="woR-Rx-wWG"/>
                         <outlet property="poojaAudioCtlrTopView" destination="WrT-Rg-1yX" id="VEY-ZF-kII"/>
@@ -851,7 +859,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StotramCellID" id="Az2-tt-Wjc" customClass="StotramTableViewCell" customModule="Poojanam" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StotramCellID" id="Az2-tt-Wjc" customClass="StotramTableViewCell" customModule="Poojanam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Az2-tt-Wjc" id="ISv-2c-b5Y">
@@ -859,25 +867,30 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-BK-R2D">
-                                                    <rect key="frame" x="15" y="14.5" width="250" height="20.5"/>
+                                                    <rect key="frame" x="15" y="15" width="250" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="jY3-aw-bYM"/>
+                                                        <constraint firstAttribute="height" constant="20" id="x2i-3D-gUM"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8X-Dc-81O">
-                                                    <rect key="frame" x="16" y="37" width="100" height="15"/>
+                                                    <rect key="frame" x="15" y="37" width="100" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="8d8-fb-gC0"/>
-                                                        <constraint firstAttribute="height" constant="15" id="EI3-gJ-lf8"/>
+                                                        <constraint firstAttribute="height" constant="15" id="En5-ev-KUm"/>
+                                                        <constraint firstAttribute="width" constant="100" id="guI-B0-GKf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-PO-LWl">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWh-PO-LWl">
                                                     <rect key="frame" x="345" y="19" width="22" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="22" id="x9L-WD-v6I"/>
+                                                        <constraint firstAttribute="width" constant="22" id="9d4-Nk-Au5"/>
+                                                        <constraint firstAttribute="height" constant="22" id="KcH-N1-wRP"/>
                                                     </constraints>
                                                     <state key="normal" image="normalPause">
                                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -886,20 +899,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePt-F7-efH">
                                                     <rect key="frame" x="0.0" y="59" width="375" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="KQE-fb-Rh5"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="k8X-Dc-81O" firstAttribute="top" secondItem="bVs-BK-R2D" secondAttribute="bottom" constant="2" id="0NX-zb-eLO"/>
-                                                <constraint firstItem="gWh-PO-LWl" firstAttribute="centerY" secondItem="ISv-2c-b5Y" secondAttribute="centerY" id="3hg-Lf-93G"/>
-                                                <constraint firstAttribute="trailing" secondItem="ePt-F7-efH" secondAttribute="trailing" id="8UF-Kk-gaJ"/>
-                                                <constraint firstItem="ePt-F7-efH" firstAttribute="top" secondItem="k8X-Dc-81O" secondAttribute="bottom" constant="7" id="9Mm-Jb-vDi"/>
-                                                <constraint firstItem="ePt-F7-efH" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leading" id="AVD-q3-HQq"/>
-                                                <constraint firstItem="bVs-BK-R2D" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leadingMargin" constant="7" id="Az5-Vk-JYb"/>
-                                                <constraint firstItem="gWh-PO-LWl" firstAttribute="trailing" secondItem="ISv-2c-b5Y" secondAttribute="trailingMargin" id="ICa-mq-HQ1"/>
-                                                <constraint firstItem="k8X-Dc-81O" firstAttribute="bottom" secondItem="ISv-2c-b5Y" secondAttribute="bottomMargin" id="bwc-bS-Nsd"/>
-                                                <constraint firstItem="k8X-Dc-81O" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leadingMargin" constant="8" id="lPP-JR-lDl"/>
-                                                <constraint firstItem="gWh-PO-LWl" firstAttribute="leading" secondItem="bVs-BK-R2D" secondAttribute="trailing" constant="80" id="xem-41-htq"/>
-                                                <constraint firstAttribute="bottom" secondItem="ePt-F7-efH" secondAttribute="bottom" id="zp7-wR-2vt"/>
+                                                <constraint firstAttribute="trailing" secondItem="gWh-PO-LWl" secondAttribute="trailing" constant="8" id="1F0-cW-GKH"/>
+                                                <constraint firstItem="ePt-F7-efH" firstAttribute="top" secondItem="k8X-Dc-81O" secondAttribute="bottom" constant="7" id="B59-rJ-Rhh"/>
+                                                <constraint firstItem="k8X-Dc-81O" firstAttribute="top" secondItem="bVs-BK-R2D" secondAttribute="bottom" constant="2" id="Bfi-yZ-jpQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="ePt-F7-efH" secondAttribute="bottom" id="Jfp-if-3Z5"/>
+                                                <constraint firstItem="bVs-BK-R2D" firstAttribute="top" secondItem="ISv-2c-b5Y" secondAttribute="top" constant="15" id="Ojz-9m-LDE"/>
+                                                <constraint firstItem="bVs-BK-R2D" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leading" constant="15" id="RUu-Ym-6oZ"/>
+                                                <constraint firstItem="ePt-F7-efH" firstAttribute="centerX" secondItem="ISv-2c-b5Y" secondAttribute="centerX" id="gi5-pu-1Ur"/>
+                                                <constraint firstAttribute="trailing" secondItem="ePt-F7-efH" secondAttribute="trailing" id="h2R-vL-YGd"/>
+                                                <constraint firstItem="k8X-Dc-81O" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leading" constant="15" id="ktp-i9-Oel"/>
+                                                <constraint firstItem="gWh-PO-LWl" firstAttribute="centerY" secondItem="ISv-2c-b5Y" secondAttribute="centerY" id="mI2-9n-d3g"/>
+                                                <constraint firstItem="ePt-F7-efH" firstAttribute="leading" secondItem="ISv-2c-b5Y" secondAttribute="leading" id="vJy-gh-o0a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -925,15 +941,8 @@
                                         <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-8y-b8g">
-                                        <rect key="frame" x="60" y="15" width="200" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="progressTintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COE-gc-6kQ">
-                                        <rect key="frame" x="319" y="15" width="40" height="40"/>
+                                        <rect key="frame" x="299" y="15" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="play"/>
                                         <connections>
@@ -948,6 +957,31 @@
                                         <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-aB-9pT">
+                                        <rect key="frame" x="58" y="0.0" width="184" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderDragged:" destination="qQj-2D-eKM" eventType="valueChanged" id="Tlc-r3-K62"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-F7-MWd">
+                                        <rect key="frame" x="270" y="23" width="16" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="previous"/>
+                                        <connections>
+                                            <action selector="previousStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="e9i-1o-J9Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1an-dT-IOB">
+                                        <rect key="frame" x="350" y="24" width="16" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="next"/>
+                                        <connections>
+                                            <action selector="nextStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="Yap-37-u7K"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </view>
@@ -956,10 +990,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stotram" image="stotram_inactive" selectedImage="stotram_active" id="WBl-dg-7b6"/>
                     <connections>
+                        <outlet property="audioSlider" destination="lJf-aB-9pT" id="hkS-j3-3gW"/>
                         <outlet property="stotramBottomAudioCtlr" destination="sUJ-1z-LjM" id="JvU-sh-C6Y"/>
                         <outlet property="stotramBtmPlayBtn" destination="COE-gc-6kQ" id="lrB-nE-ZJ0"/>
                         <outlet property="stotramPoojaName" destination="n3d-AD-T6O" id="QTf-eL-CYp"/>
-                        <outlet property="stotramProgressBar" destination="mCF-8y-b8g" id="yHM-Ic-ReN"/>
                         <outlet property="stotramProgressLabel" destination="lU9-mk-kAB" id="3ig-6p-L34"/>
                         <outlet property="stotramTableView" destination="Gpc-Y1-RkG" id="JiB-W4-VP8"/>
                     </connections>
@@ -1226,10 +1260,12 @@
         <image name="ganesh" width="48" height="48"/>
         <image name="more_active" width="22" height="5"/>
         <image name="more_inactive" width="22" height="5"/>
+        <image name="next" width="16" height="11"/>
         <image name="normalPause" width="13" height="18"/>
         <image name="play" width="40" height="40"/>
         <image name="pooja_active" width="21" height="21"/>
         <image name="pooja_inactive" width="21" height="21"/>
+        <image name="previous" width="16" height="11"/>
         <image name="songs_active" width="14" height="21"/>
         <image name="songs_inactive" width="14" height="21"/>
         <image name="stotram_active" width="21" height="20"/>
