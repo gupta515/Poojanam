@@ -12,6 +12,8 @@ import AVFoundation
 
 class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var poojaShareBtn: UIButton!
+
     @IBOutlet weak var swapButtonOptionsView: UIView!
     @IBOutlet weak var poojaSamagriBtn: UIButton!
     @IBOutlet weak var poojaVidhiBtn: UIButton!
@@ -47,7 +49,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         // Do any additional setup after loading the view.
         self.navigationController?.removeNavigationBarBorder()
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
-        swapActiveBtn(active: true)
+        swapActiveBtn(active: false)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
         
         if let poojaData = poojaDataDicts[poojaName] {
@@ -95,6 +97,17 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func poojaShareAction(_ sender: Any) {
+         print("Pooja Share btn is clicked")
+        let shareActivity = UIActivity()
+        let shareText = poojaSamagriTextView.text
+        let shareActivityView = UIActivityViewController(activityItems: ["Samagri for \(self.title ?? "") \n\n \(shareText ?? "")"], applicationActivities: [shareActivity])
+        
+        shareActivityView.excludedActivityTypes = [UIActivityType.addToReadingList,UIActivityType.airDrop,UIActivityType.assignToContact,UIActivityType.print,UIActivityType.saveToCameraRoll,UIActivityType.postToTencentWeibo,UIActivityType.postToVimeo,UIActivityType.postToWeibo]
+        
+        self.present(shareActivityView, animated: true, completion: nil)
+    }
+    
     @IBAction func poojaSamagriClicked(_ sender: AnyObject) {
         if isPoojaSamagriActivated {
             return
@@ -140,6 +153,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         poojaVidhiView.isHidden = true
         poojaSamagriView.isHidden = true
         isPoojaSamagriActivated ? (poojaSamagriView.isHidden = false) : (poojaVidhiView.isHidden = false)
+        
+        poojaShareBtn.setTitle(isPoojaSamagriActivated ? "Share" : "", for: .normal)
+        poojaShareBtn.isEnabled = isPoojaSamagriActivated
     }
     
     func swapAudioCtlrView(play : Bool, setTextView : Bool) {
@@ -161,6 +177,5 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     func getTotalAudioDuration(audioPathUrl: URL) -> Float64 {
         return CMTimeGetSeconds(AVURLAsset(url: audioPathUrl).duration)
     }
-    
-    
+
 }

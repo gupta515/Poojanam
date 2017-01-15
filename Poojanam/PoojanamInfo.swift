@@ -33,7 +33,7 @@ let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
 
 //MARK:- Stotram INFO
 
-//MARK:- Marathi Stotrams8
+//MARK:- Marathi Stotrams
 let marathi_stotram_ganpati_atharvashisha : [String:String] = ["audio":"marathi_ganpati_athravshisha_stotram", "duration":"07 mins"]
 
 let marathi_stotram_ganpati_sukta : [String:String] = ["audio":"marathi_ganpati_sukta_stotram", "duration":"03 mins"]

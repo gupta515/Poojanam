@@ -356,7 +356,21 @@
                             <constraint firstItem="rwY-4Q-yc7" firstAttribute="top" secondItem="Y3A-up-Vhh" secondAttribute="top" id="yAC-Dy-bO3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GhK-Vn-xWH"/>
+                    <navigationItem key="navigationItem" id="GhK-Vn-xWH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="UFd-9B-BO5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2iv-hy-7nc">
+                                <rect key="frame" x="309" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.98431372549019602" green="0.5490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="poojaShareAction:" destination="HaA-NF-goE" eventType="touchUpInside" id="zHw-SO-gFW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="audioSlider" destination="UzF-wK-8j6" id="Otc-tY-pBh"/>
                         <outlet property="poojaAudioBottomCtlrBtn" destination="qYj-MP-70C" id="I6K-8v-ty1"/>
@@ -370,6 +384,7 @@
                         <outlet property="poojaSamagriBtn" destination="VK1-kb-cZZ" id="QyO-Eb-MUP"/>
                         <outlet property="poojaSamagriTextView" destination="c3S-en-SWc" id="SOn-fU-mLA"/>
                         <outlet property="poojaSamagriView" destination="Qnt-7S-gut" id="oHv-sa-cQU"/>
+                        <outlet property="poojaShareBtn" destination="2iv-hy-7nc" id="kp3-tX-E24"/>
                         <outlet property="poojaVidhiBtn" destination="zLb-Bt-rwl" id="KGI-a0-nC4"/>
                         <outlet property="poojaVidhiTextView" destination="hPu-LY-TYc" id="KeS-aa-9BN"/>
                         <outlet property="poojaVidhiView" destination="gLH-Ot-KSI" id="CRo-QC-a0J"/>
