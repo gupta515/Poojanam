@@ -98,7 +98,6 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func poojaShareAction(_ sender: Any) {
-         print("Pooja Share btn is clicked")
         let shareActivity = UIActivity()
         let shareText = poojaSamagriTextView.text
         let shareActivityView = UIActivityViewController(activityItems: ["Samagri for \(self.title ?? "") \n\n \(shareText ?? "")"], applicationActivities: [shareActivity])
