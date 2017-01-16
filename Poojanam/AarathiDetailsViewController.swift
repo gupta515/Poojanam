@@ -33,6 +33,10 @@ class AarathiDetailsViewController: UIViewController {
         // Do any additional setup after loading the view. 
         self.title = aarathiName
         swapAudioCtlrView(play: isAudioPlaying, setTextView : false)
+        
+        if let aarathiInfo = aarathiDataDict[aarathiName] {
+            aarathiTextView.attributedText = TextFiles().getTextFromFile(fileName: aarathiInfo["text"] ?? "")
+        }
     }
     
     override func didReceiveMemoryWarning() {

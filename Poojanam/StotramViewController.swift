@@ -21,6 +21,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var stotramPoojaName: UILabel!
     
     var isStotramPlaying = false
+    var didAudioPlayerSet = false
     var selectedStotramIndex : Int?
     
     var langStotrams : [String] = []
@@ -58,7 +59,9 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        audioPlayer.stop()
+        if didAudioPlayerSet {
+            audioPlayer.stop()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -166,6 +169,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
                 updater = CADisplayLink(target: self, selector: #selector(self.trackAudio))
                 updater.frameInterval = 1
                 updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+                didAudioPlayerSet = true
             } catch {
                 print("Couldn't set audio player")
             }

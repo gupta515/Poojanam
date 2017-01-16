@@ -12,6 +12,8 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var aarathiTableView: UITableView!
     
+    var langAarathis : [String] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +21,11 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Aarathi"
+        
+        if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let reqAarathiList = allAarathis[selectedLang.lowercased()] {
+            langAarathis = reqAarathiList.sorted()
+            aarathiTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,21 +40,23 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return langAarathis.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aarathiCell = tableView.dequeueReusableCell(withIdentifier: "AarathiCellID") as! AarathiTableViewCell
-        //Pooja Info setup
+        
+        let aarathiName = langAarathis[indexPath.row]
+        
+        aarathiCell.aarathiDietyName.setTitle(aarathiName, for: .normal)
         aarathiCell.aarathiDietyName.tag = indexPath.row
         aarathiCell.aarathiDietyName.addTarget(self, action: #selector(aarathiPlay), for: UIControlEvents.touchUpInside)
         return aarathiCell
     }
     
-    func aarathiPlay(sender:UIButton) {
-        print(sender.tag)
-        if let aarathiDetailsView = storyboard?.instantiateViewController(withIdentifier: "AarathiDetailViewID")  as? AarathiDetailsViewController {
-            aarathiDetailsView.aarathiName = sender.currentTitle ?? "Test dummy Aarathi"
+    func aarathiPlay(sender: UIButton) {
+        if let btnTitle = sender.currentTitle, let aarathiDetailsView = storyboard?.instantiateViewController(withIdentifier: "AarathiDetailViewID")  as? AarathiDetailsViewController {
+            aarathiDetailsView.aarathiName = btnTitle
             self.navigationController?.pushViewController(aarathiDetailsView, animated: true)
         }
     }

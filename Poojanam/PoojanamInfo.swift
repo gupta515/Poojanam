@@ -31,6 +31,25 @@ let poojaDataDicts : [String:[String:String]] = ["Satyanarayana Pooja":marathi_p
 
 let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
 
+//Mark:- Aarathi INFO
+
+//Mark:- Marathi aarathi
+let  marathi_datta_aarathi : [String: String] = ["text": "marathi_datta_aarathi"]
+let  marathi_durgaDevi_aarathi : [String: String] = ["text": "marathi_durgaDevi_aarathi"]
+let  marathi_ganesh_aarathi : [String: String] = ["text": "marathi_ganesh_aarathi"]
+let  marathi_mangalagauri_aarathi : [String: String] = ["text": "marathi_mangalagauri_aarathi"]
+let  marathi_satyanarayanDev_aarathi : [String: String] = ["text": "marathi_satyanarayanDev_aarathi"]
+let  marathi_shankar_aarathi : [String: String] = ["text": "marathi_shankar_aarathi"]
+let  marathi_shriMaruthi_aarathi : [String: String] = ["text": "marathi_shriMaruthi_aarathi"]
+let  marathi_shriram_aarathi : [String: String] = ["text": "marathi_shriram_aarathi"]
+let  marathi_vitthal_aarathi : [String: String] = ["text": "marathi_vitthal_aarathi"]
+
+let marathi_aarathis: [String] = ["Datta Aarathi", "Durga Devi Aarathi", "Ganesh Aarathi", "Mangalagauri Aarathi", "Satyanarayana Aarathi", "Shankar Aarathi", "Shri Maruthi Aarathi", "Shri Ram Aarathi", "Vitthal Aarathi"]
+
+let aarathiDataDict : [String: [String: String]] = ["Datta Aarathi" : marathi_datta_aarathi, "Durga Devi Aarathi": marathi_durgaDevi_aarathi, "Ganesh Aarathi": marathi_ganesh_aarathi, "Mangalagauri Aarathi": marathi_mangalagauri_aarathi, "Satyanarayana Aarathi": marathi_satyanarayanDev_aarathi, "Shankar Aarathi": marathi_shankar_aarathi, "Shri Maruthi Aarathi": marathi_shriMaruthi_aarathi, "Shri Ram Aarathi": marathi_shriram_aarathi, "Vitthal Aarathi": marathi_vitthal_aarathi]
+
+let allAarathis : [String: [String]] = ["marathi": marathi_aarathis]
+
 //MARK:- Stotram INFO
 
 //MARK:- Marathi Stotrams
@@ -65,5 +84,3 @@ let marathi_stotrams : [String] = ["Ganpati Atharvashisha", "Ganpati Sukta", "Ma
 let stotramDataDict : [String: [String:String]] = ["Ganpati Atharvashisha": marathi_stotram_ganpati_atharvashisha, "Ganpati Sukta": marathi_stotram_ganpati_sukta, "Mahalakshmi Ashtak": marathi_stotram_mahalakshmi_ashtakam, "Maruti Stotram":marathi_stotram_maruti, "Navgraha Stotram": marathi_stotram_navgraha, "Purusha Sukta": marathi_stotram_purusha_sukta, "Ramraksha Stotra": marathi_stotram_ramaraksha, "Rudra Adhyay": marathi_stotram_rudra_adhyay, "Sankat Nashan GaneshStotra": marathi_stotram_sankatnashan_ganesh, "Shani Stotra": marathi_stotram_shani, "Shri Sukta": marathi_stotram_shri_stotram, "Sour Sukta": marathi_stotram_sour, "Dattatreya Kashta Nashak": marathi_stotram_dattatreya_kashta_nashak]
 
 let allStotrams : [String: [String]] = ["marathi" :  marathi_stotrams]
-
-

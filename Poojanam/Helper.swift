@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TextFiles {
-    func getTextFromFile(fileName: String, fileExtension: String) -> NSAttributedString? {
+    func getTextFromFile(fileName: String, fileExtension: String = "rtf") -> NSAttributedString? {
         if let rtfPath = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
             do {
                 return try NSAttributedString(url: rtfPath, options: [NSDocumentTypeDocumentAttribute : NSRTFTextDocumentType], documentAttributes: nil)

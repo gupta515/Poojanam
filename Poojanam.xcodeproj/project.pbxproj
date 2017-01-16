@@ -61,6 +61,15 @@
 		31E4B6AF1D8F06C2007C16CB /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6AE1D8F06C2007C16CB /* MainNavigationController.swift */; };
 		31E4B6B21D9030C8007C16CB /* PoojanamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */; };
 		31E4B6B41D903FB9007C16CB /* LanguageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */; };
+		31E9DA961E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA8D1E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf */; };
+		31E9DA971E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA8E1E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf */; };
+		31E9DA981E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA8F1E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf */; };
+		31E9DA991E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA901E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf */; };
+		31E9DA9A1E2B9E5400BF1EF2 /* marathi_satyanarayanDev_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA911E2B9E5400BF1EF2 /* marathi_satyanarayanDev_aarathi.rtf */; };
+		31E9DA9B1E2B9E5400BF1EF2 /* marathi_shankar_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA921E2B9E5400BF1EF2 /* marathi_shankar_aarathi.rtf */; };
+		31E9DA9C1E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA931E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf */; };
+		31E9DA9D1E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA941E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf */; };
+		31E9DA9E1E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31E9DA951E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf */; };
 		31FDC59B1D7D3CC8008CAC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */; };
 		31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */; };
 		31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */; };
@@ -136,6 +145,15 @@
 		31E4B6AE1D8F06C2007C16CB /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojanamInfo.swift; sourceTree = "<group>"; };
 		31E4B6B31D903FB9007C16CB /* LanguageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewCell.swift; sourceTree = "<group>"; };
+		31E9DA8D1E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_datta_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA8E1E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_durgaDevi_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA8F1E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_ganesh_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA901E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA911E2B9E5400BF1EF2 /* marathi_satyanarayanDev_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayanDev_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA921E2B9E5400BF1EF2 /* marathi_shankar_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_shankar_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA931E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_shriMaruthi_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA941E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_shriram_aarathi.rtf; sourceTree = "<group>"; };
+		31E9DA951E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_vitthal_aarathi.rtf; sourceTree = "<group>"; };
 		31FDC5971D7D3CC8008CAC1C /* Poojanam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poojanam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FDC59A1D7D3CC8008CAC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31FDC5A11D7D3CC9008CAC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,6 +215,7 @@
 		311F26A41DC26F6000CD0098 /* Marati */ = {
 			isa = PBXGroup;
 			children = (
+				31E9DA8C1E2B9E4900BF1EF2 /* aarathi */,
 				311F26A51DC271B600CD0098 /* Pooja */,
 			);
 			name = Marati;
@@ -390,6 +409,22 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		31E9DA8C1E2B9E4900BF1EF2 /* aarathi */ = {
+			isa = PBXGroup;
+			children = (
+				31E9DA8D1E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf */,
+				31E9DA8E1E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf */,
+				31E9DA8F1E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf */,
+				31E9DA901E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf */,
+				31E9DA911E2B9E5400BF1EF2 /* marathi_satyanarayanDev_aarathi.rtf */,
+				31E9DA921E2B9E5400BF1EF2 /* marathi_shankar_aarathi.rtf */,
+				31E9DA931E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf */,
+				31E9DA941E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf */,
+				31E9DA951E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf */,
+			);
+			name = aarathi;
+			sourceTree = "<group>";
+		};
 		31FDC58E1D7D3CC8008CAC1C = {
 			isa = PBXGroup;
 			children = (
@@ -547,30 +582,39 @@
 				31519AF51DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf in Resources */,
 				319691661E103C9000AF093C /* marathi_parthivGanapathi_pooja_benefits.rtf in Resources */,
 				313B25D21DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf in Resources */,
+				31E9DA971E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf in Resources */,
+				31E9DA9D1E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf in Resources */,
 				313B25CD1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a in Resources */,
 				319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */,
 				315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */,
 				313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */,
+				31E9DA961E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf in Resources */,
 				3120F8FE1E118E43007017BC /* marathi_ramaraksha_stotram.m4a in Resources */,
 				3120F9031E118E43007017BC /* marathi_sour_stotram.m4a in Resources */,
 				31FDC5A71D7D3CC9008CAC1C /* LaunchScreen.storyboard in Resources */,
 				313B25C71DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf in Resources */,
 				319691641E103C8000AF093C /* marathi_parthivGanapathi_pooja_about.rtf in Resources */,
+				31E9DA9A1E2B9E5400BF1EF2 /* marathi_satyanarayanDev_aarathi.rtf in Resources */,
 				31FDC5A41D7D3CC9008CAC1C /* Assets.xcassets in Resources */,
 				3120F8F81E118E43007017BC /* marathi_ganpati_athravshisha_stotram.m4a in Resources */,
 				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
 				3120F9001E118E43007017BC /* marathi_sankatnashan_ganesh_stotram.m4a in Resources */,
 				3158E69F1DCA672500A28374 /* .gitignore in Resources */,
 				314E7DEE1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a in Resources */,
+				31E9DA991E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf in Resources */,
 				3196916A1E103CA900AF093C /* marathi_parthivGanapathi_pooja_samagri.rtf in Resources */,
 				31DF4B791E1F67FD007C830A /* marathi_mangalagauri_pooja_about.rtf in Resources */,
 				3120F8FD1E118E43007017BC /* marathi_purusha_sukta_stotram.m4a in Resources */,
+				31E9DA9B1E2B9E5400BF1EF2 /* marathi_shankar_aarathi.rtf in Resources */,
 				319691681E103C9B00AF093C /* marathi_parthivGanapathi_pooja_vidhi.rtf in Resources */,
+				31E9DA981E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf in Resources */,
 				3120F8FF1E118E43007017BC /* marathi_rudra_adhyay_stotram.m4a in Resources */,
 				319691621E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a in Resources */,
 				313B25D11DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf in Resources */,
 				3120F8F71E118E43007017BC /* marathi_dattatreya_kashta_nashak_stotram.m4a in Resources */,
+				31E9DA9C1E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf in Resources */,
 				3120F8FA1E118E43007017BC /* marathi_mahalakshmi_ashtakam_stotram.m4a in Resources */,
+				31E9DA9E1E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
