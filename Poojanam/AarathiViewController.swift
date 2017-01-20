@@ -51,6 +51,11 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
         aarathiCell.aarathiDietyName.setTitle(aarathiName, for: .normal)
         aarathiCell.aarathiDietyName.tag = indexPath.row
         aarathiCell.aarathiDietyName.addTarget(self, action: #selector(aarathiPlay), for: UIControlEvents.touchUpInside)
+        if let aarathiInfo = aarathiDataDict[aarathiName] {
+            if let dietyImageName = aarathiInfo["image"] {
+                aarathiCell.aarathiDietyImage.image = UIImage(named: dietyImageName)
+            }
+        }
         return aarathiCell
     }
     

@@ -34,15 +34,15 @@ let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
 //Mark:- Aarathi INFO
 
 //Mark:- Marathi aarathi
-let  marathi_datta_aarathi : [String: String] = ["text": "marathi_datta_aarathi"]
-let  marathi_durgaDevi_aarathi : [String: String] = ["text": "marathi_durgaDevi_aarathi"]
-let  marathi_ganesh_aarathi : [String: String] = ["text": "marathi_ganesh_aarathi"]
-let  marathi_mangalagauri_aarathi : [String: String] = ["text": "marathi_mangalagauri_aarathi"]
-let  marathi_satyanarayanDev_aarathi : [String: String] = ["text": "marathi_satyanarayanDev_aarathi"]
-let  marathi_shankar_aarathi : [String: String] = ["text": "marathi_shankar_aarathi"]
-let  marathi_shriMaruthi_aarathi : [String: String] = ["text": "marathi_shriMaruthi_aarathi"]
-let  marathi_shriram_aarathi : [String: String] = ["text": "marathi_shriram_aarathi"]
-let  marathi_vitthal_aarathi : [String: String] = ["text": "marathi_vitthal_aarathi"]
+let  marathi_datta_aarathi : [String: String] = ["text": "marathi_datta_aarathi", "image": "aarathi_inactive"]
+let  marathi_durgaDevi_aarathi : [String: String] = ["text": "marathi_durgaDevi_aarathi", "image": "durga" ]
+let  marathi_ganesh_aarathi : [String: String] = ["text": "marathi_ganesh_aarathi", "image": "ganesh"]
+let  marathi_mangalagauri_aarathi : [String: String] = ["text": "marathi_mangalagauri_aarathi", "image": "mangalagauri"]
+let  marathi_satyanarayanDev_aarathi : [String: String] = ["text": "marathi_satyanarayanDev_aarathi", "image": "satyanarayana"]
+let  marathi_shankar_aarathi : [String: String] = ["text": "marathi_shankar_aarathi", "image": "shiva"]
+let  marathi_shriMaruthi_aarathi : [String: String] = ["text": "marathi_shriMaruthi_aarathi", "image": "aarathi_inactive"]
+let  marathi_shriram_aarathi : [String: String] = ["text": "marathi_shriram_aarathi", "image": "aarathi_inactive"]
+let  marathi_vitthal_aarathi : [String: String] = ["text": "marathi_vitthal_aarathi", "image": "aarathi_inactive"]
 
 let marathi_aarathis: [String] = ["Datta Aarathi", "Durga Devi Aarathi", "Ganesh Aarathi", "Mangalagauri Aarathi", "Satyanarayana Aarathi", "Shankar Aarathi", "Shri Maruthi Aarathi", "Shri Ram Aarathi", "Vitthal Aarathi"]
 
