@@ -32,8 +32,10 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
         
-//        audioSlider.setThumbImage(imageWithImage(image: audioSlider.thumbImage(for: .normal)!), for: .normal)
+        audioSlider.setThumbImage(sliderThumbImage, for: .normal)
     }
     
     func imageWithImage(image: UIImage, scaledToSize newSize: CGSize = CGSize(width: 20, height: 20)) -> UIImage
@@ -114,7 +116,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
                 audioPlayer.play()
                 isStotramPlaying = true
                 stotramBottomAudioCtlr.isHidden = false
-                stotramBtmPlayBtn.setImage(UIImage(named: "pause"), for: UIControlState.normal)
+                stotramBtmPlayBtn.setImage(UIImage(named: "pauseWhite"), for: UIControlState.normal)
                 stotramTableView.frame.size.height -= 70
             }
             stotramTableView.reloadData()
@@ -128,7 +130,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
         
         isStotramPlaying = true
         selectedStotramIndex = selectedStotram
-        stotramBtmPlayBtn.setImage(UIImage(named: "pause"), for: UIControlState.normal)
+        stotramBtmPlayBtn.setImage(UIImage(named: "pauseWhite"), for: UIControlState.normal)
         stotramTableView.frame.size.height -= 70
         
         //Audio Bottom View
@@ -149,7 +151,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
         isStotramPlaying = false
         stotramBottomAudioCtlr.isHidden = true
         stotramTableView.frame.size.height += 70
-        stotramBtmPlayBtn.setImage(UIImage(named: "play"), for: UIControlState.normal)
+        stotramBtmPlayBtn.setImage(UIImage(named: "playWhite"), for: UIControlState.normal)
         stotramTableView.reloadData()
     }
     

@@ -23,17 +23,12 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var poojaVidhiView: UIView!
     
     @IBOutlet weak var poojaAudioCtlrTopView: UIView!
-    @IBOutlet weak var poojaAudioTopProgressBar: UIProgressView!
     @IBOutlet weak var poojaAudioProgressLabel: UILabel!
     @IBOutlet weak var poojaAudioTopCtlrBtn: UIButton!
     
     @IBOutlet weak var poojaVidhiTextView: UITextView!
-    
-    @IBOutlet weak var poojaAudioCtlrBottomView: UIView!
-    @IBOutlet weak var poojaAudioBottomProgressLabel: UILabel!
+
     @IBOutlet weak var audioSlider: UISlider!
-    @IBOutlet weak var poojaAudioLabel: UILabel!
-    @IBOutlet weak var poojaAudioBottomCtlrBtn: UIButton!
     
     var poojaName : String = ""
     var isPoojaSamagriActivated : Bool = true
@@ -52,9 +47,12 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         swapActiveBtn(active: false)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
         
+        let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
+        
+        audioSlider.setThumbImage(sliderThumbImage, for: .normal)
+        
         if let poojaData = poojaDataDicts[poojaName] {
             self.title = poojaData["name"]
-            poojaAudioLabel.text = "\(poojaData["name"] ?? "") audio"
             //Set Text info
             poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["vidhi"]!, fileExtension: "rtf")
             poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)
@@ -85,9 +83,6 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
             let currentTime = Int(audioPlayer.currentTime)
             let currentTimeStr  = String(format: "%02d", currentTime/60) + ":" + String(format: "%02d", currentTime%60)
             poojaAudioProgressLabel.text = currentTimeStr
-            poojaAudioBottomProgressLabel.text = currentTimeStr
-            
-            poojaAudioTopProgressBar.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
             audioSlider.value = Float(audioPlayer.currentTime/audioPlayer.duration)
         }
     }
@@ -159,13 +154,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
     func swapAudioCtlrView(play : Bool, setTextView : Bool) {
         isAudioPlaying = play
-        let audioCtlrImage = isAudioPlaying ? UIImage(named: "pause") : UIImage(named : "play")
-        if setTextView{
-            poojaVidhiTextView.frame.size.height = poojaVidhiView.frame.height - (isAudioPlaying ? 142 : 72)
-        }
+        let audioCtlrImage = isAudioPlaying ? UIImage(named: "pauseWhite") : UIImage(named : "playWhite")
+
         poojaAudioTopCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
-        poojaAudioCtlrBottomView.isHidden = !isAudioPlaying
-        poojaAudioBottomCtlrBtn.setImage(audioCtlrImage, for: UIControlState.normal)
     }
     
     @IBAction func valueAction(_ sender: UISlider) {

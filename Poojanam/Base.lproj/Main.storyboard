@@ -7,6 +7,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansDevanagari-Regular.ttf">
+            <string>NotoSansDevanagari</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Pooja-->
         <scene sceneID="hNz-n2-bh7">
@@ -251,108 +256,105 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLH-Ot-KSI">
                                 <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WrT-Rg-1yX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="oQh-JA-6GW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="WUp-hO-gPc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WrT-Rg-1yX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcZ-at-lAT">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="progressTintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-M3-BfR">
-                                                <rect key="frame" x="16" y="16" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="play"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Listen to audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-aG-LSj" userLabel="Listen to audio">
+                                                <rect key="frame" x="54" y="16" width="191" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="aPM-Bn-Vul"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansDevanagari" family="Noto Sans Devanagari" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n19-dn-rX2">
+                                                <rect key="frame" x="320" y="26" width="40" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="qtk-zp-f73"/>
+                                                    <constraint firstAttribute="width" constant="40" id="xUG-Wp-pWE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansDevanagari" family="Noto Sans Devanagari" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-wK-8j6">
+                                                <rect key="frame" x="13" y="60" width="349" height="31"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="valueAction:" destination="HaA-NF-goE" eventType="valueChanged" id="rbi-vd-Ic7"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89a-mw-SB6">
+                                                <rect key="frame" x="0.0" y="79" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="gs8-u7-pdk"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-M3-BfR">
+                                                <rect key="frame" x="15" y="22" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="BzC-Jd-e9H"/>
+                                                    <constraint firstAttribute="width" constant="25" id="jah-cD-bIG"/>
+                                                </constraints>
+                                                <state key="normal" image="playWhite"/>
                                                 <connections>
                                                     <action selector="poojaTopPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="mMv-tP-ZHL"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Listen to audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-aG-LSj" userLabel="Listen to audio">
-                                                <rect key="frame" x="70" y="16" width="180" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n19-dn-rX2">
-                                                <rect key="frame" x="325" y="26" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89a-mw-SB6">
-                                                <rect key="frame" x="0.0" y="71" width="375" height="1"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="n19-dn-rX2" secondAttribute="trailing" constant="15" id="0D0-81-iUv"/>
+                                            <constraint firstItem="UzF-wK-8j6" firstAttribute="top" secondItem="agZ-aG-LSj" secondAttribute="bottom" constant="4" id="62M-Se-5AT"/>
+                                            <constraint firstAttribute="trailing" secondItem="89a-mw-SB6" secondAttribute="trailing" id="EQP-kp-Ayd"/>
+                                            <constraint firstItem="UzF-wK-8j6" firstAttribute="top" secondItem="agZ-aG-LSj" secondAttribute="bottom" constant="4" id="J44-uW-PyA"/>
+                                            <constraint firstItem="n19-dn-rX2" firstAttribute="top" secondItem="WrT-Rg-1yX" secondAttribute="top" constant="26" id="NKh-ok-UmQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="89a-mw-SB6" secondAttribute="bottom" id="RNI-C6-CYS"/>
+                                            <constraint firstItem="n19-dn-rX2" firstAttribute="leading" secondItem="agZ-aG-LSj" secondAttribute="trailing" constant="75" id="Tju-jY-sC1"/>
+                                            <constraint firstAttribute="trailing" secondItem="UzF-wK-8j6" secondAttribute="trailing" constant="15" id="UdU-e7-zNv"/>
+                                            <constraint firstItem="agZ-aG-LSj" firstAttribute="leading" secondItem="dLe-M3-BfR" secondAttribute="trailing" constant="14" id="YRh-rY-nUm"/>
+                                            <constraint firstItem="dLe-M3-BfR" firstAttribute="top" secondItem="WrT-Rg-1yX" secondAttribute="top" constant="22" id="YWN-JU-HUa"/>
+                                            <constraint firstItem="89a-mw-SB6" firstAttribute="leading" secondItem="WrT-Rg-1yX" secondAttribute="leading" id="ZOW-pi-VRy"/>
+                                            <constraint firstItem="agZ-aG-LSj" firstAttribute="top" secondItem="WrT-Rg-1yX" secondAttribute="top" constant="16" id="hGd-Ma-lv9"/>
+                                            <constraint firstItem="UzF-wK-8j6" firstAttribute="leading" secondItem="WrT-Rg-1yX" secondAttribute="leading" constant="15" id="jtp-yg-thU"/>
+                                            <constraint firstAttribute="height" constant="80" id="phq-4R-NGm"/>
+                                            <constraint firstItem="dLe-M3-BfR" firstAttribute="leading" secondItem="WrT-Rg-1yX" secondAttribute="leading" constant="15" id="rFb-OA-iAk"/>
+                                            <constraint firstItem="89a-mw-SB6" firstAttribute="centerX" secondItem="WrT-Rg-1yX" secondAttribute="centerX" id="sJM-Oo-eWw"/>
+                                            <constraint firstItem="UzF-wK-8j6" firstAttribute="centerX" secondItem="WrT-Rg-1yX" secondAttribute="centerX" id="zYj-q0-gVH"/>
+                                        </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-LY-TYc">
-                                        <rect key="frame" x="8" y="72" width="365" height="478"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-LY-TYc">
+                                        <rect key="frame" x="8" y="80" width="359" height="478"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQB-63-xXQ">
-                                        <rect key="frame" x="0.0" y="488" width="375" height="70"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-Kz-7Ik">
-                                                <rect key="frame" x="8" y="6" width="40" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVI-J1-wBx">
-                                                <rect key="frame" x="60" y="15" width="200" height="2"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="progressTintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYj-MP-70C">
-                                                <rect key="frame" x="319" y="15" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="play"/>
-                                                <connections>
-                                                    <action selector="poojaBottomPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="22i-LW-t0W"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ganesh Pooja Audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-CW-XIz">
-                                                <rect key="frame" x="8" y="41" width="250" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-wK-8j6">
-                                                <rect key="frame" x="58" y="0.0" width="204" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="thumbTintColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="valueAction:" destination="HaA-NF-goE" eventType="valueChanged" id="rbi-vd-Ic7"/>
-                                                </connections>
-                                            </slider>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="3iO-pB-f5y"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="KQB-63-xXQ" firstAttribute="leading" secondItem="gLH-Ot-KSI" secondAttribute="leading" id="dbG-pc-3R6"/>
-                                    <constraint firstAttribute="bottom" secondItem="KQB-63-xXQ" secondAttribute="bottom" id="eHO-UY-di9"/>
-                                    <constraint firstItem="KQB-63-xXQ" firstAttribute="centerX" secondItem="gLH-Ot-KSI" secondAttribute="centerX" id="vqc-M9-9JW"/>
+                                    <constraint firstItem="WrT-Rg-1yX" firstAttribute="leading" secondItem="gLH-Ot-KSI" secondAttribute="leading" id="5UI-Rm-G3t"/>
+                                    <constraint firstAttribute="trailing" secondItem="WrT-Rg-1yX" secondAttribute="trailing" id="Cwy-da-HH2"/>
+                                    <constraint firstAttribute="trailing" secondItem="oQh-JA-6GW" secondAttribute="trailing" id="EZK-AK-vQX"/>
+                                    <constraint firstItem="hPu-LY-TYc" firstAttribute="top" secondItem="WrT-Rg-1yX" secondAttribute="bottom" id="EcS-sd-6FA"/>
+                                    <constraint firstAttribute="bottom" secondItem="hPu-LY-TYc" secondAttribute="bottom" id="EgT-pO-aR3"/>
+                                    <constraint firstItem="WrT-Rg-1yX" firstAttribute="centerX" secondItem="gLH-Ot-KSI" secondAttribute="centerX" id="Fow-2h-qIm"/>
+                                    <constraint firstItem="hPu-LY-TYc" firstAttribute="centerX" secondItem="gLH-Ot-KSI" secondAttribute="centerX" id="GCL-Zh-dgJ"/>
+                                    <constraint firstItem="oQh-JA-6GW" firstAttribute="top" secondItem="gLH-Ot-KSI" secondAttribute="top" id="IuY-Dk-1mT"/>
+                                    <constraint firstItem="hPu-LY-TYc" firstAttribute="leading" secondItem="gLH-Ot-KSI" secondAttribute="leading" constant="8" id="Zlb-DO-lwO"/>
+                                    <constraint firstItem="WrT-Rg-1yX" firstAttribute="top" secondItem="gLH-Ot-KSI" secondAttribute="top" id="Zu8-Pi-eqv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPu-LY-TYc" secondAttribute="trailing" constant="8" id="a4E-WK-dBo"/>
+                                    <constraint firstItem="oQh-JA-6GW" firstAttribute="leading" secondItem="gLH-Ot-KSI" secondAttribute="leading" id="ejt-UU-5vw"/>
+                                    <constraint firstItem="oQh-JA-6GW" firstAttribute="centerX" secondItem="gLH-Ot-KSI" secondAttribute="centerX" id="fSk-ub-4TV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -390,14 +392,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="audioSlider" destination="UzF-wK-8j6" id="Otc-tY-pBh"/>
-                        <outlet property="poojaAudioBottomCtlrBtn" destination="qYj-MP-70C" id="I6K-8v-ty1"/>
-                        <outlet property="poojaAudioBottomProgressLabel" destination="gbE-Kz-7Ik" id="FUN-lc-wF2"/>
-                        <outlet property="poojaAudioCtlrBottomView" destination="KQB-63-xXQ" id="woR-Rx-wWG"/>
                         <outlet property="poojaAudioCtlrTopView" destination="WrT-Rg-1yX" id="VEY-ZF-kII"/>
-                        <outlet property="poojaAudioLabel" destination="Tyx-CW-XIz" id="3nG-1K-miF"/>
                         <outlet property="poojaAudioProgressLabel" destination="n19-dn-rX2" id="kOf-DE-NOW"/>
                         <outlet property="poojaAudioTopCtlrBtn" destination="dLe-M3-BfR" id="1cq-GD-xSJ"/>
-                        <outlet property="poojaAudioTopProgressBar" destination="QcZ-at-lAT" id="4io-ov-X8G"/>
                         <outlet property="poojaSamagriBtn" destination="VK1-kb-cZZ" id="QyO-Eb-MUP"/>
                         <outlet property="poojaSamagriTextView" destination="c3S-en-SWc" id="SOn-fU-mLA"/>
                         <outlet property="poojaSamagriView" destination="Qnt-7S-gut" id="oHv-sa-cQU"/>
@@ -968,63 +965,115 @@
                                     <outlet property="delegate" destination="qQj-2D-eKM" id="tGf-9I-tH0"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-1z-LjM">
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-1z-LjM">
                                 <rect key="frame" x="0.0" y="548" width="375" height="70"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lU9-mk-kAB">
-                                        <rect key="frame" x="8" y="6" width="40" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COE-gc-6kQ">
-                                        <rect key="frame" x="299" y="15" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="play"/>
-                                        <connections>
-                                            <action selector="poojaBottomPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="jxt-5H-gjc"/>
-                                            <action selector="stotramBtmAudioCtlr:" destination="qQj-2D-eKM" eventType="touchUpInside" id="bX3-yS-RsR"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ganesh Pooja Audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3d-AD-T6O">
-                                        <rect key="frame" x="8" y="41" width="250" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-aB-9pT">
-                                        <rect key="frame" x="58" y="0.0" width="184" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="thumbTintColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="sliderDragged:" destination="qQj-2D-eKM" eventType="valueChanged" id="Tlc-r3-K62"/>
-                                        </connections>
-                                    </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-F7-MWd">
-                                        <rect key="frame" x="270" y="23" width="16" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="previous"/>
-                                        <connections>
-                                            <action selector="previousStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="e9i-1o-J9Q"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1an-dT-IOB">
-                                        <rect key="frame" x="350" y="24" width="16" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="next"/>
-                                        <connections>
-                                            <action selector="nextStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="Yap-37-u7K"/>
-                                        </connections>
-                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-P0-KsL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXD-Jc-JJr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lU9-mk-kAB">
+                                                <rect key="frame" x="15" y="18" width="40" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3MO-nL-U0S"/>
+                                                    <constraint firstAttribute="height" constant="21" id="nns-HB-IOq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansDevanagari" family="Noto Sans Devanagari" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-aB-9pT">
+                                                <rect key="frame" x="68" y="10" width="194" height="31"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ov7-Mr-tSh"/>
+                                                </constraints>
+                                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderDragged:" destination="qQj-2D-eKM" eventType="valueChanged" id="Tlc-r3-K62"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ganesh Pooja Audio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3d-AD-T6O">
+                                                <rect key="frame" x="15" y="40" width="245" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="7Cb-j0-6Cl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-af-d77">
+                                                <rect key="frame" x="275" y="0.0" width="85" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COE-gc-6kQ">
+                                                        <rect key="frame" x="30" y="22" width="25" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="playWhite"/>
+                                                        <connections>
+                                                            <action selector="poojaBottomPlayBtn:" destination="HaA-NF-goE" eventType="touchUpInside" id="jxt-5H-gjc"/>
+                                                            <action selector="stotramBtmAudioCtlr:" destination="qQj-2D-eKM" eventType="touchUpInside" id="bX3-yS-RsR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1an-dT-IOB">
+                                                        <rect key="frame" x="75" y="30" width="10" height="10"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="nextWhite"/>
+                                                        <connections>
+                                                            <action selector="nextStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="Yap-37-u7K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-F7-MWd">
+                                                        <rect key="frame" x="0.0" y="30" width="10" height="10"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="previousWhite"/>
+                                                        <connections>
+                                                            <action selector="previousStrotam:" destination="qQj-2D-eKM" eventType="touchUpInside" id="e9i-1o-J9Q"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="NtF-fk-Xih"/>
+                                                    <constraint firstAttribute="height" constant="70" id="yQv-Rk-8Ud"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="3dK-af-d77" secondAttribute="bottom" id="7Yt-yg-Uk0"/>
+                                            <constraint firstItem="n3d-AD-T6O" firstAttribute="leading" secondItem="KXD-Jc-JJr" secondAttribute="leading" constant="15" id="Cuv-gp-nBV"/>
+                                            <constraint firstItem="3dK-af-d77" firstAttribute="top" secondItem="KXD-Jc-JJr" secondAttribute="top" id="FJB-El-0lc"/>
+                                            <constraint firstItem="lU9-mk-kAB" firstAttribute="top" secondItem="KXD-Jc-JJr" secondAttribute="top" constant="18" id="NgV-W5-IDv"/>
+                                            <constraint firstItem="lU9-mk-kAB" firstAttribute="leading" secondItem="KXD-Jc-JJr" secondAttribute="leading" constant="15" id="PHh-rc-LEa"/>
+                                            <constraint firstItem="3dK-af-d77" firstAttribute="leading" secondItem="n3d-AD-T6O" secondAttribute="trailing" constant="15" id="QoC-b6-VXA"/>
+                                            <constraint firstAttribute="trailing" secondItem="3dK-af-d77" secondAttribute="trailing" constant="15" id="eeG-4J-TMv"/>
+                                            <constraint firstAttribute="bottom" secondItem="n3d-AD-T6O" secondAttribute="bottom" constant="9" id="hNf-Dn-bNK"/>
+                                            <constraint firstItem="lJf-aB-9pT" firstAttribute="top" secondItem="KXD-Jc-JJr" secondAttribute="top" constant="10" id="mYr-lL-vnD"/>
+                                            <constraint firstItem="lJf-aB-9pT" firstAttribute="leading" secondItem="lU9-mk-kAB" secondAttribute="trailing" constant="15" id="oto-eK-p6p"/>
+                                            <constraint firstItem="3dK-af-d77" firstAttribute="leading" secondItem="lJf-aB-9pT" secondAttribute="trailing" constant="15" id="uLe-Tv-Jk6"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KXD-Jc-JJr" secondAttribute="bottom" id="Jor-vT-i0p"/>
+                                    <constraint firstAttribute="height" constant="70" id="Lm1-Xq-gPS"/>
+                                    <constraint firstItem="KXD-Jc-JJr" firstAttribute="leading" secondItem="sUJ-1z-LjM" secondAttribute="leading" id="cVf-fp-32p"/>
+                                    <constraint firstAttribute="trailing" secondItem="KXD-Jc-JJr" secondAttribute="trailing" id="la7-qy-JrH"/>
+                                    <constraint firstItem="KXD-Jc-JJr" firstAttribute="top" secondItem="sUJ-1z-LjM" secondAttribute="top" id="yJC-yP-3Ex"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sUJ-1z-LjM" firstAttribute="centerX" secondItem="gGq-Bx-SqA" secondAttribute="centerX" id="4Bl-QY-5ep"/>
+                            <constraint firstItem="OFJ-wX-VlS" firstAttribute="top" secondItem="sUJ-1z-LjM" secondAttribute="bottom" id="I05-Hg-egK"/>
+                            <constraint firstAttribute="trailing" secondItem="sUJ-1z-LjM" secondAttribute="trailing" id="ROU-ap-2ZH"/>
+                            <constraint firstItem="sUJ-1z-LjM" firstAttribute="leading" secondItem="gGq-Bx-SqA" secondAttribute="leading" id="arX-iV-nwy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stotram" image="stotram_inactive" selectedImage="stotram_active" id="WBl-dg-7b6"/>
                     <connections>
@@ -1056,7 +1105,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bVU-PX-AyP" id="x2f-tt-WVM">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Change Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNz-4M-0gE">
@@ -1076,7 +1125,7 @@
                                         <rect key="frame" x="0.0" y="60" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6V4-Wl-ghk" id="QDE-nO-xr5">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Send Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-8u-543">
@@ -1096,7 +1145,7 @@
                                         <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ZM-aQ-aQ9" id="AXR-4W-0vX">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  About Poojanam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-qa-WRF">
@@ -1147,7 +1196,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Wt-U5-UVa" id="MVX-dp-YAt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-6o-cx1">
@@ -1239,7 +1288,7 @@
         <scene sceneID="uWW-ih-wbf">
             <objects>
                 <navigationController id="cVK-uc-FzB" customClass="MainNavigationController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pya-GF-1Nx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pya-GF-1Nx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -1298,12 +1347,13 @@
         <image name="ganesh" width="48" height="48"/>
         <image name="more_active" width="22" height="5"/>
         <image name="more_inactive" width="22" height="5"/>
-        <image name="next" width="16" height="11"/>
+        <image name="nextWhite" width="32" height="23"/>
         <image name="normalPause" width="13" height="18"/>
         <image name="play" width="40" height="40"/>
+        <image name="playWhite" width="80" height="80"/>
         <image name="pooja_active" width="21" height="21"/>
         <image name="pooja_inactive" width="21" height="21"/>
-        <image name="previous" width="16" height="11"/>
+        <image name="previousWhite" width="32" height="23"/>
         <image name="songs_active" width="14" height="21"/>
         <image name="songs_inactive" width="14" height="21"/>
         <image name="stotram_active" width="21" height="20"/>
