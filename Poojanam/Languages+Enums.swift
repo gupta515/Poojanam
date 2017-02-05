@@ -8,10 +8,28 @@
 
 import Foundation
 
-enum PoojaList : String {
+enum Langauge : String {
     
     case Marathi = "marathi"
     
+    var titleWithLocal : String {
+        return "मराठी (Marathi)"
+    }
+    
+    var poojasList : PoojaList {
+        return PoojaList(rawValue: self.rawValue)!
+    }
+    
+    var aarathiList : AarathiList {
+        return AarathiList(rawValue: self.rawValue)!
+    }
+    
+}
+
+enum PoojaList : String {
+    
+    case Marathi = "marathi"
+
     var keysList : [String] {
         
         switch self {

@@ -22,11 +22,11 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Aarathi"
         
-        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let aarathisListInfo = AarathiList(rawValue: selectedLang.lowercased()) else {
+        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"),  let langInfo = Langauge(rawValue: selectedLang.lowercased()) else {
             return
         }
         
-        langAarathis = aarathisListInfo.keyList.sorted()
+        langAarathis = langInfo.aarathiList.keyList.sorted()
         aarathiTableView.reloadData()
     }
     
