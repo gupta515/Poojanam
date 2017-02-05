@@ -73,3 +73,9 @@ extension UIImage {
     }
 }
 
+extension UIViewController {
+    
+    func popViewController() {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+}

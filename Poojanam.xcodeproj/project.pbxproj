@@ -22,18 +22,18 @@
 		3120F9011E118E43007017BC /* marathi_shani_stotram.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3120F8F41E118E43007017BC /* marathi_shani_stotram.m4a */; };
 		3120F9021E118E43007017BC /* marathi_shri_stotram.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3120F8F51E118E43007017BC /* marathi_shri_stotram.m4a */; };
 		3120F9031E118E43007017BC /* marathi_sour_stotram.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3120F8F61E118E43007017BC /* marathi_sour_stotram.m4a */; };
+		312CBD031E424EF2006634F2 /* PoojanamFBRefLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CBD021E424EF2006634F2 /* PoojanamFBRefLinks.swift */; };
 		313B25C71DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25C61DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf */; };
 		313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25C81DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf */; };
-		313B25CD1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */; };
 		313B25D11DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25CF1DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf */; };
 		313B25D21DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313B25D01DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf */; };
-		314E7DEE1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */; };
 		31519AF11DCA56EC0090F97C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31519AF01DCA56EC0090F97C /* Helper.swift */; };
 		31519AF31DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf */; };
 		31519AF51DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */; };
 		3158E69F1DCA672500A28374 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3158E69E1DCA672500A28374 /* .gitignore */; };
 		315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 315C19C31DC9B601002A7188 /* GoogleService-Info.plist */; };
 		316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */; };
+		317BA9861E4748F200885E61 /* Pooja+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9851E4748F200885E61 /* Pooja+Enums.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
 		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
@@ -46,7 +46,6 @@
 		3184CE381D853AE100812B60 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE371D853AE100812B60 /* AboutViewController.swift */; };
 		319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319005481D9990830066EB49 /* PoojaTableViewCell.swift */; };
 		319691601E0F986D00AF093C /* ImageViewRoundCornered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3196915F1E0F986D00AF093C /* ImageViewRoundCornered.swift */; };
-		319691621E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 319691611E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a */; };
 		319691641E103C8000AF093C /* marathi_parthivGanapathi_pooja_about.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319691631E103C8000AF093C /* marathi_parthivGanapathi_pooja_about.rtf */; };
 		319691661E103C9000AF093C /* marathi_parthivGanapathi_pooja_benefits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319691651E103C9000AF093C /* marathi_parthivGanapathi_pooja_benefits.rtf */; };
 		319691681E103C9B00AF093C /* marathi_parthivGanapathi_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 319691671E103C9B00AF093C /* marathi_parthivGanapathi_pooja_vidhi.rtf */; };
@@ -106,18 +105,18 @@
 		3120F8F41E118E43007017BC /* marathi_shani_stotram.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_shani_stotram.m4a; sourceTree = "<group>"; };
 		3120F8F51E118E43007017BC /* marathi_shri_stotram.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_shri_stotram.m4a; sourceTree = "<group>"; };
 		3120F8F61E118E43007017BC /* marathi_sour_stotram.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_sour_stotram.m4a; sourceTree = "<group>"; };
+		312CBD021E424EF2006634F2 /* PoojanamFBRefLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojanamFBRefLinks.swift; sourceTree = "<group>"; };
 		313B25C61DD60EC500A117FE /* marathi_mangalagauri_pooja_benefits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_benefits.rtf; sourceTree = "<group>"; };
 		313B25C81DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_mangalagauri_pooja_vidhi.rtf; sourceTree = "<group>"; };
-		313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_mangalagauri_pooja.m4a; sourceTree = "<group>"; };
 		313B25CF1DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansDevanagari-Bold.ttf"; sourceTree = "<group>"; };
 		313B25D01DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansDevanagari-Regular.ttf"; sourceTree = "<group>"; };
-		314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_satyanarayan_pooja.m4a; sourceTree = "<group>"; };
 		31519AF01DCA56EC0090F97C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_samagri.rtf; sourceTree = "<group>"; };
 		31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_vidhi.rtf; sourceTree = "<group>"; };
 		3158E69E1DCA672500A28374 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		315C19C31DC9B601002A7188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramTableViewCell.swift; sourceTree = "<group>"; };
+		317BA9851E4748F200885E61 /* Pooja+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pooja+Enums.swift"; path = "Enums/Pooja+Enums.swift"; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
 		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +129,6 @@
 		3184CE371D853AE100812B60 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		319005481D9990830066EB49 /* PoojaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoojaTableViewCell.swift; sourceTree = "<group>"; };
 		3196915F1E0F986D00AF093C /* ImageViewRoundCornered.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewRoundCornered.swift; sourceTree = "<group>"; };
-		319691611E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_parthivGanapathi_pooja.m4a; sourceTree = "<group>"; };
 		319691631E103C8000AF093C /* marathi_parthivGanapathi_pooja_about.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_parthivGanapathi_pooja_about.rtf; sourceTree = "<group>"; };
 		319691651E103C9000AF093C /* marathi_parthivGanapathi_pooja_benefits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_parthivGanapathi_pooja_benefits.rtf; sourceTree = "<group>"; };
 		319691671E103C9B00AF093C /* marathi_parthivGanapathi_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_parthivGanapathi_pooja_vidhi.rtf; sourceTree = "<group>"; };
@@ -260,16 +258,6 @@
 			name = Stotram;
 			sourceTree = "<group>";
 		};
-		3120F8E81E118E21007017BC /* marathi */ = {
-			isa = PBXGroup;
-			children = (
-				314E7DED1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a */,
-				319691611E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a */,
-				313B25CC1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a */,
-			);
-			name = marathi;
-			sourceTree = "<group>";
-		};
 		3120F8E91E118E32007017BC /* marathi */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,12 +297,12 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		3168A5651E1174550003DB24 /* Pooja */ = {
+		317BA9871E4751BB00885E61 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				3120F8E81E118E21007017BC /* marathi */,
+				317BA9851E4748F200885E61 /* Pooja+Enums.swift */,
 			);
-			name = Pooja;
+			name = Enums;
 			sourceTree = "<group>";
 		};
 		3184CE281D8524AA00812B60 /* DetailPages */ = {
@@ -350,10 +338,12 @@
 		319005191D97B6730066EB49 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				317BA9871E4751BB00885E61 /* Enums */,
 				3196915E1E0F985600AF093C /* HelperClasses */,
 				31E4B6B11D9030C8007C16CB /* PoojanamInfo.swift */,
 				311054291DA116E400EAEE25 /* Extensions.swift */,
 				31519AF01DCA56EC0090F97C /* Helper.swift */,
+				312CBD021E424EF2006634F2 /* PoojanamFBRefLinks.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -479,7 +469,6 @@
 			isa = PBXGroup;
 			children = (
 				3120F8E71E118E12007017BC /* Stotram */,
-				3168A5651E1174550003DB24 /* Pooja */,
 			);
 			name = AudioFiles;
 			sourceTree = "<group>";
@@ -584,7 +573,6 @@
 				313B25D21DD63CB200A117FE /* NotoSansDevanagari-Regular.ttf in Resources */,
 				31E9DA971E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf in Resources */,
 				31E9DA9D1E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf in Resources */,
-				313B25CD1DD6117700A117FE /* marathi_mangalagauri_pooja.m4a in Resources */,
 				319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */,
 				315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */,
 				313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */,
@@ -600,7 +588,6 @@
 				31FDC5A21D7D3CC9008CAC1C /* Main.storyboard in Resources */,
 				3120F9001E118E43007017BC /* marathi_sankatnashan_ganesh_stotram.m4a in Resources */,
 				3158E69F1DCA672500A28374 /* .gitignore in Resources */,
-				314E7DEE1DD03F7000EDE444 /* marathi_satyanarayan_pooja.m4a in Resources */,
 				31E9DA991E2B9E5400BF1EF2 /* marathi_mangalagauri_aarathi.rtf in Resources */,
 				3196916A1E103CA900AF093C /* marathi_parthivGanapathi_pooja_samagri.rtf in Resources */,
 				31DF4B791E1F67FD007C830A /* marathi_mangalagauri_pooja_about.rtf in Resources */,
@@ -609,7 +596,6 @@
 				319691681E103C9B00AF093C /* marathi_parthivGanapathi_pooja_vidhi.rtf in Resources */,
 				31E9DA981E2B9E5400BF1EF2 /* marathi_ganesh_aarathi.rtf in Resources */,
 				3120F8FF1E118E43007017BC /* marathi_rudra_adhyay_stotram.m4a in Resources */,
-				319691621E103B9100AF093C /* marathi_parthivGanapathi_pooja.m4a in Resources */,
 				313B25D11DD63CB200A117FE /* NotoSansDevanagari-Bold.ttf in Resources */,
 				3120F8F71E118E43007017BC /* marathi_dattatreya_kashta_nashak_stotram.m4a in Resources */,
 				31E9DA9C1E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf in Resources */,
@@ -688,6 +674,7 @@
 				31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */,
 				31E138951DAAC029003E1283 /* AarathiTableViewCell.swift in Sources */,
 				3184CE251D84979600812B60 /* StotramViewController.swift in Sources */,
+				317BA9861E4748F200885E61 /* Pooja+Enums.swift in Sources */,
 				319691601E0F986D00AF093C /* ImageViewRoundCornered.swift in Sources */,
 				31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */,
 				3184CE2F1D852EE800812B60 /* PoojaDetailsViewController.swift in Sources */,
@@ -702,6 +689,7 @@
 				3184CE2A1D85268B00812B60 /* SongDetailsViewController.swift in Sources */,
 				31E4B6B21D9030C8007C16CB /* PoojanamInfo.swift in Sources */,
 				31D0868C1D80836100D59FB7 /* PoojaViewController.swift in Sources */,
+				312CBD031E424EF2006634F2 /* PoojanamFBRefLinks.swift in Sources */,
 				319005491D9990830066EB49 /* PoojaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,16 +21,27 @@ class AboutPoojaViewController: UITableViewController {
     @IBOutlet weak var poojaInfoBeginView: UIView!
     @IBOutlet weak var poojaInfoEndView: UIView!
     
+    @IBOutlet weak var poojaInfoDuration: UILabel!
     @IBOutlet weak var poojaInfoDurationLabel: UILabel!
+
+    @IBOutlet weak var poojaInfoBenefits: UILabel!
     @IBOutlet weak var poojaInfoDescriptionView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if let poojaData = poojaDataDicts[poojaName] {
-            self.title = poojaName
-            poojaInfoNameLabel.text = "About \(poojaName)"
             
+            let poojaKey = poojaData["audio"] ?? ""
+            
+            if let localData = LocalLanguage(rawValue: poojaKey) {
+                
+                self.title = localData.title
+                poojaInfoNameLabel.text = localData.about
+                poojaInfoDuration.text = localData.duration
+                poojaInfoBenefits.text = localData.benefits
+            }
+
             poojaInfoDateView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
             poojaInfoBeginView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
             poojaInfoEndView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().colorGray())
