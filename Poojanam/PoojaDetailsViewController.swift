@@ -36,6 +36,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var audioSlider: UISlider!
     
     var poojaName : String = ""
+    var poojaInfo : Pooja?
     var isPoojaSamagriActivated : Bool = true
     var audioPlayer = AVAudioPlayer()
     var isDownloading = false
@@ -61,15 +62,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         audioSlider.setThumbImage(sliderThumbImage, for: .normal)
         
         if let poojaData = poojaDataDicts[poojaName] {
+            
+            self.title = poojaInfo?.title
 
-            let poojaKey = poojaData["audio"] ?? ""
-            
-            if let localData = LocalLanguage(rawValue: poojaKey) {
-                
-                self.title = localData.title
-            }
-            
-            
             //Set Text info
             poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["vidhi"]!, fileExtension: "rtf")
             poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)

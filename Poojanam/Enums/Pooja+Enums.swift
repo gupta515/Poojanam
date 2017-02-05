@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum LocalLanguage : String {
+enum Pooja : String {
     
-    case MarathiMangalagauriPooja = "marathi_mangalagauri_pooja"
-    case MarathiSatyanarayanaPooja = "marathi_satyanarayan_pooja"
-    case MarathiParthivGanapathiPooja = "marathi_parthivGanapathi_pooja"
+    case MarathiMangalagauriPooja = "Mangalagauri Pooja_Marathi"
+    case MarathiSatyanarayanaPooja = "Satyanarayana Pooja_Marathi"
+    case MarathiParthivGanapathiPooja = "Parthiv Ganapathi Pooja_Marathi"
     
     var title : String {
         
@@ -22,11 +22,27 @@ enum LocalLanguage : String {
             return "मंगलागौरी पूजा"
             
         case .MarathiParthivGanapathiPooja:
-            return "श्री पार्थिवगणपती पूजा "
+            return "श्री पार्थिवगणपती पूजा"
             
         case .MarathiSatyanarayanaPooja:
             return "श्रीसत्यनारायण पूजा"
         }
+    }
+    
+    var image : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "mangalagauri"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "ganesh"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "satyanarayana"
+        }
+        
     }
     
     var about : String {
@@ -41,6 +57,21 @@ enum LocalLanguage : String {
             
         case .MarathiSatyanarayanaPooja:
             return "श्रीसत्यनारायण पूजा - (विषयि) माहिती"
+        }
+    }
+    
+    var aboutText : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja_about"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja_about"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja_about"
         }
     }
     
@@ -59,8 +90,23 @@ enum LocalLanguage : String {
         }
     }
     
+    var benefitsText : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja_benefits"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja_benefits"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja_benefits"
+        }
+    }
+    
     var duration : String {
-
+        
         switch self {
             
         case .MarathiMangalagauriPooja:
@@ -73,5 +119,19 @@ enum LocalLanguage : String {
             return "श्रीसत्यनारायण पूजा कालावधि"
         }
     }
-
+    
+    var durationValue : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "00hr 45mins"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "01hr 00mins"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "01hr 15mins"
+        }
+    }
 }
