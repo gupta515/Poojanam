@@ -36,6 +36,7 @@
 		317BA9861E4748F200885E61 /* Pooja+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9851E4748F200885E61 /* Pooja+Enums.swift */; };
 		317BA9891E475A7F00885E61 /* Aarathi+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */; };
 		317BA98B1E476FF600885E61 /* Languages+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA98A1E476FF600885E61 /* Languages+Enums.swift */; };
+		317BA98D1E477E1300885E61 /* Stotram+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA98C1E477E1300885E61 /* Stotram+Enums.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
 		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
@@ -121,6 +122,7 @@
 		317BA9851E4748F200885E61 /* Pooja+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pooja+Enums.swift"; path = "Enums/Pooja+Enums.swift"; sourceTree = "<group>"; };
 		317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aarathi+Enums.swift"; sourceTree = "<group>"; };
 		317BA98A1E476FF600885E61 /* Languages+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Languages+Enums.swift"; sourceTree = "<group>"; };
+		317BA98C1E477E1300885E61 /* Stotram+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stotram+Enums.swift"; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
 		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				317BA9851E4748F200885E61 /* Pooja+Enums.swift */,
 				317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */,
 				317BA98A1E476FF600885E61 /* Languages+Enums.swift */,
+				317BA98C1E477E1300885E61 /* Stotram+Enums.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				31E4B6AF1D8F06C2007C16CB /* MainNavigationController.swift in Sources */,
 				3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */,
 				3184CE311D85346D00812B60 /* AarathiDetailsViewController.swift in Sources */,
+				317BA98D1E477E1300885E61 /* Stotram+Enums.swift in Sources */,
 				3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */,
 				3184CE341D853AB500812B60 /* LanguagesViewController.swift in Sources */,
 				31D0868E1D8083A800D59FB7 /* AarathiViewController.swift in Sources */,

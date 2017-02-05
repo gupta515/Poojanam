@@ -1034,9 +1034,8 @@
                             <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-1z-LjM">
                                 <rect key="frame" x="0.0" y="548" width="375" height="70"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-P0-KsL">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksx-P0-KsL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXD-Jc-JJr">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -1125,10 +1124,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ksx-P0-KsL" secondAttribute="bottom" id="99l-RX-0KY"/>
                                     <constraint firstAttribute="bottom" secondItem="KXD-Jc-JJr" secondAttribute="bottom" id="Jor-vT-i0p"/>
                                     <constraint firstAttribute="height" constant="70" id="Lm1-Xq-gPS"/>
+                                    <constraint firstItem="ksx-P0-KsL" firstAttribute="top" secondItem="sUJ-1z-LjM" secondAttribute="top" id="RS1-aD-KUs"/>
+                                    <constraint firstItem="ksx-P0-KsL" firstAttribute="leading" secondItem="sUJ-1z-LjM" secondAttribute="leading" id="WWw-bY-zBw"/>
                                     <constraint firstItem="KXD-Jc-JJr" firstAttribute="leading" secondItem="sUJ-1z-LjM" secondAttribute="leading" id="cVf-fp-32p"/>
                                     <constraint firstAttribute="trailing" secondItem="KXD-Jc-JJr" secondAttribute="trailing" id="la7-qy-JrH"/>
+                                    <constraint firstAttribute="trailing" secondItem="ksx-P0-KsL" secondAttribute="trailing" id="vpl-g1-9hB"/>
                                     <constraint firstItem="KXD-Jc-JJr" firstAttribute="top" secondItem="sUJ-1z-LjM" secondAttribute="top" id="yJC-yP-3Ex"/>
                                 </constraints>
                             </view>
@@ -1143,6 +1146,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stotram" image="stotram_inactive" selectedImage="stotram_active" id="WBl-dg-7b6"/>
                     <connections>
+                        <outlet property="audioBG" destination="ksx-P0-KsL" id="0Pa-Gg-XDB"/>
                         <outlet property="audioSlider" destination="lJf-aB-9pT" id="hkS-j3-3gW"/>
                         <outlet property="stotramBottomAudioCtlr" destination="sUJ-1z-LjM" id="JvU-sh-C6Y"/>
                         <outlet property="stotramBtmPlayBtn" destination="COE-gc-6kQ" id="lrB-nE-ZJ0"/>

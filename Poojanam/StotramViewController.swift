@@ -15,7 +15,8 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var stotramBottomAudioCtlr: UIView!
     
     @IBOutlet weak var stotramProgressLabel: UILabel!
-
+    
+    @IBOutlet weak var audioBG: UIImageView!
     @IBOutlet weak var audioSlider: UISlider!
     @IBOutlet weak var stotramBtmPlayBtn: UIButton!
     @IBOutlet weak var stotramPoojaName: UILabel!
@@ -32,7 +33,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
         let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
         
         audioSlider.setThumbImage(sliderThumbImage, for: .normal)
@@ -40,23 +41,25 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func imageWithImage(image: UIImage, scaledToSize newSize: CGSize = CGSize(width: 20, height: 20)) -> UIImage
     {
-    UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-
-    
-    let newImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    
-    return newImage!;
+        
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!;
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Stotram"
         
-        if let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let reqStotramList = allStotrams[selectedLang.lowercased()]{
-            langStotrams = reqStotramList.sorted()
-            stotramTableView.reloadData()
+        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let langInfo = Langauge(rawValue:selectedLang.lowercased()) else {
+            return
         }
+        
+        langStotrams = langInfo.stotramList.keyList.sorted()
+        stotramTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,11 +83,14 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let stotramCell = tableView.dequeueReusableCell(withIdentifier: "StotramCellID") as!StotramTableViewCell
-        if let stotramData = stotramDataDict[langStotrams[indexPath.row]] {
-            stotramCell.stotramNameLabel.text = langStotrams[indexPath.row]
-            stotramCell.stotramProgressLabel.text = stotramData["duration"]
+        
+        let stotramKey = langStotrams[indexPath.row]
+        guard let stotramCell = tableView.dequeueReusableCell(withIdentifier: "StotramCellID") as? StotramTableViewCell,  let stotramInfo = Stotram(rawValue: stotramKey) else  {
+            return UITableViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         }
+        
+        stotramCell.stotramNameLabel.text = stotramInfo.title
+        stotramCell.stotramProgressLabel.text = stotramInfo.durationValue
         
         //Play Button Actions
         stotramCell.stotramAudioBtn.tag = indexPath.row
@@ -134,11 +140,13 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
         stotramTableView.frame.size.height -= 70
         
         //Audio Bottom View
-        let selectedStotramName = langStotrams[selectedStotram]
-        stotramPoojaName.text = selectedStotramName
-        
-        if let stotramInfo = stotramDataDict[selectedStotramName], let stotramAudioFile = stotramInfo["audio"] {
-            setAudioController(audioFile: stotramAudioFile)
+        let selectedStotramKey = langStotrams[selectedStotram]
+
+        if let stotramInfo = Stotram(rawValue: selectedStotramKey) {
+            
+            stotramPoojaName.text = stotramInfo.title
+            audioBG.image = UIImage(named: stotramInfo.audioBG)
+            setAudioController(audioFile: stotramInfo.audio)
             audioPlayer.play()
         }
         
@@ -188,11 +196,11 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
             let currentTimeStr  = String(format: "%02d", currentTime/60) + ":" + String(format: "%02d", currentTime%60)
             
             stotramProgressLabel.text = currentTimeStr
-
+            
             audioSlider.value = Float(audioPlayer.currentTime/audioPlayer.duration)
         }
     }
-
+    
     @IBAction func sliderDragged(_ sender: UISlider) {
         let currentAudioPosition = Float(audioPlayer.duration) * Float(sender.value)
         audioPlayer.currentTime = TimeInterval(currentAudioPosition)
@@ -204,9 +212,8 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func nextStrotam(_ sender: Any) {
+     
         guard let index = selectedStotramIndex, selectedStotramIndex != (langStotrams.count - 1) else { return }
         stotramPlay(selectedStotram: index + 1)
-        
     }
-    
 }
