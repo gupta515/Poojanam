@@ -34,6 +34,7 @@
 		315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 315C19C31DC9B601002A7188 /* GoogleService-Info.plist */; };
 		316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */; };
 		317BA9861E4748F200885E61 /* Pooja+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9851E4748F200885E61 /* Pooja+Enums.swift */; };
+		317BA9891E475A7F00885E61 /* Aarathi+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */; };
 		3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE221D8480F100812B60 /* SongsViewController.swift */; };
 		3184CE251D84979600812B60 /* StotramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE241D84979600812B60 /* StotramViewController.swift */; };
 		3184CE271D8497A600812B60 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184CE261D8497A600812B60 /* MoreViewController.swift */; };
@@ -117,6 +118,7 @@
 		315C19C31DC9B601002A7188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramTableViewCell.swift; sourceTree = "<group>"; };
 		317BA9851E4748F200885E61 /* Pooja+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pooja+Enums.swift"; path = "Enums/Pooja+Enums.swift"; sourceTree = "<group>"; };
+		317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aarathi+Enums.swift"; sourceTree = "<group>"; };
 		3184CE221D8480F100812B60 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		3184CE241D84979600812B60 /* StotramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramViewController.swift; sourceTree = "<group>"; };
 		3184CE261D8497A600812B60 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				317BA9851E4748F200885E61 /* Pooja+Enums.swift */,
+				317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */,
 				31519AF11DCA56EC0090F97C /* Helper.swift in Sources */,
 				3184CE2D1D852ED600812B60 /* AboutPoojaViewController.swift in Sources */,
+				317BA9891E475A7F00885E61 /* Aarathi+Enums.swift in Sources */,
 				3184CE231D8480F100812B60 /* SongsViewController.swift in Sources */,
 				31E4B6B41D903FB9007C16CB /* LanguageViewCell.swift in Sources */,
 				31FDC59B1D7D3CC8008CAC1C /* AppDelegate.swift in Sources */,

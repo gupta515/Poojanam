@@ -25,25 +25,18 @@ class AarathiDetailsViewController: UIViewController {
     @IBOutlet weak var aarathiAudioBottomPlayBtn: UIButton!
     @IBOutlet weak var aarathiNameLabel: UILabel!
     
-    var aarathiName : String = ""
+    var aarathiInfo : Aarathi?
     var isAudioPlaying = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view. 
-        self.title = aarathiName
+        self.title = aarathiInfo?.title
         swapAudioCtlrView(play: isAudioPlaying, setTextView : false)
         
-        if let aarathiInfo = aarathiDataDict[aarathiName] {
-            aarathiTextView.attributedText = TextFiles().getTextFromFile(fileName: aarathiInfo["text"] ?? "")
-        }
+        aarathiTextView.attributedText = TextFiles().getTextFromFile(fileName: aarathiInfo?.textFile ?? "")
+        
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func aarathiAudioCtlrTopBtn(_ sender: AnyObject) {
         swapAudioCtlrView(play: !isAudioPlaying, setTextView : true)

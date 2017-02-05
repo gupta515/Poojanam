@@ -13,7 +13,7 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var aarathiTableView: UITableView!
     
     var langAarathis : [String] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +27,7 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
             aarathiTableView.reloadData()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,25 +44,34 @@ class AarathiViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let aarathiCell = tableView.dequeueReusableCell(withIdentifier: "AarathiCellID") as! AarathiTableViewCell
         
         let aarathiName = langAarathis[indexPath.row]
         
-        aarathiCell.aarathiDietyName.setTitle(aarathiName, for: .normal)
+        guard let aarathiCell = tableView.dequeueReusableCell(withIdentifier: "AarathiCellID") as? AarathiTableViewCell, let aarathiInfo = Aarathi(rawValue: aarathiName) else {
+            return UITableViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        }
+        
+        aarathiCell.aarathiDietyName.setTitle(aarathiInfo.title, for: .normal)
         aarathiCell.aarathiDietyName.tag = indexPath.row
         aarathiCell.aarathiDietyName.addTarget(self, action: #selector(aarathiPlay), for: UIControlEvents.touchUpInside)
-        if let aarathiInfo = aarathiDataDict[aarathiName] {
-            if let dietyImageName = aarathiInfo["image"] {
-                aarathiCell.aarathiDietyImage.image = UIImage(named: dietyImageName)
-            }
-        }
+        
+        aarathiCell.aarathiDietyImage.image = UIImage(named: aarathiInfo.image)
+        
         return aarathiCell
     }
     
     func aarathiPlay(sender: UIButton) {
-        if let btnTitle = sender.currentTitle, let aarathiDetailsView = storyboard?.instantiateViewController(withIdentifier: "AarathiDetailViewID")  as? AarathiDetailsViewController {
-            aarathiDetailsView.aarathiName = btnTitle
-            self.navigationController?.pushViewController(aarathiDetailsView, animated: true)
+        
+        let aarathiName = langAarathis[sender.tag]
+        
+        guard let aarathiInfo = Aarathi(rawValue: aarathiName), let aarathiDetailsView = storyboard?.instantiateViewController(withIdentifier: "AarathiDetailViewID")  as? AarathiDetailsViewController else {
+            print("Might be proper info is not existing to move forward")
+            return
         }
+        
+        aarathiDetailsView.aarathiInfo = aarathiInfo
+        
+        self.navigationController?.pushViewController(aarathiDetailsView, animated: true)
+        
     }
 }
