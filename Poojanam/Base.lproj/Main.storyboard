@@ -1269,27 +1269,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-6o-cx1">
-                                                    <rect key="frame" x="45" y="18" width="320" height="20"/>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="ago-E1-hP3">
+                                                    <rect key="frame" x="15" y="22" width="16" height="12"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="320" id="Dyb-vi-F9Y"/>
-                                                        <constraint firstAttribute="height" constant="20" id="dIN-bX-h8I"/>
+                                                        <constraint firstAttribute="height" constant="12" id="U1P-PP-LNV"/>
+                                                        <constraint firstAttribute="width" constant="16" id="hm7-2g-88b"/>
                                                     </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-6o-cx1">
+                                                    <rect key="frame" x="45" y="0.0" width="315" height="59"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="ago-E1-hP3">
-                                                    <rect key="frame" x="18" y="22" width="14" height="10"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ago-E1-hP3" firstAttribute="top" secondItem="MVX-dp-YAt" secondAttribute="top" constant="22" id="0or-e2-hSc"/>
-                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="leading" secondItem="ago-E1-hP3" secondAttribute="trailing" constant="13" id="116-Cr-xiA"/>
-                                                <constraint firstItem="ago-E1-hP3" firstAttribute="leading" secondItem="MVX-dp-YAt" secondAttribute="leading" constant="18" id="6vi-lM-0Og"/>
-                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="leading" secondItem="ago-E1-hP3" secondAttribute="trailing" constant="13" id="9zz-s4-eBa"/>
-                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="top" secondItem="MVX-dp-YAt" secondAttribute="top" constant="18" id="UIt-kO-JZ3"/>
-                                                <constraint firstAttribute="trailing" secondItem="mQw-6o-cx1" secondAttribute="trailing" constant="10" id="aEO-ki-IlE"/>
+                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="leading" secondItem="ago-E1-hP3" secondAttribute="trailing" constant="14" id="Nba-GT-EE4"/>
+                                                <constraint firstAttribute="trailing" secondItem="mQw-6o-cx1" secondAttribute="trailing" constant="15" id="Np4-YY-awv"/>
+                                                <constraint firstAttribute="bottom" secondItem="mQw-6o-cx1" secondAttribute="bottom" id="Qyb-Ea-WSK"/>
+                                                <constraint firstItem="ago-E1-hP3" firstAttribute="leading" secondItem="MVX-dp-YAt" secondAttribute="leading" constant="15" id="b4p-NB-a4i"/>
+                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="top" secondItem="MVX-dp-YAt" secondAttribute="top" id="bfU-Ve-Y9H"/>
+                                                <constraint firstItem="ago-E1-hP3" firstAttribute="top" secondItem="MVX-dp-YAt" secondAttribute="top" constant="22" id="fJR-JR-Wg4"/>
+                                                <constraint firstItem="mQw-6o-cx1" firstAttribute="leading" secondItem="ago-E1-hP3" secondAttribute="trailing" constant="14" id="qK3-lh-rgi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1327,7 +1328,22 @@
                     <view key="view" contentMode="scaleToFill" id="1ED-cD-d9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team is Working on" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-Lq-1Bi">
+                                <rect key="frame" x="15" y="323" width="345" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S4g-Lq-1Bi" secondAttribute="trailing" constant="15" id="DkI-wf-7eo"/>
+                            <constraint firstItem="S4g-Lq-1Bi" firstAttribute="leading" secondItem="1ED-cD-d9E" secondAttribute="leading" constant="15" id="NIM-Vg-W5A"/>
+                            <constraint firstItem="S4g-Lq-1Bi" firstAttribute="top" secondItem="Cqk-Sh-gIR" secondAttribute="bottom" constant="259" id="T68-IJ-QHp"/>
+                            <constraint firstItem="dnB-7m-diu" firstAttribute="top" secondItem="S4g-Lq-1Bi" secondAttribute="bottom" constant="274" id="aFO-RT-FEd"/>
+                            <constraint firstItem="S4g-Lq-1Bi" firstAttribute="centerX" secondItem="1ED-cD-d9E" secondAttribute="centerX" id="rzw-3L-6Iz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Aag-gM-6F3"/>
                 </viewController>
@@ -1346,13 +1362,102 @@
                     <view key="view" contentMode="scaleToFill" id="zSq-1S-XbU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poojanam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmi-4W-XFd">
+                                <rect key="frame" x="15" y="85" width="345" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QCW-dM-azc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.3   " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-19-wrv">
+                                <rect key="frame" x="15" y="110" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tcl-Rg-KtA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Motto   " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEA-Jp-cTC">
+                                <rect key="frame" x="15" y="170" width="345" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9Jd-g3-X0x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q90-Cn-paY">
+                                <rect key="frame" x="14" y="449" width="345" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Developed by   " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03S-u6-UKd">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun Sirius  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fn-yx-oo5">
+                                        <rect key="frame" x="0.0" y="20" width="345" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="© 2017 by Sun Sirius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8m2-fz-RwU">
+                                        <rect key="frame" x="0.0" y="60" width="345" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-ZF-XiH">
+                                <rect key="frame" x="15" y="195" width="345" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="rYO-6Z-Iol"/>
+                                </constraints>
+                                <string key="text">In today’s fast challenging lifestyle finding
+a priest to perform specific Pooja is a hard
+challenge. Poojanam fills the gap by offering
+Pujas by experienced priests, at an ease of
+fingertips.
+
+Poojanam team wish you to be blessed</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <string key="userLabel">In today’s fast challenging lifestyle finding a priest to perform specific Pooja is a hard challenge. Poojanam fills the gap by offering Pujas by experienced priests, at an ease of fingertips.  Poojanam team wish you to be blessed</string>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LEA-Jp-cTC" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="5ud-kB-bvD"/>
+                            <constraint firstItem="LEA-Jp-cTC" firstAttribute="top" secondItem="7Se-19-wrv" secondAttribute="bottom" constant="30" id="Hjq-wh-eUO"/>
+                            <constraint firstAttribute="trailing" secondItem="7Se-19-wrv" secondAttribute="trailing" constant="15" id="JeW-dt-lYz"/>
+                            <constraint firstItem="LEA-Jp-cTC" firstAttribute="top" secondItem="7Se-19-wrv" secondAttribute="bottom" constant="30" id="NdI-c0-3Id"/>
+                            <constraint firstAttribute="trailing" secondItem="fmi-4W-XFd" secondAttribute="trailing" constant="15" id="Sfy-WE-af2"/>
+                            <constraint firstItem="fmi-4W-XFd" firstAttribute="top" secondItem="giR-8c-0dr" secondAttribute="bottom" constant="21" id="X3E-PO-hBX"/>
+                            <constraint firstAttribute="trailing" secondItem="LEA-Jp-cTC" secondAttribute="trailing" constant="15" id="Xsd-HX-0Xk"/>
+                            <constraint firstItem="Gmf-ZF-XiH" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="btx-lx-Xjp"/>
+                            <constraint firstItem="Gmf-ZF-XiH" firstAttribute="top" secondItem="LEA-Jp-cTC" secondAttribute="bottom" id="cPQ-Z6-kGM"/>
+                            <constraint firstAttribute="trailing" secondItem="Gmf-ZF-XiH" secondAttribute="trailing" constant="15" id="fyK-6j-LY4"/>
+                            <constraint firstItem="fmi-4W-XFd" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="nx8-8d-6gK"/>
+                            <constraint firstItem="7Se-19-wrv" firstAttribute="top" secondItem="fmi-4W-XFd" secondAttribute="bottom" id="qLz-mp-9TS"/>
+                            <constraint firstItem="7Se-19-wrv" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="xcM-A5-sqG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="StM-f7-YpQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfK-ci-kgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="1363"/>
+            <point key="canvasLocation" x="542.5" y="1362.5"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="uWW-ih-wbf">

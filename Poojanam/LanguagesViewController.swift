@@ -43,10 +43,15 @@ class LanguagesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let languageCell = tableView.dequeueReusableCell(withIdentifier: "LanguageCellID") as! LanguageViewCell
-        let arryLang = languagesAvailable[indexPath.row]
-        languageCell.languageLable.text = arryLang
-        languageCell.languageHighLight.isHidden = (arryLang != selectedLanguage)
+        
+        let langKey = languagesAvailable[indexPath.row]
+        
+        guard let languageCell = tableView.dequeueReusableCell(withIdentifier: "LanguageCellID") as? LanguageViewCell, let langInfo = Langauge(rawValue: langKey) else {
+            return UITableViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        }
+    
+        languageCell.languageLable.text = langInfo.titleWithLocal
+        languageCell.languageHighLight.isHidden = (langKey.lowercased() != selectedLanguage.lowercased())
         return languageCell
     }
     

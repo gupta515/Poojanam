@@ -8,6 +8,8 @@
 
 import Foundation
 
+let languagesAvailable :[String] = ["marathi"]
+
 enum Langauge : String {
     
     case Marathi = "marathi"
