@@ -96,7 +96,6 @@ extension PoojaViewController {
             return
         }
         
-        poojaDetailsView.poojaName = poojaInfo.rawValue
         poojaDetailsView.poojaInfo = poojaInfo
         self.navigationController?.pushViewController(poojaDetailsView, animated: true)
         

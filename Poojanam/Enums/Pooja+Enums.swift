@@ -42,7 +42,96 @@ enum Pooja : String {
         case .MarathiSatyanarayanaPooja:
             return "satyanarayana"
         }
+    }
+    
+    var samagri : String {
         
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja_samagri"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja_samagri"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja_samagri"
+        }
+    }
+    
+    var audio : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja"
+        }
+    }
+    
+    var audioBG : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "gaurimaathaBG"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "ganeshBG"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "gaurimaathaBG"
+        }
+    }
+    
+    var vidhi : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja_vidhi"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja_vidhi"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja_vidhi"
+        }
+    }
+    
+    var downloadFBS : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return fbMarathiMangalagauriPoojaVidhi
+            
+        case .MarathiParthivGanapathiPooja:
+            return fbMarathiParthivGanapathiPoojaVidhi
+            
+        case .MarathiSatyanarayanaPooja:
+            return fbMarathiSatyanarayanPoojaVidhi
+        }
+    }
+    
+    var cacheKey : String {
+        
+        switch self {
+            
+        case .MarathiMangalagauriPooja:
+            return "marathi_mangalagauri_pooja_cacheKey"
+            
+        case .MarathiParthivGanapathiPooja:
+            return "marathi_parthivGanapathi_pooja_cacheKey"
+            
+        case .MarathiSatyanarayanaPooja:
+            return "marathi_satyanarayan_pooja_cacheKey"
+        }
     }
     
     var about : String {

@@ -10,26 +10,6 @@ import Foundation
 
 let languagesAvailable = ["Hindi","Marathi","Telugu","Tamil"]
 
-//Mark:- Pooja's INFO
-
-// Marathi Pooja's
-
-
-let marathi_pooja_mangalagauri : [String:String] = [ "audio":"marathi_mangalagauri_pooja",   "name":"Mangalagauri Pooja", "image":"mangalagauri", "samagri":"marathi_mangalagauri_pooja_samagri", "vidhi":"marathi_mangalagauri_pooja_vidhi", "downloadFBUrl": fbMarathiMangalagauriPoojaVidhi, "cacheKey": "marathi_mangalagauri_pooja_cacheKey", "audioBG": "gaurimaathaBG"]
-
-let marathi_pooja_parthivGanapathi : [String:String] = [ "audio":"marathi_parthivGanapathi_pooja",   "name":"Parthiv Ganapathi", "image":"ganesh", "samagri":"marathi_parthivGanapathi_pooja_samagri", "vidhi":"marathi_parthivGanapathi_pooja_vidhi", "downloadFBUrl": fbMarathiParthivGanapathiPoojaVidhi, "cacheKey": "marathi_parthivGanapathi_pooja_cacheKey", "audioBG": "ganeshBG"]
-
-let marathi_pooja_satyanarayana : [String:String] = [ "audio": "marathi_satyanarayan_pooja", "name": "Satyanarayana Pooja",
-                                                     "samagri": "marathi_satyanarayan_pooja_samagri",
-                                                     "vidhi": "marathi_satyanarayan_pooja_vidhi", "downloadFBUrl": fbMarathiSatyanarayanPoojaVidhi, "cacheKey": "marathi_satyanarayan_pooja_cacheKey", "audioBG": "gaurimaathaBG"]
-
-let marathi_poojas : [String:[String:String]] = ["Satyanarayana Pooja_Marathi":marathi_pooja_satyanarayana, "Mangalagauri Pooja_Marathi":marathi_pooja_mangalagauri, "Parthiv Ganapathi Pooja_Marathi": marathi_pooja_parthivGanapathi]
-
-// All Pooja's
-let poojaDataDicts : [String:[String:String]] = ["Satyanarayana Pooja_Marathi":marathi_pooja_satyanarayana, "Mangalagauri Pooja_Marathi":marathi_pooja_mangalagauri, "Parthiv Ganapathi Pooja_Marathi": marathi_pooja_parthivGanapathi]
-
-let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
-
 //MARK:- Stotram INFO
 
 //MARK:- Marathi Stotrams

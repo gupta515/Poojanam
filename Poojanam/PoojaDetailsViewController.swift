@@ -34,8 +34,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var poojaVidhiTextView: UITextView!
     
     @IBOutlet weak var audioSlider: UISlider!
-    
-    var poojaName : String = ""
+
     var poojaInfo : Pooja?
     var isPoojaSamagriActivated : Bool = true
     var audioPlayer = AVAudioPlayer()
@@ -61,34 +60,31 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         
         audioSlider.setThumbImage(sliderThumbImage, for: .normal)
         
-        if let poojaData = poojaDataDicts[poojaName] {
-            
-            self.title = poojaInfo?.title
-
-            //Set Text info
-            poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["vidhi"]!, fileExtension: "rtf")
-            poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)
-            poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaData["samagri"]!, fileExtension: "rtf")
-            
-            poojaAudioImageBG.image = UIImage(named: poojaData["audioBG"]!)
-            guard let poojaAudio = poojaData["audio"], !poojaAudio.isEmpty else {
-                print("Audio name is not available")
-                return
-            }
-            
-            if let cacheKey = poojaData["cacheKey"], UserDefaults.standard.bool(forKey: cacheKey) {
-                print("File already downloaded")
-                setAudio(audioUrl: poojaAudio)
-                return
-            }
-            
-            if let refURL = poojaData["downloadFBUrl"] {
-                poojaAudioCtlrTopView.isHidden = true
-                audioDownloadView.isHidden = false
-                audioDownloadLabel.text = "Downloading (0%)"
-                downloadAudioFromFB(audioFBSUrl: refURL, audioFileName: poojaAudio)
-            }
-            
+        self.title = poojaInfo?.title
+        
+        //Set Text info
+        poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaInfo?.vidhi ?? "", fileExtension: "rtf")
+        poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)
+        poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaInfo?.samagri ?? "", fileExtension: "rtf")
+        
+        poojaAudioImageBG.image = UIImage(named: poojaInfo?.audioBG ?? "")
+        
+        guard let poojaAudio = poojaInfo?.audio, !poojaAudio.isEmpty else {
+            print("Audio name is not available")
+            return
+        }
+        
+        if let cacheKey = poojaInfo?.cacheKey, UserDefaults.standard.bool(forKey: cacheKey) {
+            print("File already downloaded")
+            setAudio(audioUrl: poojaAudio)
+            return
+        }
+        
+        if let refURL = poojaInfo?.downloadFBS {
+            poojaAudioCtlrTopView.isHidden = true
+            audioDownloadView.isHidden = false
+            audioDownloadLabel.text = "Downloading (0%)"
+            downloadAudioFromFB(audioFBSUrl: refURL, audioFileName: poojaAudio)
         }
     }
     
