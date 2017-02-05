@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Language : String {
+enum PoojaList : String {
     
     case Marathi = "marathi"
     
@@ -18,6 +18,20 @@ enum Language : String {
             
         case .Marathi:
             return ["Mangalagauri Pooja_Marathi", "Parthiv Ganapathi Pooja_Marathi", "Satyanarayana Pooja_Marathi"]
+        }
+    }
+}
+
+enum AarathiList : String {
+    
+    case Marathi = "marathi"
+    
+    var keyList : [String] {
+        
+        switch self {
+            
+        case .Marathi:
+            return ["Datta Aarathi_Marathi", "Durga Devi Aarathi_Marathi", "Ganesh Aarathi_Marathi", "Mangalagauri Aarathi_Marathi", "Satyanarayana Aarathi_Marathi", "Shankar Aarathi_Marathi", "Shri Maruthi Aarathi_Marathi", "Shri Ram Aarathi_Marathi", "Vitthal Aarathi_Marathi"]
         }
     }
 }

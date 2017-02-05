@@ -10,45 +10,45 @@ import Foundation
 
 enum Aarathi : String {
     
-    case DattaAarathi           =   "Datta Aarathi"
-    case DurgaDeviAarathi       =   "Durga Devi Aarathi"
-    case GaneshAarathi          =   "Ganesh Aarathi"
-    case MangalagauriAarathi    =   "Mangalagauri Aarathi"
-    case SatyanarayanaAarathi   =   "Satyanarayana Aarathi"
-    case ShankarAarathi         =   "Shankar Aarathi"
-    case ShriMaruthiAarathi     =   "Shri Maruthi Aarathi"
-    case ShriRamAarathi         =   "Shri Ram Aarathi"
-    case VitthalAarathi         =   "Vitthal Aarathi"
+    case MarathiDattaAarathi           =   "Datta Aarathi_Marathi"
+    case MarathiDurgaDeviAarathi       =   "Durga Devi Aarathi_Marathi"
+    case MarathiGaneshAarathi          =   "Ganesh Aarathi_Marathi"
+    case MarathiMangalagauriAarathi    =   "Mangalagauri Aarathi_Marathi"
+    case MarathiSatyanarayanaAarathi   =   "Satyanarayana Aarathi_Marathi"
+    case MarathiShankarAarathi         =   "Shankar Aarathi_Marathi"
+    case MarathiShriMaruthiAarathi     =   "Shri Maruthi Aarathi_Marathi"
+    case MarathiShriRamAarathi         =   "Shri Ram Aarathi_Marathi"
+    case MarathiVitthalAarathi         =   "Vitthal Aarathi_Marathi"
     
     var title : String {
         
         switch self {
             
-        case .DattaAarathi:
+        case .MarathiDattaAarathi:
             return "दत्त आरती"
             
-        case .DurgaDeviAarathi:
+        case .MarathiDurgaDeviAarathi:
             return "दुर्गा देवि आरती"
             
-        case .GaneshAarathi:
+        case .MarathiGaneshAarathi:
             return "गणेश आरती"
             
-        case .MangalagauriAarathi:
+        case .MarathiMangalagauriAarathi:
             return "मंगलागौरी आरती"
             
-        case .SatyanarayanaAarathi:
+        case .MarathiSatyanarayanaAarathi:
             return "श्रीसत्यनारायण आरती"
             
-        case .ShankarAarathi:
+        case .MarathiShankarAarathi:
             return "शंकर आरती"
             
-        case .ShriMaruthiAarathi:
+        case .MarathiShriMaruthiAarathi:
             return "श्री मारुती आरती"
             
-        case .ShriRamAarathi:
+        case .MarathiShriRamAarathi:
             return "श्रीराम आरती"
             
-        case .VitthalAarathi:
+        case .MarathiVitthalAarathi:
             return "विठ्ठल आरती"
             
         }
@@ -58,31 +58,31 @@ enum Aarathi : String {
         
         switch self {
             
-        case .DattaAarathi:
+        case .MarathiDattaAarathi:
             return "datta"
             
-        case .DurgaDeviAarathi:
+        case .MarathiDurgaDeviAarathi:
             return "durga"
             
-        case .GaneshAarathi:
+        case .MarathiGaneshAarathi:
             return "ganesh"
             
-        case .MangalagauriAarathi:
+        case .MarathiMangalagauriAarathi:
             return "mangalagauri"
             
-        case .SatyanarayanaAarathi:
+        case .MarathiSatyanarayanaAarathi:
             return "satyanarayana"
             
-        case .ShankarAarathi:
+        case .MarathiShankarAarathi:
             return "shiva"
             
-        case .ShriMaruthiAarathi:
+        case .MarathiShriMaruthiAarathi:
             return "hanuman"
             
-        case .ShriRamAarathi:
+        case .MarathiShriRamAarathi:
             return "ram"
             
-        case .VitthalAarathi:
+        case .MarathiVitthalAarathi:
             return "vittal"
             
         }
@@ -92,31 +92,31 @@ enum Aarathi : String {
         
         switch self {
             
-        case .DattaAarathi:
+        case .MarathiDattaAarathi:
             return "marathi_datta_aarathi"
             
-        case .DurgaDeviAarathi:
+        case .MarathiDurgaDeviAarathi:
             return "marathi_durgaDevi_aarathi"
             
-        case .GaneshAarathi:
+        case .MarathiGaneshAarathi:
             return "marathi_ganesh_aarathi"
             
-        case .MangalagauriAarathi:
+        case .MarathiMangalagauriAarathi:
             return "marathi_mangalagauri_aarathi"
             
-        case .SatyanarayanaAarathi:
+        case .MarathiSatyanarayanaAarathi:
             return "marathi_satyanarayanDev_aarathi"
             
-        case .ShankarAarathi:
+        case .MarathiShankarAarathi:
             return "marathi_shankar_aarathi"
             
-        case .ShriMaruthiAarathi:
+        case .MarathiShriMaruthiAarathi:
             return "marathi_shriMaruthi_aarathi"
             
-        case .ShriRamAarathi:
+        case .MarathiShriRamAarathi:
             return "marathi_shriram_aarathi"
             
-        case .VitthalAarathi:
+        case .MarathiVitthalAarathi:
             return "marathi_vitthal_aarathi"
             
         }

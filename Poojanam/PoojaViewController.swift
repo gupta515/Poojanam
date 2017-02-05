@@ -26,11 +26,11 @@ class PoojaViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Pooja"
         
-        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let languageInfo = Language(rawValue: selectedLang.lowercased()) else {
+        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let poojaListInfo = PoojaList(rawValue: selectedLang.lowercased()) else {
             return
         }
         
-        langPoojaSortedKeys = languageInfo.keysList.sorted()
+        langPoojaSortedKeys = poojaListInfo.keysList.sorted()
         poojaTableView?.reloadData()
 
     }

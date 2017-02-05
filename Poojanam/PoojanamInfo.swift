@@ -30,14 +30,6 @@ let poojaDataDicts : [String:[String:String]] = ["Satyanarayana Pooja_Marathi":m
 
 let allPoojas : [String:[String:[String:String]]] = ["marathi":marathi_poojas]
 
-//Mark:- Aarathi INFO
-
-//Mark:- Marathi aarathi
-
-let marathi_aarathis: [String] = ["Datta Aarathi", "Durga Devi Aarathi", "Ganesh Aarathi", "Mangalagauri Aarathi", "Satyanarayana Aarathi", "Shankar Aarathi", "Shri Maruthi Aarathi", "Shri Ram Aarathi", "Vitthal Aarathi"]
-
-let allAarathis : [String: [String]] = ["marathi": marathi_aarathis]
-
 //MARK:- Stotram INFO
 
 //MARK:- Marathi Stotrams
