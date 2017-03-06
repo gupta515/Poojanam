@@ -64,7 +64,6 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         
         //Set Text info
         poojaVidhiTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaInfo?.vidhi ?? "", fileExtension: "rtf")
-        poojaVidhiTextView.font = UIFont(name: "NotoSansDevanagari-Regular", size: 42)
         poojaSamagriTextView.attributedText = TextFiles().getTextFromFile(fileName: poojaInfo?.samagri ?? "", fileExtension: "rtf")
         
         poojaAudioImageBG.image = UIImage(named: poojaInfo?.audioBG ?? "")

@@ -37,7 +37,7 @@ enum Pooja : String {
             return "mangalagauri"
             
         case .MarathiParthivGanapathiPooja:
-            return "ganesh"
+            return "Ganesh"
             
         case .MarathiSatyanarayanaPooja:
             return "satyanarayana"

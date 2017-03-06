@@ -65,7 +65,7 @@ enum Aarathi : String {
             return "durga"
             
         case .MarathiGaneshAarathi:
-            return "ganesh"
+            return "Ganesh"
             
         case .MarathiMangalagauriAarathi:
             return "mangalagauri"

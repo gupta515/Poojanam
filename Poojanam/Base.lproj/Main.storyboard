@@ -1122,7 +1122,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ksx-P0-KsL" secondAttribute="bottom" id="99l-RX-0KY"/>
                                     <constraint firstAttribute="bottom" secondItem="KXD-Jc-JJr" secondAttribute="bottom" id="Jor-vT-i0p"/>
@@ -1372,7 +1371,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0 (1.2) " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-19-wrv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0 (1.3) " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-19-wrv">
                                 <rect key="frame" x="15" y="110" width="345" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Tcl-Rg-KtA"/>
@@ -1390,9 +1389,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q90-Cn-paY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q90-Cn-paY">
                                 <rect key="frame" x="14" y="449" width="345" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Developed by   " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03S-u6-UKd">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="15"/>
@@ -1417,6 +1415,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="ueX-0Q-k4M"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-ZF-XiH">
                                 <rect key="frame" x="15" y="195" width="345" height="140"/>
@@ -1444,12 +1445,15 @@ Poojanam team wish you to be blessed</string>
                             <constraint firstItem="LEA-Jp-cTC" firstAttribute="top" secondItem="7Se-19-wrv" secondAttribute="bottom" constant="30" id="NdI-c0-3Id"/>
                             <constraint firstAttribute="trailing" secondItem="fmi-4W-XFd" secondAttribute="trailing" constant="15" id="Sfy-WE-af2"/>
                             <constraint firstItem="fmi-4W-XFd" firstAttribute="top" secondItem="giR-8c-0dr" secondAttribute="bottom" constant="21" id="X3E-PO-hBX"/>
+                            <constraint firstItem="Q90-Cn-paY" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="14" id="X3l-MW-24f"/>
                             <constraint firstAttribute="trailing" secondItem="LEA-Jp-cTC" secondAttribute="trailing" constant="15" id="Xsd-HX-0Xk"/>
+                            <constraint firstItem="F2q-dH-OBf" firstAttribute="top" secondItem="Q90-Cn-paY" secondAttribute="bottom" constant="94" id="Ztx-4o-cZH"/>
                             <constraint firstItem="Gmf-ZF-XiH" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="btx-lx-Xjp"/>
                             <constraint firstItem="Gmf-ZF-XiH" firstAttribute="top" secondItem="LEA-Jp-cTC" secondAttribute="bottom" id="cPQ-Z6-kGM"/>
                             <constraint firstAttribute="trailing" secondItem="Gmf-ZF-XiH" secondAttribute="trailing" constant="15" id="fyK-6j-LY4"/>
                             <constraint firstItem="fmi-4W-XFd" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="nx8-8d-6gK"/>
                             <constraint firstItem="7Se-19-wrv" firstAttribute="top" secondItem="fmi-4W-XFd" secondAttribute="bottom" id="qLz-mp-9TS"/>
+                            <constraint firstAttribute="trailing" secondItem="Q90-Cn-paY" secondAttribute="trailing" constant="16" id="twq-9h-0U7"/>
                             <constraint firstItem="7Se-19-wrv" firstAttribute="leading" secondItem="zSq-1S-XbU" secondAttribute="leading" constant="15" id="xcM-A5-sqG"/>
                         </constraints>
                     </view>
@@ -1463,7 +1467,7 @@ Poojanam team wish you to be blessed</string>
         <scene sceneID="uWW-ih-wbf">
             <objects>
                 <navigationController id="cVK-uc-FzB" customClass="MainNavigationController" customModule="Poojanam" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pya-GF-1Nx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pya-GF-1Nx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
