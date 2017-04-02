@@ -1,6 +1,0 @@
-framework module Pods_PoojanamTests {
-  umbrella header "Pods-PoojanamTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

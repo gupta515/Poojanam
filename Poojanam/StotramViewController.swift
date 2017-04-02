@@ -7,35 +7,213 @@
 //
 
 import UIKit
+import AVFoundation
 
-class StotramViewController: UIViewController {
-
+class StotramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var stotramTableView: UITableView!
+    @IBOutlet weak var stotramBottomAudioCtlr: UIView!
+    
+    @IBOutlet weak var stotramProgressLabel: UILabel!
+    
+    @IBOutlet weak var audioBG: UIImageView!
+    @IBOutlet weak var audioSlider: UISlider!
+    @IBOutlet weak var stotramBtmPlayBtn: UIButton!
+    @IBOutlet weak var stotramPoojaName: UILabel!
+    
+    var isStotramPlaying = false
+    var didAudioPlayerSet = false
+    var selectedStotramIndex : Int?
+    
+    var langStotrams : [String] = []
+    
+    var audioPlayer = AVAudioPlayer()
+    var updater : CADisplayLink! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        print("Stotram View didload")
+        
+        let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
+        
+        audioSlider.setThumbImage(sliderThumbImage, for: .normal)
+    }
+    
+    func imageWithImage(image: UIImage, scaledToSize newSize: CGSize = CGSize(width: 20, height: 20)) -> UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!;
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Stotram view will appear")
         self.tabBarController?.navigationItem.title = "Stotram"
+        
+        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let langInfo = Langauge(rawValue:selectedLang.lowercased()) else {
+            return
+        }
+        
+        langStotrams = langInfo.stotramList.keyList.sorted()
+        stotramTableView.reloadData()
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if didAudioPlayerSet {
+            audioPlayer.stop()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return langStotrams.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let stotramKey = langStotrams[indexPath.row]
+        guard let stotramCell = tableView.dequeueReusableCell(withIdentifier: "StotramCellID") as? StotramTableViewCell,  let stotramInfo = Stotram(rawValue: stotramKey) else  {
+            return UITableViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        }
+        
+        stotramCell.stotramNameLabel.text = stotramInfo.title
+        stotramCell.stotramProgressLabel.text = stotramInfo.durationValue
+        
+        //Play Button Actions
+        stotramCell.stotramAudioBtn.tag = indexPath.row
+        stotramCell.stotramAudioBtn.isHidden = true
+        stotramCell.stotramAudioBtn.addTarget(self, action: #selector(stotramListPlayButton), for: UIControlEvents.touchUpInside)
+        if isStotramPlaying && selectedStotramIndex == indexPath.row{
+            stotramCell.stotramAudioBtn.isHidden = false
+        }
+        return stotramCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        stotramPlay(selectedStotram: indexPath.row)
+    }
+    
+    func stotramListPlayButton(sender: UIButton){
+        stotramPlay(selectedStotram: sender.tag)
+    }
+    
+    func stotramPlay(selectedStotram : Int){
+        if selectedStotramIndex == selectedStotram {
+            if isStotramPlaying {
+                audioPlayer.pause()
+                isStotramPlaying = false
+                stotramBottomAudioCtlr.isHidden = true
+                stotramTableView.frame.size.height += 70
+            } else {
+                audioPlayer.play()
+                isStotramPlaying = true
+                stotramBottomAudioCtlr.isHidden = false
+                stotramBtmPlayBtn.setImage(UIImage(named: "pauseWhite"), for: UIControlState.normal)
+                stotramTableView.frame.size.height -= 70
+            }
+            stotramTableView.reloadData()
+            return
+        }
+        if isStotramPlaying {
+            audioPlayer.stop()
+            stotramTableView.frame.size.height += 70
+            stotramBottomAudioCtlr.isHidden = true
+        }
+        
+        isStotramPlaying = true
+        selectedStotramIndex = selectedStotram
+        stotramBtmPlayBtn.setImage(UIImage(named: "pauseWhite"), for: UIControlState.normal)
+        stotramTableView.frame.size.height -= 70
+        
+        //Audio Bottom View
+        let selectedStotramKey = langStotrams[selectedStotram]
 
+        if let stotramInfo = Stotram(rawValue: selectedStotramKey) {
+            
+            stotramPoojaName.text = stotramInfo.title
+            audioBG.image = UIImage(named: stotramInfo.audioBG)
+            setAudioController(audioFile: stotramInfo.audio)
+            audioPlayer.play()
+        }
+        
+        stotramBottomAudioCtlr.isHidden = false
+        stotramTableView.reloadData()
+    }
+    
+    func stotramPause() {
+        audioPlayer.pause()
+        isStotramPlaying = false
+        stotramBottomAudioCtlr.isHidden = true
+        stotramTableView.frame.size.height += 70
+        stotramBtmPlayBtn.setImage(UIImage(named: "playWhite"), for: UIControlState.normal)
+        stotramTableView.reloadData()
+    }
+    
+    @IBAction func stotramBtmAudioCtlr(_ sender: Any) {
+        if isStotramPlaying {
+            stotramPause()
+        } else if let index = selectedStotramIndex {
+            stotramPlay(selectedStotram: index)
+        }
+    }
+    
+    func setAudioController(audioFile:String, withExtension: String = ".m4a") {
+        if let audioPathUrl = Bundle.main.url(forResource: audioFile, withExtension: withExtension) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioPathUrl)
+                
+                updater = CADisplayLink(target: self, selector: #selector(self.trackAudio))
+                updater.frameInterval = 1
+                updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+                didAudioPlayerSet = true
+            } catch {
+                print("Couldn't set audio player")
+            }
+        }
+    }
+    
+    func getTotalAudioDuration(audioPathUrl: URL) -> Float64 {
+        return CMTimeGetSeconds(AVURLAsset(url: audioPathUrl).duration)
+    }
+    
+    func trackAudio() {
+        if isStotramPlaying {
+            let currentTime = Int(audioPlayer.currentTime)
+            let currentTimeStr  = String(format: "%02d", currentTime/60) + ":" + String(format: "%02d", currentTime%60)
+            
+            stotramProgressLabel.text = currentTimeStr
+            
+            audioSlider.value = Float(audioPlayer.currentTime/audioPlayer.duration)
+        }
+    }
+    
+    @IBAction func sliderDragged(_ sender: UISlider) {
+        let currentAudioPosition = Float(audioPlayer.duration) * Float(sender.value)
+        audioPlayer.currentTime = TimeInterval(currentAudioPosition)
+    }
+    
+    @IBAction func previousStrotam(_ sender: Any) {
+        guard let index = selectedStotramIndex, index != 0 else { return }
+        stotramPlay(selectedStotram: index - 1)
+    }
+    
+    @IBAction func nextStrotam(_ sender: Any) {
+     
+        guard let index = selectedStotramIndex, selectedStotramIndex != (langStotrams.count - 1) else { return }
+        stotramPlay(selectedStotram: index + 1)
+    }
 }

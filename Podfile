@@ -6,10 +6,12 @@ target 'Poojanam' do
   use_frameworks!
 
   # Pods for Poojanam
-
-  target 'PoojanamTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  
+#  target 'PoojanamTests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
 
 end
