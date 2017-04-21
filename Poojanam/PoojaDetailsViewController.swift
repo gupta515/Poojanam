@@ -137,6 +137,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         closeViewAlertCtlr.addAction(UIAlertAction(title: isDownloading ? "Cancel Download" : isAudioPlaying ? "Stop Playing" : "", style: .destructive, handler: { (action) in
             self.stopViewActions()
         }))
+        
+        closeViewAlertCtlr.popoverPresentationController?.sourceView = self.view
+        closeViewAlertCtlr.popoverPresentationController?.sourceRect = self.view.frame
         closeViewAlertCtlr.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(closeViewAlertCtlr, animated: true, completion: nil)
     }
