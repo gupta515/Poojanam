@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -99,34 +99,56 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pooja_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-1X-rZd" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="4" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pooja_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-1X-rZd" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="9wu-QO-oa5"/>
+                                                        <constraint firstAttribute="height" constant="40" id="W8i-n6-04U"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
                                                             <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-hn-r4k">
-                                                    <rect key="frame" x="68" y="4" width="200" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-hn-r4k">
+                                                    <rect key="frame" x="70" y="1" width="268" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="ng6-HS-IUs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Ganesh Chaturthi">
                                                         <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yl-chq">
-                                                    <rect key="frame" x="336" y="11" width="22" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yl-chq">
+                                                    <rect key="frame" x="338" y="13.5" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="Uqu-T2-gz0"/>
+                                                        <constraint firstAttribute="height" constant="22" id="tqm-TR-udx"/>
+                                                    </constraints>
                                                     <state key="normal" image="about"/>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-0p-nlc">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-0p-nlc">
                                                     <rect key="frame" x="70" y="49" width="305" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="nIF-2t-iBc"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dz1-1X-rZd" firstAttribute="centerY" secondItem="jde-Xb-Jvr" secondAttribute="centerY" id="9SN-Fw-jMz"/>
+                                                <constraint firstItem="TeG-Yl-chq" firstAttribute="centerY" secondItem="jde-Xb-Jvr" secondAttribute="centerY" id="DMA-aP-OJB"/>
+                                                <constraint firstItem="gaV-0p-nlc" firstAttribute="leading" secondItem="jde-Xb-Jvr" secondAttribute="leading" constant="70" id="DQc-K6-88a"/>
+                                                <constraint firstAttribute="trailing" secondItem="TeG-Yl-chq" secondAttribute="trailing" constant="15" id="ENe-fU-4my"/>
+                                                <constraint firstItem="UB5-hn-r4k" firstAttribute="leading" secondItem="dz1-1X-rZd" secondAttribute="trailing" constant="10" id="S6G-GF-Pas"/>
+                                                <constraint firstAttribute="bottom" secondItem="gaV-0p-nlc" secondAttribute="bottom" id="ZAl-Zt-1q4"/>
+                                                <constraint firstItem="TeG-Yl-chq" firstAttribute="leading" secondItem="UB5-hn-r4k" secondAttribute="trailing" id="ZMq-R2-dnd"/>
+                                                <constraint firstAttribute="trailing" secondItem="gaV-0p-nlc" secondAttribute="trailing" id="f8a-2M-G9s"/>
+                                                <constraint firstItem="UB5-hn-r4k" firstAttribute="top" secondItem="jde-Xb-Jvr" secondAttribute="top" constant="1" id="hz0-mC-jTe"/>
+                                                <constraint firstItem="dz1-1X-rZd" firstAttribute="leading" secondItem="jde-Xb-Jvr" secondAttribute="leading" constant="20" id="xFi-Qm-tAA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="poojaDietyImage" destination="dz1-1X-rZd" id="0QZ-RA-ssp"/>
@@ -727,29 +749,46 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="9Aq-lY-W2X" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="4" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="9Aq-lY-W2X" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Age-IX-Nn8"/>
+                                                        <constraint firstAttribute="height" constant="40" id="BcP-k3-nGV"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
                                                             <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-gB-3UN">
-                                                    <rect key="frame" x="68" y="4" width="266" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-gB-3UN">
+                                                    <rect key="frame" x="70" y="1" width="290" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Cct-qd-hUE"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Ganesh Aarathi">
                                                         <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-qh-CRc">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-qh-CRc">
                                                     <rect key="frame" x="70" y="49" width="305" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="fck-na-Trj"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iuN-qh-CRc" secondAttribute="bottom" id="Jv5-wR-9zp"/>
+                                                <constraint firstAttribute="trailing" secondItem="iuN-qh-CRc" secondAttribute="trailing" id="MDT-DT-kFS"/>
+                                                <constraint firstItem="jvx-gB-3UN" firstAttribute="top" secondItem="FFZ-r9-JET" secondAttribute="top" constant="1" id="MTt-0V-B8S"/>
+                                                <constraint firstItem="9Aq-lY-W2X" firstAttribute="leading" secondItem="FFZ-r9-JET" secondAttribute="leading" constant="20" id="Qdo-Pm-q6o"/>
+                                                <constraint firstItem="9Aq-lY-W2X" firstAttribute="centerY" secondItem="FFZ-r9-JET" secondAttribute="centerY" id="T7f-hl-J12"/>
+                                                <constraint firstItem="jvx-gB-3UN" firstAttribute="leading" secondItem="9Aq-lY-W2X" secondAttribute="trailing" constant="10" id="Uo2-lT-oLN"/>
+                                                <constraint firstAttribute="trailing" secondItem="jvx-gB-3UN" secondAttribute="trailing" constant="15" id="cjf-Tj-x4j"/>
+                                                <constraint firstItem="iuN-qh-CRc" firstAttribute="leading" secondItem="FFZ-r9-JET" secondAttribute="leading" constant="70" id="ngv-Nh-MlW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="aarathiDietyImage" destination="9Aq-lY-W2X" id="8wO-8k-1Xu"/>
