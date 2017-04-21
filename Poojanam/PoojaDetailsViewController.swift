@@ -107,6 +107,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         let shareText = poojaSamagriTextView.text
         let shareActivityView = UIActivityViewController(activityItems: ["Samagri for \(self.title ?? "") \n\n \(shareText ?? "")"], applicationActivities: [shareActivity])
         
+        shareActivityView.popoverPresentationController?.sourceView = self.view
+        shareActivityView.popoverPresentationController?.sourceRect = self.view.frame
+        
         shareActivityView.excludedActivityTypes = [UIActivityType.addToReadingList,UIActivityType.airDrop,UIActivityType.assignToContact,UIActivityType.print,UIActivityType.saveToCameraRoll,UIActivityType.postToTencentWeibo,UIActivityType.postToVimeo,UIActivityType.postToWeibo]
         
         self.present(shareActivityView, animated: true, completion: nil)
