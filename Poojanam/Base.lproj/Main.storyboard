@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1459,15 +1459,11 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-ZF-XiH">
-                                <rect key="frame" x="15" y="195" width="345" height="140"/>
+                                <rect key="frame" x="15" y="195" width="345" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="rYO-6Z-Iol"/>
+                                    <constraint firstAttribute="height" constant="150" id="rYO-6Z-Iol"/>
                                 </constraints>
-                                <string key="text">In today’s fast challenging lifestyle finding
-a priest to perform specific Pooja is a hard
-challenge. Poojanam fills the gap by offering
-Pujas by experienced priests, at an ease of
-fingertips.
+                                <string key="text">In today’s fast changing lifestyle, finding a priest to perform authentic Pooja is a tough challenge. Poojanam fills this gap by offering authentic Pooja’s performed by highly qualified priest, at an ease of your fingertips.
 
 Poojanam team wish you to be blessed</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
