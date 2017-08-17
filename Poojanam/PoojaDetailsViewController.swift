@@ -53,7 +53,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         // Do any additional setup after loading the view.
         self.navigationController?.removeNavigationBarBorder()
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
-        swapActiveBtn(active: false)
+        swapActiveBtn(active: true)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
         
         let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
