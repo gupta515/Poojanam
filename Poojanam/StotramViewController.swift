@@ -54,10 +54,15 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Stotram"
         
-        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let langInfo = Langauge(rawValue:selectedLang.lowercased()) else {
+        // TO DO: Delete below code when new languages are added
+        //        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let langInfo = Langauge(rawValue:selectedLang.lowercased()) else {
+        //            return
+        //        }
+        
+        let selectedLang = "marathi"
+        guard let langInfo = Langauge(rawValue: selectedLang.lowercased()) else {
             return
         }
-        
         langStotrams = langInfo.stotramList.keyList.sorted()
         stotramTableView.reloadData()
     }
@@ -141,7 +146,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
         
         //Audio Bottom View
         let selectedStotramKey = langStotrams[selectedStotram]
-
+        
         if let stotramInfo = Stotram(rawValue: selectedStotramKey) {
             
             stotramPoojaName.text = stotramInfo.title
@@ -212,7 +217,7 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func nextStrotam(_ sender: Any) {
-     
+        
         guard let index = selectedStotramIndex, selectedStotramIndex != (langStotrams.count - 1) else { return }
         stotramPlay(selectedStotram: index + 1)
     }

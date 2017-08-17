@@ -25,14 +25,18 @@ class PoojaViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Pooja"
-
-        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage"), let langInfo = Langauge(rawValue: selectedLang.lowercased()) else {
+        // TO DO: Delete below code when new languages are added
+        //        guard let selectedLang = UserDefaults.standard.string(forKey: "selectedLanguage marathi"), let langInfo = Langauge(rawValue: selectedLang.lowercased()) else {
+        //            return
+        //        }
+        
+        let selectedLang = "marathi"
+        guard let langInfo = Langauge(rawValue: selectedLang.lowercased()) else {
             return
         }
         
         langPoojaSortedKeys = langInfo.poojasList.keysList.sorted()
         poojaTableView?.reloadData()
-
     }
     
     @IBAction func upcomingPoojaDetailBtn(_ sender: AnyObject) {
