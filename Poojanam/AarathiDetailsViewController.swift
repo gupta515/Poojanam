@@ -9,27 +9,50 @@
 import UIKit
 
 class AarathiDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var aarathiAudioCltrTopView: UIView!
+    
+    
+    @IBOutlet weak var aarathiAudioTopPlayBtn: UIButton!
+    @IBOutlet weak var aarathiAudioTopProgressLabel: UILabel!
+    @IBOutlet weak var aarathiAudioTopProgressBar: UIProgressView!
+    
+    @IBOutlet weak var aarathiTextView: UITextView!
+    
+    @IBOutlet weak var aarathiAudioCtlrBottomView: UIView!
+    @IBOutlet weak var aarathiAudioBottomProgressLabel: UILabel!
+    @IBOutlet weak var aarathiAudioProgressBar: UIProgressView!
+    @IBOutlet weak var aarathiAudioBottomPlayBtn: UIButton!
+    @IBOutlet weak var aarathiNameLabel: UILabel!
+    
+    var aarathiInfo : Aarathi?
+    var isAudioPlaying = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Do any additional setup after loading the view. 
+        self.title = aarathiInfo?.title
+        swapAudioCtlrView(play: isAudioPlaying, setTextView : false)
+        
+        aarathiTextView.attributedText = TextFiles().getTextFromFile(fileName: aarathiInfo?.textFile ?? "")
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func aarathiAudioCtlrTopBtn(_ sender: AnyObject) {
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView : true)
     }
-    */
+    
+    @IBAction func aarathiAudioCtlrBottomBtn(_ sender: AnyObject) {
+        swapAudioCtlrView(play: !isAudioPlaying, setTextView : true)
+    }
+    
+    func swapAudioCtlrView(play : Bool, setTextView : Bool) {
+        isAudioPlaying = play
+        let audioCtlrImage = isAudioPlaying ? UIImage(named: "pause") : UIImage(named : "play")
 
+        aarathiAudioTopPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)
+        aarathiAudioCtlrBottomView.isHidden = !isAudioPlaying
+        aarathiAudioBottomPlayBtn.setImage(audioCtlrImage, for: UIControlState.normal)
+    }
+    
 }
