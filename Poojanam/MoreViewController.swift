@@ -8,17 +8,15 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class MoreViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        print("More view did load")
+        self.tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("More view will appear")
         self.tabBarController?.navigationItem.title = "More"
     }
     
@@ -27,7 +25,6 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -37,5 +34,4 @@ class MoreViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
