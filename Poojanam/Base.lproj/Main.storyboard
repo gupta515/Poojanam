@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="cVK-uc-FzB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -87,47 +87,70 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-Eo-Wvf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-Eo-Wvf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoojaCellID" rowHeight="50" id="rHv-JU-7CX" customClass="PoojaTableViewCell" customModule="Poojanam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoojaCellID" rowHeight="55" id="rHv-JU-7CX" customClass="PoojaTableViewCell" customModule="Poojanam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rHv-JU-7CX" id="jde-Xb-Jvr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pooja_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-1X-rZd" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="4" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pooja_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-1X-rZd" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="6" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="9wu-QO-oa5"/>
+                                                        <constraint firstAttribute="height" constant="44" id="W8i-n6-04U"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                            <real key="value" value="20"/>
+                                                            <real key="value" value="22"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-hn-r4k">
-                                                    <rect key="frame" x="68" y="4" width="200" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-hn-r4k">
+                                                    <rect key="frame" x="72" y="1" width="266" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="ng6-HS-IUs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <state key="normal" title="Ganesh Chaturthi">
-                                                        <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.49744897959183676" green="0.49489795918367346" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yl-chq">
-                                                    <rect key="frame" x="336" y="11" width="22" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-Yl-chq">
+                                                    <rect key="frame" x="338" y="16.5" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="Uqu-T2-gz0"/>
+                                                        <constraint firstAttribute="height" constant="22" id="tqm-TR-udx"/>
+                                                    </constraints>
                                                     <state key="normal" image="about"/>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-0p-nlc">
-                                                    <rect key="frame" x="70" y="49" width="305" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-0p-nlc">
+                                                    <rect key="frame" x="70" y="54" width="305" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="nIF-2t-iBc"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dz1-1X-rZd" firstAttribute="centerY" secondItem="jde-Xb-Jvr" secondAttribute="centerY" id="9SN-Fw-jMz"/>
+                                                <constraint firstItem="TeG-Yl-chq" firstAttribute="centerY" secondItem="jde-Xb-Jvr" secondAttribute="centerY" id="DMA-aP-OJB"/>
+                                                <constraint firstItem="gaV-0p-nlc" firstAttribute="leading" secondItem="jde-Xb-Jvr" secondAttribute="leading" constant="70" id="DQc-K6-88a"/>
+                                                <constraint firstAttribute="trailing" secondItem="TeG-Yl-chq" secondAttribute="trailing" constant="15" id="ENe-fU-4my"/>
+                                                <constraint firstItem="UB5-hn-r4k" firstAttribute="leading" secondItem="dz1-1X-rZd" secondAttribute="trailing" constant="10" id="S6G-GF-Pas"/>
+                                                <constraint firstAttribute="bottom" secondItem="gaV-0p-nlc" secondAttribute="bottom" id="ZAl-Zt-1q4"/>
+                                                <constraint firstItem="TeG-Yl-chq" firstAttribute="leading" secondItem="UB5-hn-r4k" secondAttribute="trailing" id="ZMq-R2-dnd"/>
+                                                <constraint firstAttribute="trailing" secondItem="gaV-0p-nlc" secondAttribute="trailing" id="f8a-2M-G9s"/>
+                                                <constraint firstItem="UB5-hn-r4k" firstAttribute="top" secondItem="jde-Xb-Jvr" secondAttribute="top" constant="1" id="hz0-mC-jTe"/>
+                                                <constraint firstItem="dz1-1X-rZd" firstAttribute="leading" secondItem="jde-Xb-Jvr" secondAttribute="leading" constant="18" id="xFi-Qm-tAA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="poojaDietyImage" destination="dz1-1X-rZd" id="0QZ-RA-ssp"/>
                                             <outlet property="poojaInfoBtn" destination="TeG-Yl-chq" id="o2d-e2-2Ag"/>
@@ -177,7 +200,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSR-fi-yhM">
-                                        <rect key="frame" x="67" y="10" width="241" height="40"/>
+                                        <rect key="frame" x="67.5" y="10" width="240" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK1-kb-cZZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
@@ -206,19 +229,18 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Me8-of-BQy"/>
+                                            <constraint firstAttribute="width" constant="240" id="aed-wC-6qq"/>
+                                            <constraint firstAttribute="height" constant="40" id="onp-xR-KkB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="10" id="4is-9x-1kN"/>
+                                    <constraint firstItem="kqb-EY-SZ1" firstAttribute="top" secondItem="rSR-fi-yhM" secondAttribute="bottom" constant="9" id="4fa-SL-zs4"/>
                                     <constraint firstAttribute="trailing" secondItem="kqb-EY-SZ1" secondAttribute="trailing" id="5YE-s5-yje"/>
                                     <constraint firstItem="kqb-EY-SZ1" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="59" id="QSQ-HS-Oe6"/>
-                                    <constraint firstAttribute="trailing" secondItem="rSR-fi-yhM" secondAttribute="trailing" constant="67" id="SSf-wa-Kw4"/>
                                     <constraint firstItem="kqb-EY-SZ1" firstAttribute="leading" secondItem="rwY-4Q-yc7" secondAttribute="leading" id="XnN-Op-0D9"/>
-                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="leading" secondItem="rwY-4Q-yc7" secondAttribute="leading" constant="67" id="azY-zm-T52"/>
-                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="top" secondItem="rwY-4Q-yc7" secondAttribute="top" constant="10" id="sX2-2C-ayV"/>
+                                    <constraint firstItem="rSR-fi-yhM" firstAttribute="centerX" secondItem="rwY-4Q-yc7" secondAttribute="centerX" id="iLV-nI-vvN"/>
                                     <constraint firstAttribute="height" constant="60" id="xt1-7s-O9W"/>
                                 </constraints>
                             </view>
@@ -351,7 +373,7 @@
                                             <constraint firstItem="UzF-wK-8j6" firstAttribute="centerX" secondItem="WrT-Rg-1yX" secondAttribute="centerX" id="zYj-q0-gVH"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-LY-TYc">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-LY-TYc">
                                         <rect key="frame" x="8" y="80" width="359" height="478"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -715,41 +737,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-WL-M6S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-WL-M6S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AarathiCellID" rowHeight="50" id="8VB-eZ-Rum" customClass="AarathiTableViewCell" customModule="Poojanam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AarathiCellID" rowHeight="55" id="8VB-eZ-Rum" customClass="AarathiTableViewCell" customModule="Poojanam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8VB-eZ-Rum" id="FFZ-r9-JET">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="9Aq-lY-W2X" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="4" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ganesh" translatesAutoresizingMaskIntoConstraints="NO" id="9Aq-lY-W2X" customClass="ImageViewRoundCornered" customModule="Poojanam" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="6" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="Age-IX-Nn8"/>
+                                                        <constraint firstAttribute="height" constant="44" id="BcP-k3-nGV"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                            <real key="value" value="20"/>
+                                                            <real key="value" value="22"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-gB-3UN">
-                                                    <rect key="frame" x="68" y="4" width="266" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-gB-3UN">
+                                                    <rect key="frame" x="72" y="1" width="288" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Cct-qd-hUE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <state key="normal" title="Ganesh Aarathi">
                                                         <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-qh-CRc">
-                                                    <rect key="frame" x="70" y="49" width="305" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-qh-CRc">
+                                                    <rect key="frame" x="70" y="54" width="305" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="fck-na-Trj"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iuN-qh-CRc" secondAttribute="bottom" id="Jv5-wR-9zp"/>
+                                                <constraint firstAttribute="trailing" secondItem="iuN-qh-CRc" secondAttribute="trailing" id="MDT-DT-kFS"/>
+                                                <constraint firstItem="jvx-gB-3UN" firstAttribute="top" secondItem="FFZ-r9-JET" secondAttribute="top" constant="1" id="MTt-0V-B8S"/>
+                                                <constraint firstItem="9Aq-lY-W2X" firstAttribute="leading" secondItem="FFZ-r9-JET" secondAttribute="leading" constant="18" id="Qdo-Pm-q6o"/>
+                                                <constraint firstItem="9Aq-lY-W2X" firstAttribute="centerY" secondItem="FFZ-r9-JET" secondAttribute="centerY" id="T7f-hl-J12"/>
+                                                <constraint firstItem="jvx-gB-3UN" firstAttribute="leading" secondItem="9Aq-lY-W2X" secondAttribute="trailing" constant="10" id="Uo2-lT-oLN"/>
+                                                <constraint firstAttribute="trailing" secondItem="jvx-gB-3UN" secondAttribute="trailing" constant="15" id="cjf-Tj-x4j"/>
+                                                <constraint firstItem="iuN-qh-CRc" firstAttribute="leading" secondItem="FFZ-r9-JET" secondAttribute="leading" constant="70" id="ngv-Nh-MlW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="aarathiDietyImage" destination="9Aq-lY-W2X" id="8wO-8k-1Xu"/>
@@ -827,7 +866,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-tK-5P7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-tK-5P7">
                                 <rect key="frame" x="8" y="0.0" width="359" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1258,8 +1297,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nY8-ao-8Jp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LanguageCellID" rowHeight="60" id="2Wt-U5-UVa" customClass="LanguageViewCell" customModule="Poojanam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -1420,15 +1460,11 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-ZF-XiH">
-                                <rect key="frame" x="15" y="195" width="345" height="140"/>
+                                <rect key="frame" x="15" y="195" width="345" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="rYO-6Z-Iol"/>
+                                    <constraint firstAttribute="height" constant="150" id="rYO-6Z-Iol"/>
                                 </constraints>
-                                <string key="text">In today’s fast challenging lifestyle finding
-a priest to perform specific Pooja is a hard
-challenge. Poojanam fills the gap by offering
-Pujas by experienced priests, at an ease of
-fingertips.
+                                <string key="text">In today’s fast changing lifestyle, finding a priest to perform authentic Pooja is a tough challenge. Poojanam fills this gap by offering authentic Pooja’s performed by highly qualified priest, at an ease of your fingertips.
 
 Poojanam team wish you to be blessed</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>

@@ -107,6 +107,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         let shareText = poojaSamagriTextView.text
         let shareActivityView = UIActivityViewController(activityItems: ["Samagri for \(self.title ?? "") \n\n \(shareText ?? "")"], applicationActivities: [shareActivity])
         
+        shareActivityView.popoverPresentationController?.sourceView = self.view
+        shareActivityView.popoverPresentationController?.sourceRect = self.view.frame
+        
         shareActivityView.excludedActivityTypes = [UIActivityType.addToReadingList,UIActivityType.airDrop,UIActivityType.assignToContact,UIActivityType.print,UIActivityType.saveToCameraRoll,UIActivityType.postToTencentWeibo,UIActivityType.postToVimeo,UIActivityType.postToWeibo]
         
         self.present(shareActivityView, animated: true, completion: nil)
@@ -137,6 +140,9 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         closeViewAlertCtlr.addAction(UIAlertAction(title: isDownloading ? "Cancel Download" : isAudioPlaying ? "Stop Playing" : "", style: .destructive, handler: { (action) in
             self.stopViewActions()
         }))
+        
+        closeViewAlertCtlr.popoverPresentationController?.sourceView = self.view
+        closeViewAlertCtlr.popoverPresentationController?.sourceRect = self.view.frame
         closeViewAlertCtlr.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(closeViewAlertCtlr, animated: true, completion: nil)
     }
