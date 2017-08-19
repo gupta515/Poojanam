@@ -53,7 +53,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         // Do any additional setup after loading the view.
         self.navigationController?.removeNavigationBarBorder()
         swapButtonOptionsView.setViewRoundCornerWithBorder(borderWidth: 1, cornerRadius: 5, borderColor: UIColor().appBaseColorSaffaron())
-        swapActiveBtn(active: false)
+        swapActiveBtn(active: true)
         swapAudioCtlrView(play: isAudioPlaying, setTextView: false)
         
         let sliderThumbImage = UIImage(named: "audioSliderSeeker")?.resizeImage(newWidth: 10)
@@ -111,7 +111,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         shareActivityView.popoverPresentationController?.sourceRect = self.view.frame
         
         shareActivityView.excludedActivityTypes = [UIActivityType.addToReadingList,UIActivityType.airDrop,UIActivityType.assignToContact,UIActivityType.print,UIActivityType.saveToCameraRoll,UIActivityType.postToTencentWeibo,UIActivityType.postToVimeo,UIActivityType.postToWeibo]
-        
+
         self.present(shareActivityView, animated: true, completion: nil)
     }
     
