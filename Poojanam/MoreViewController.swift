@@ -9,7 +9,8 @@
 import UIKit
 import iRate
 
-private let RateUs_IndexPath = IndexPath(row: 1, section: 0)
+private let RateUsIndex = IndexPath(row: 1, section: 0)
+private let ShareIndex = IndexPath(row: 2, section: 0)
 
 class MoreViewController: UITableViewController {
     
@@ -42,8 +43,8 @@ class MoreViewController: UITableViewController {
         
         switch indexPath {
         
-        case RateUs_IndexPath:
-            
+        case RateUsIndex:
+
             guard Helper.isAppUpdated() else {
                 
                 let updateAppAlertCtrlr: UIAlertController = UIAlertController(title: "Poojanam got updated!", message: "We got new update for poojanam, would you like to update poojanam?", preferredStyle: .alert)
@@ -59,6 +60,13 @@ class MoreViewController: UITableViewController {
             }
             
             promptForRating()
+            
+        case ShareIndex:
+            
+            if let url = URL(string: poojanamAppStoreUrl) {
+                let text = "I have started using POOJANAM to perform my poojas, Try it out."
+                share(text, url: url)
+            }
             
         default:
             print("Nothing to handle")
@@ -81,5 +89,18 @@ extension MoreViewController {
         } else {
             iRate.sharedInstance().promptForRating()
         }
+    }
+    
+    func share(_ text: String, url: URL) {
+        
+        let activity = UIActivity()
+        let activityVC = UIActivityViewController(activityItems: [text, url], applicationActivities: [activity])
+        
+        activityVC.excludedActivityTypes = [UIActivityType.addToReadingList, UIActivityType.airDrop, UIActivityType.assignToContact, UIActivityType.print, UIActivityType.saveToCameraRoll, UIActivityType.postToTencentWeibo, UIActivityType.postToVimeo, UIActivityType.postToWeibo]
+        activityVC.completionWithItemsHandler = {
+            (activity, success, items, error) in
+
+        }
+        self.present(activityVC, animated: true, completion: nil)
     }
 }

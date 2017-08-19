@@ -111,7 +111,7 @@ class PoojaDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         shareActivityView.popoverPresentationController?.sourceRect = self.view.frame
         
         shareActivityView.excludedActivityTypes = [UIActivityType.addToReadingList,UIActivityType.airDrop,UIActivityType.assignToContact,UIActivityType.print,UIActivityType.saveToCameraRoll,UIActivityType.postToTencentWeibo,UIActivityType.postToVimeo,UIActivityType.postToWeibo]
-        
+
         self.present(shareActivityView, animated: true, completion: nil)
     }
     
