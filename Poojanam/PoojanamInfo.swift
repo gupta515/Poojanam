@@ -8,5 +8,5 @@
 
 import Foundation
 
-
+let poojanamAppStoreUrl = "https://itunes.apple.com/app/lookup?id=1184324616"
 
