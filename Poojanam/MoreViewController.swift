@@ -41,8 +41,25 @@ class MoreViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath {
+        
         case RateUs_IndexPath:
+            
+            guard Helper.isAppUpdated() else {
+                
+                let updateAppAlertCtrlr: UIAlertController = UIAlertController(title: "Poojanam got updated!", message: "We got new update for poojanam, would you like to update poojanam?", preferredStyle: .alert)
+                updateAppAlertCtrlr.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default) { _ -> Void in
+                    self.promptForRating()
+                })
+                
+                updateAppAlertCtrlr.addAction(UIAlertAction(title: "Update", style: UIAlertActionStyle.default) { _ -> Void in
+                    self.redirectToAppStore()
+                })
+                self.present(updateAppAlertCtrlr, animated: true, completion: nil)
+                return
+            }
+            
             promptForRating()
+            
         default:
             print("Nothing to handle")
         }
@@ -65,5 +82,4 @@ extension MoreViewController {
             iRate.sharedInstance().promptForRating()
         }
     }
-    
 }

@@ -9,6 +9,8 @@ target 'Poojanam' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   
+  pod 'SwiftyJSON'
+  
   pod 'iRate'
   
 #  target 'PoojanamTests' do

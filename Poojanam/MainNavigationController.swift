@@ -14,8 +14,7 @@ class MainNavigationController: UINavigationController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        
+
         // TO DO: Delete below code when new languages are added
         //        if let _ = UserDefaults.standard.string(forKey: "selectedLanguage") {
         //            return
@@ -25,6 +24,10 @@ class MainNavigationController: UINavigationController {
         //        }
 
         UserDefaults.standard.removeObject(forKey: "selectedLanguage")
+        
+        if UserDefaults.standard.string(forKey: "AppStore_AppVersionNumber") == nil  || UserDefaults.standard.string(forKey: "AppStore_AppVersionNumber")?.isEmpty == true {
+            UserDefaults.standard.set(Helper.getAppVersionFullString(), forKey: "AppStore_AppVersionNumber")
+        }
     }
     
     override func didReceiveMemoryWarning() {

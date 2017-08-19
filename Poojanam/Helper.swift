@@ -8,6 +8,38 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
+
+class Helper {
+    
+    class func getAppVersionDictionary() -> NSDictionary {
+        return ["version": Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "NA", "build": Bundle.main.infoDictionary?[kCFBundleVersionKey as String] as? String ?? "NA"]
+    }
+    
+    static func getAppVersionFullString() -> String {
+        
+        let appInfo = getAppVersionDictionary()
+        return "\(appInfo["version"] as? String ?? "")(\(appInfo["build"] as? String ?? ""))"
+    }
+    
+    class func isAppUpdated() -> Bool {
+        
+        let userAppVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "NA"
+        
+        var storeAppVersion = UserDefaults.standard.string(forKey: "AppStore_AppVersionNumber") ?? "NA"
+        
+        if let url = URL(string: "http://itunes.apple.com/lookup?bundleId=com.sunsirius.Poojanam"), let data = try? Data(contentsOf: url) {
+            
+            if let lookup = JSON(data).dictionary, lookup["resultCount"]?.intValue == 1, let currentVersion = lookup["results"]?[0]["version"].string {
+                storeAppVersion = currentVersion
+                UserDefaults.standard.set(currentVersion, forKey: "AppStore_AppVersionNumber")
+            }
+        }
+        
+        return !(storeAppVersion.compare(userAppVersion, options: .numeric) == .orderedDescending)
+    }
+    
+}
 
 class TextFiles {
     func getTextFromFile(fileName: String, fileExtension: String = "rtf") -> NSAttributedString? {
