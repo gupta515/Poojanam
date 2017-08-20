@@ -213,6 +213,7 @@ extension PoojaDetailsViewController {
                 updater.frameInterval = 1
                 updater.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
             } catch {
+                isAudioPlayerSet = false
                 print("Couldn't set audio player")
             }
         }
