@@ -124,6 +124,14 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
                 stotramBottomAudioCtlr.isHidden = true
                 stotramTableView.frame.size.height += 70
             } else {
+                
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                }
+                catch {
+                    // report for an error
+                }
+                
                 audioPlayer.play()
                 isStotramPlaying = true
                 stotramBottomAudioCtlr.isHidden = false
@@ -152,6 +160,14 @@ class StotramViewController: UIViewController, UITableViewDataSource, UITableVie
             stotramPoojaName.text = stotramInfo.title
             audioBG.image = UIImage(named: stotramInfo.audioBG)
             setAudioController(audioFile: stotramInfo.audio)
+            
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            }
+            catch {
+                // report for an error
+            }
+            
             audioPlayer.play()
         }
         

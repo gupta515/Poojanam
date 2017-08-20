@@ -178,6 +178,13 @@ extension PoojaDetailsViewController {
         }
         
         if isAudioPlaying {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            }
+            catch {
+                // report for an error
+            }
+            
             audioPlayer.play()
         } else {
             audioPlayer.pause()
