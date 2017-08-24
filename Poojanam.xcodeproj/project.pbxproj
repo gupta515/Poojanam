@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31009CC01D80064C00CC9F7E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31009CBF1D80064C00CC9F7E /* TabBarController.swift */; };
+		310AC07E1F4E8F32009425BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 310AC07D1F4E8F32009425BE /* GoogleService-Info.plist */; };
 		3110542A1DA116E400EAEE25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311054291DA116E400EAEE25 /* Extensions.swift */; };
 		3120F8F71E118E43007017BC /* marathi_dattatreya_kashta_nashak_stotram.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3120F8EA1E118E43007017BC /* marathi_dattatreya_kashta_nashak_stotram.m4a */; };
 		3120F8F81E118E43007017BC /* marathi_ganpati_athravshisha_stotram.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3120F8EB1E118E43007017BC /* marathi_ganpati_athravshisha_stotram.m4a */; };
@@ -31,7 +32,6 @@
 		31519AF31DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf */; };
 		31519AF51DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */; };
 		3158E69F1DCA672500A28374 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3158E69E1DCA672500A28374 /* .gitignore */; };
-		315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 315C19C31DC9B601002A7188 /* GoogleService-Info.plist */; };
 		316612241DB7ED5A00AD3572 /* StotramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */; };
 		317BA9861E4748F200885E61 /* Pooja+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9851E4748F200885E61 /* Pooja+Enums.swift */; };
 		317BA9891E475A7F00885E61 /* Aarathi+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */; };
@@ -94,6 +94,7 @@
 		0A19E1104C7F414F4615DA7E /* Pods_PoojanamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoojanamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F13F21B98EC8260EF891F45 /* Pods_Poojanam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poojanam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31009CBF1D80064C00CC9F7E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		310AC07D1F4E8F32009425BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		311054291DA116E400EAEE25 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3120F8EA1E118E43007017BC /* marathi_dattatreya_kashta_nashak_stotram.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_dattatreya_kashta_nashak_stotram.m4a; sourceTree = "<group>"; };
 		3120F8EB1E118E43007017BC /* marathi_ganpati_athravshisha_stotram.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marathi_ganpati_athravshisha_stotram.m4a; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		31519AF21DCA63810090F97C /* marathi_satyanarayan_pooja_samagri.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_samagri.rtf; sourceTree = "<group>"; };
 		31519AF41DCA638B0090F97C /* marathi_satyanarayan_pooja_vidhi.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = marathi_satyanarayan_pooja_vidhi.rtf; sourceTree = "<group>"; };
 		3158E69E1DCA672500A28374 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		315C19C31DC9B601002A7188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		316612231DB7ED5A00AD3572 /* StotramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StotramTableViewCell.swift; sourceTree = "<group>"; };
 		317BA9851E4748F200885E61 /* Pooja+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pooja+Enums.swift"; path = "Enums/Pooja+Enums.swift"; sourceTree = "<group>"; };
 		317BA9881E475A7F00885E61 /* Aarathi+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aarathi+Enums.swift"; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 				31FDC5A01D7D3CC9008CAC1C /* Main.storyboard */,
 				31FDC5A31D7D3CC9008CAC1C /* Assets.xcassets */,
 				31FDC5A51D7D3CC9008CAC1C /* LaunchScreen.storyboard */,
-				315C19C31DC9B601002A7188 /* GoogleService-Info.plist */,
+				310AC07D1F4E8F32009425BE /* GoogleService-Info.plist */,
 				31FDC5A81D7D3CC9008CAC1C /* Info.plist */,
 				3158E69E1DCA672500A28374 /* .gitignore */,
 			);
@@ -583,7 +583,6 @@
 				31E9DA971E2B9E5400BF1EF2 /* marathi_durgaDevi_aarathi.rtf in Resources */,
 				31E9DA9D1E2B9E5400BF1EF2 /* marathi_shriram_aarathi.rtf in Resources */,
 				319B8B2D1DCE40C200B7314D /* marathi_satyanarayan_pooja_benefits.rtf in Resources */,
-				315C19C41DC9B601002A7188 /* GoogleService-Info.plist in Resources */,
 				31DEE1751E6BDBCB00D5F26E /* marathi_parthivGanapathi_pooja_samagri.rtf in Resources */,
 				313B25C91DD60F5200A117FE /* marathi_mangalagauri_pooja_vidhi.rtf in Resources */,
 				31E9DA961E2B9E5400BF1EF2 /* marathi_datta_aarathi.rtf in Resources */,
@@ -609,6 +608,7 @@
 				31E9DA9C1E2B9E5400BF1EF2 /* marathi_shriMaruthi_aarathi.rtf in Resources */,
 				31DEE17B1E6BE0B000D5F26E /* marathi_parthivGanapathi_pooja_benefits.rtf in Resources */,
 				3120F8FA1E118E43007017BC /* marathi_mahalakshmi_ashtakam_stotram.m4a in Resources */,
+				310AC07E1F4E8F32009425BE /* GoogleService-Info.plist in Resources */,
 				31E9DA9E1E2B9E5400BF1EF2 /* marathi_vitthal_aarathi.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

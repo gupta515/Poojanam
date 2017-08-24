@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>835634752525-an6s0le66u9tuur2mbso66s4484iln2j.apps.googleusercontent.com</string>
+	<string>835634752525-6hsqvq9185v1qf2n9r39rj8t87ri91o0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.835634752525-an6s0le66u9tuur2mbso66s4484iln2j</string>
+	<string>com.googleusercontent.apps.835634752525-6hsqvq9185v1qf2n9r39rj8t87ri91o0</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDmQ4j8JCJ0RRuwF0gfKrEoYjAhN0ziTVc</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>sunsirius.Poojanam</string>
+	<string>com.sunsirius.Poojanam</string>
 	<key>PROJECT_ID</key>
 	<string>poojanam-d5278</string>
 	<key>STORAGE_BUCKET</key>
@@ -27,13 +27,13 @@
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:835634752525:ios:c5fb9ad9c3112994</string>
+	<string>1:835634752525:ios:7b8ca81b307b2c9d</string>
 	<key>DATABASE_URL</key>
 	<string>https://poojanam-d5278.firebaseio.com</string>
 </dict>
