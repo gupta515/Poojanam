@@ -77,11 +77,12 @@ class DownloadHelper {
     
     func getLocalDownloadEndPath(urlString: String, kind: String) -> String {
         
-        guard let language = UserDefaults.standard.string(forKey: "selectedLanguage") else {
-            return ""
-        }
+        // TO DO: uncomment selectedLanguage logic
+//        guard let language = UserDefaults.standard.string(forKey: "selectedLanguage") else {
+//            return ""
+//        }
         
-        return "download/\(language.lowercased() )/\(kind)/\(urlString).m4a"
+        return "download/marathi/\(kind)/\(urlString).m4a"
     }
     
     func getLocalDownloadFilePath(endPath: String, kind: String) -> URL? {
@@ -90,7 +91,7 @@ class DownloadHelper {
             return nil
         }
 
-        guard let urlPath =  NSURL(fileURLWithPath: filePath, isDirectory: true).appendingPathComponent("/" + getLocalDownloadEndPath(urlString: endPath, kind: kind) )?.path, let reqURL = NSURL(string: urlPath)  as URL? else {
+        guard let urlPath =  NSURL(fileURLWithPath: filePath, isDirectory: true).appendingPathComponent( getLocalDownloadEndPath(urlString: endPath, kind: kind) )?.path, let reqURL = NSURL(string: urlPath)  as URL? else {
             return nil
         }
 
